@@ -1,0 +1,24 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - banners module
+// styles for the banners module
+
+@mixin banner-base {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  font-size: 2.4rem;
+  font-family: font('book');
+}
+
+// - - banner-light
+.banner-light {
+  @include banner-base;
+  background: color('mid-blue');
+  color: #fff;
+}
+
+// - - banner-dark
+.banner-dark {
+  @include banner-base;
+  background: color('dark-blue');
+  color: #fff;
+}

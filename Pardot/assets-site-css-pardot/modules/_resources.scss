@@ -1,0 +1,91 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - resources module
+// styles for the resources module
+
+// - - - - - - - - - - - - - - - - - - -
+// - - resources container
+
+#resources {
+	h1{
+		text-align: center;
+		width: 100%;
+		padding-bottom: 8rem;
+	}
+	.img-hero {
+		@include background-image('/assets/img/resources/Hero/MobileSmall_480x243.jpg', '/assets/img/resources/Hero/MobileSmall_960x487.jpg');
+
+		@media only screen and (min-width: 481px) and (max-width: 1024px) {
+			@include background-image('/assets/img/resources/Hero/Mobile_1024x519.jpg', '/assets/img/resources/Hero/Mobile_2048x1038.jpg');
+		}
+
+		@media only screen and (min-width: 1025px) {
+			@include background-image('/assets/img/resources/Hero/Desktop_1440x730.jpg', '/assets/img/resources/Hero/Desktop_2880x1460.jpg');
+		}
+	}
+}
+
+#newsroom {
+	h1{
+		text-align: center;
+		width: 100%;
+		padding-bottom: 8rem;
+	}
+	.img-hero {
+		@include background-image('/assets/img/newsroom/Hero/MobileSmall_480x243.jpg', '/assets/img/newsroom/Hero/MobileSmall_960x487.jpg');
+
+		@media only screen and (min-width: 481px) and (max-width: 1024px) {
+			@include background-image('/assets/img/newsroom/Hero/Mobile_1024x519.jpg', '/assets/img/newsroom/Hero/Mobile_2048x1038.jpg');
+		}
+
+		@media only screen and (min-width: 1025px) {
+			@include background-image('/assets/img/newsroom/Hero/Desktop_1440x730.jpg', '/assets/img/newsroom/Hero/Desktop_2880x1460.jpg');
+		}
+	}
+}
+
+
+h1 {
+	font-size: 6rem;
+}
+
+.resources-container {
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 49.26471%;
+  @include breakpoint(bp('tablet')){
+    width: 18.58407%;
+  }
+}
+
+.resources-filter {
+  border-bottom: 1px solid color('mid-gray');
+  padding: 1rem 0;
+
+  @include breakpoint(bp('tablet')){
+    border-bottom: none;
+    float: left;
+    padding: 2rem 0;
+    margin-right: 4rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.s-background-wedgewood-blue .l-section-heading{
+  color: #FFF;
+}
+.resources-container a{
+  text-decoration: none;
+  @include font-rules('medium');
+  color: color('dark-blue');
+  font-size: 1.5rem;
+}
+#resourceSearchText{
+	color: white;
+}
+
+@include breakpoint(bp('tablet')){
+  .hero-heading-container{
+  	width: 100%;
+  }
+}

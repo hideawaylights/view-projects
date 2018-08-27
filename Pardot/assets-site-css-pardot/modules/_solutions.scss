@@ -1,0 +1,499 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - solutions module
+// styles for the solutions module
+
+// - - - - - - - - - - - - - - - - - - -
+#solutions-hero {
+	.img-hero {
+		@include background-image('/assets/img/solutions/MobileSmall/480x243/MobileSmall_CenturyLink.jpg', '/assets/img/solutions/MobileSmall/960x487/MobileSmall_CenturyLink.jpg');
+
+		@media only screen and (min-width: 481px) and (max-width: 1024px) {
+			@include background-image('/assets/img/solutions/Mobile/1024x519/Mobile_CenturyLink.jpg', '/assets/img/solutions/Mobile/2048x1038/Mobile_CenturyLink.jpg');
+		}
+
+		@media only screen and (min-width: 1025px) {
+		  	@include background-image('/assets/img/solutions/Desktop/1440x730/Desktop_CenturyLink.jpg', '/assets/img/solutions/Desktop/2880x1460/Desktop_CenturyLink@2x.jpg');
+		}
+	}
+}
+
+#solutions-hero-collection-item {
+	.img-hero-commercial-office {
+		@include background-image('/assets/img/solutions/buildings-types/commercial-office/img/Hero/MobileSmall/480x243/MobileSmall_CommercialOffice.jpg', '/assets/img/solutions/buildings-types/commercial-office/img/Hero/MobileSmall/960x487/MobileSmall_CommercialOffice.jpg');
+
+		@media only screen and (min-width: 481px) and (max-width: 1024px) {
+			@include background-image('/assets/img/solutions/buildings-types/commercial-office/img/Hero/Mobile/1024x519/Mobile_CommercialOffice.jpg', '/assets/img/solutions/buildings-types/commercial-office/img/Hero/Mobile/2048x1038/Mobile_CommercialOffice.jpg');
+		}
+
+		@media only screen and (min-width: 1025px) {
+		  	@include background-image('/assets/img/solutions/buildings-types/commercial-office/img/Hero/Desktop/1440x730/Desktop_CommercialOffice.jpg', '/assets/img/solutions/buildings-types/commercial-office/img/Hero/Desktop/2880x1460/Desktop_CommercialOffice.jpg');
+		}
+	}
+
+	.img-hero-education {
+		@include background-image('/assets/img/solutions/buildings-types/education/img/Hero/MobileSmall/480x243/MobileSmall_Education.jpg', '/assets/img/solutions/buildings-types/education/img/Hero/MobileSmall/960x487/MobileSmall_Education.jpg');
+
+		@media only screen and (min-width: 481px) and (max-width: 1024px) {
+			@include background-image('/assets/img/solutions/buildings-types/education/img/Hero/Mobile/1024x519/Mobile_Education.jpg', '/assets/img/solutions/buildings-types/education/img/Hero/Mobile/2048x1038/Mobile_Education.jpg');
+		}
+
+		@media only screen and (min-width: 1025px) {
+		  	@include background-image('/assets/img/solutions/buildings-types/education/img/Hero/Desktop/1440x730/Desktop_Education.jpg', '/assets/img/solutions/buildings-types/education/img/Hero/Desktop/2880x1460/Desktop_Education.jpg');
+		}
+	}
+
+	.img-hero-healthcare {
+		@include background-image('/assets/img/solutions/buildings-types/healthcare/img/Hero/MobileSmall/480x243/MobileSmall_Healthcare.jpg', '/assets/img/solutions/buildings-types/healthcare/img/Hero/MobileSmall/960x487/MobileSmall_Healthcare.jpg');
+
+		@media only screen and (min-width: 481px) and (max-width: 1024px) {
+			@include background-image('/assets/img/solutions/buildings-types/healthcare/img/Hero/Mobile/1024x519/Mobile_Healthcare.jpg', '/assets/img/solutions/buildings-types/healthcare/img/Hero/Mobile/2048x1038/Mobile_Healthcare.jpg');
+		}
+
+		@media only screen and (min-width: 1025px) {
+		  	@include background-image('/assets/img/solutions/buildings-types/healthcare/img/Hero/Desktop/1440x730/Desktop_Healthcare.jpg', '/assets/img/solutions/buildings-types/healthcare/img/Hero/Desktop/2880x1460/Desktop_Healthcare.jpg');
+		}
+	}
+
+	.img-hero-architect {
+		@include background-image('/assets/img/solutions/project-role/architect/img/Hero/MobileSmall/480x243/MobileSmall_Architect.jpg', '/assets/img/solutions/project-role/architect/img/Hero/MobileSmall/960x487/MobileSmall_Architect.jpg');
+
+		@media only screen and (min-width: 481px) and (max-width: 1024px) {
+			@include background-image('/assets/img/solutions/project-role/architect/img/Hero/Mobile/1024x519/Mobile_Architect.jpg', '/assets/img/solutions/project-role/architect/img/Hero/Mobile/2048x1038/Mobile_Architect.jpg');
+		}
+
+		@media only screen and (min-width: 1025px) {
+		  	@include background-image('/assets/img/solutions/project-role/architect/img/Hero/Desktop/1440x730/Desktop_Architect.jpg', '/assets/img/solutions/project-role/architect/img/Hero/Desktop/2880x1460/Desktop_Architect.jpg');
+		}
+	}
+
+	.img-hero-developer {
+		@include background-image('/assets/img/solutions/project-role/developer/img/Hero/MobileSmall/480x243/MobileSmall_Developer.jpg', '/assets/img/solutions/project-role/developer/img/Hero/MobileSmall/960x487/MobileSmall_Developer.jpg');
+
+		@media only screen and (min-width: 481px) and (max-width: 1024px) {
+			@include background-image('/assets/img/solutions/project-role/developer/img/Hero/Mobile/1024x519/Mobile_Developer.jpg', '/assets/img/solutions/project-role/developer/img/Hero/Mobile/2048x1038/Mobile_Developer.jpg');
+		}
+
+		@media only screen and (min-width: 1025px) {
+		  	@include background-image('/assets/img/solutions/project-role/developer/img/Hero/Desktop/1440x730/Desktop_Developer.jpg', '/assets/img/solutions/project-role/developer/img/Hero/Desktop/2880x1460/Desktop_Developer.jpg');
+		}
+	}
+
+		.img-hero-byrne {
+		@include background-image('/assets/img/solutions/buildings-types/commercial-office/img/Hero/MobileSmall/480x243/Patrick_Byrne_homepage_480x244.jpg', '/assets/img/solutions/buildings-types/commercial-office/img/Hero/MobileSmall/960x487/Patrick_Byrne_homepage_960x487.jpg');
+
+		@media only screen and (min-width: 481px) and (max-width: 1024px) {
+			@include background-image('/assets/img/solutions/buildings-types/commercial-office/img/Hero/Mobile/1024x519/Patrick_Byrne_homepage_1024x519.jpg', '/assets/img/solutions/buildings-types/commercial-office/img/Hero/Mobile/2048x1038/Patrick_Byrne_homepage_2048x1038.jpg');
+		}
+
+		@media only screen and (min-width: 1025px) {
+		  	@include background-image('/assets/img/solutions/buildings-types/commercial-office/img/Hero/Desktop/1440x730/Patrick_Byrne_homepage_1440x730.jpg', '/assets/img/solutions/buildings-types/commercial-office/img/Hero/Desktop/2880x1460/Patrick_Byrne_homepage_2880x1460.jpg');
+		}
+	}
+
+		.img-hero-multifamily {
+		@include background-image('/assets/img/solutions/buildings-types/multifamily/img/Hero/MobileSmall/480x243/Multi_Family_Hero_480x243.jpg', '/assets/img/solutions/buildings-types/multifamily/img/Hero/MobileSmall/960x487/Multi_Family_Hero_960x478.jpg');
+
+		@media only screen and (min-width: 481px) and (max-width: 1024px) {
+			@include background-image('/assets/img/solutions/buildings-types/multifamily/img/Hero/Mobile/1024x519/Multi_Family_Hero_1024x519.jpg', '/assets/img/solutions/buildings-types/multifamily/img/Hero/Mobile/2048x1038/Multi_Family_Hero_2048x1038.jpg');
+		}
+
+		@media only screen and (min-width: 1025px) {
+		  	@include background-image('/assets/img/solutions/buildings-types/multifamily/img/Hero/Desktop/1440x730/Desktop_Multifamily_1460x730.jpg', '/assets/img/solutions/buildings-types/multifamily/img/Hero/Desktop/2880x1460/Desktop_Multifamily_2880x1460.jpg');
+		}
+	}
+
+		.img-hero-zabel {
+		@include background-image('/assets/img/solutions/project-role/developer/img/Hero/MobileSmall/480x243/Doug_Zabel_homepage_480x244px.jpg', '/assets/img/solutions/project-role/developer/img/Hero/MobileSmall/960x487/Doug_Zabel_homepage_960x487px.jpg');
+
+		@media only screen and (min-width: 481px) and (max-width: 1024px) {
+			@include background-image('/assets/img/solutions/project-role/developer/img/Hero/Mobile/1024x519/Doug_Zabel_homepage_1024x519px.jpg', '/assets/img/solutions/project-role/developer/img/Hero/Mobile/2048x1038/Doug_Zabel_homepage_2048x1038px.jpg');
+		}
+
+		@media only screen and (min-width: 1025px) {
+		  	@include background-image('/assets/img/solutions/project-role/developer/img/Hero/Desktop/1440x730/Doug_Zabel_homepage_1440x730px.jpg', '/assets/img/solutions/project-role/developer/img/Hero/Desktop/2880x1460/Doug_Zabel_homepage_2800x1460px.jpg');
+		}
+	}
+
+	.img-hero-occupant {
+		@include background-image('/assets/img/solutions/project-role/occupant/img/Hero/MobileSmall/480x243/MobileSmall_Occupant.jpg', '/assets/img/solutions/project-role/occupant/img/Hero/MobileSmall/960x487/MobileSmall_Occupant.jpg');
+
+		@media only screen and (min-width: 481px) and (max-width: 1024px) {
+			@include background-image('/assets/img/solutions/project-role/occupant/img/Hero/Mobile/1024x519/Mobile_Occupant.jpg', '/assets/img/solutions/project-role/occupant/img/Hero/Mobile/2048x1038/Mobile_Occupant.jpg');
+		}
+
+		@media only screen and (min-width: 1025px) {
+		  	@include background-image('/assets/img/solutions/project-role/occupant/img/Hero/Desktop/1440x730/Desktop_Occupant.jpg', '/assets/img/solutions/project-role/occupant/img/Hero/Desktop/2880x1460/Desktop_Occupant.jpg');
+		}
+	}
+}
+
+/* #solutions-hero-template { */
+/* 	.img-hero { */
+/* 		@include hero-image */
+/* 	} */
+/* } */
+
+#buildings-types, #project-role{
+	padding-top: 8rem;
+	padding-bottom: 8rem;
+	header{
+	margin-top: 0px;
+	}
+	img{
+		max-width: 150px;
+	}
+	h3{
+		@include font-rules('book');
+		font-size: 3.2rem;
+		line-height: 3.4rem;
+		color: color('dark-blue');
+		text-align: center;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+}
+#project-role{
+	background-color: color('dark-blue');
+	h1,h2,h3,p{
+		color: white;
+	}
+}
+#solutions-intro{
+  background-color: #F0F0F0;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  h2{
+    margin-top: 2.4rem;
+    margin-bottom: 2rem;
+    @include font-rules('light');
+    font-size: 3.2rem;
+    color: color('dark-blue');
+  }
+  p{
+    @include font-rules('book');
+    font-size: 1.8rem;
+    color: color('dark-gray');
+  }
+  img{
+  	max-width: 125px;
+  }
+}
+#solutions-logos{
+	ul{
+		h3{
+			margin-bottom: 2rem;
+		}
+		margin-top: 2.4rem;
+		margin-bottom: 2rem;
+	}
+}
+
+.quote-developer {
+	p {
+		@media (min-width: 971px) {
+			font-size: 2.7rem !important;
+		}
+	}
+}
+
+
+
+
+#solutions-logos-logos, #solutions-analysis-logos{
+  text-align: center;
+
+  img{
+    margin-right: 6.5rem;
+    vertical-align: middle;
+    margin-bottom: 3rem;
+    max-width: 140px;
+    max-height: 100px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+#solutions-logos-logos {
+	margin-bottom: 5rem;
+}
+#solutions-benefits{
+	background-color: #D6E1E6;
+	padding-bottom: 8rem;
+	  text-align: center;
+	  header{
+	    h2, p{
+	      color: color('dark-blue');
+	    }
+	  }
+	  .benefit-img{
+	  	width: 100%;
+	  	background-size: cover;
+
+	  		@media (min-width: 970px){
+				height: 450px;
+
+	  		}
+	  		@media (max-width: 970px){
+				text-shadow: 0 .2rem .4rem rgba(0, 0, 0, .5)
+	  		}
+	  }
+	  .grid-large-column-3 {
+	  	margin-top:  8rem;
+	  	margin-bottom:  4rem;
+
+	  	&:not(:nth-child(3)){
+	  		/*border-right: 2px solid color('dark-blue');*/
+	  			@media (max-width: 970px){
+	  			  border-right: 0px;
+	  			  border-bottom: 1px solid #fff;
+	  			}
+	  			margin-right: 14rem ;
+	  	}
+	  	@media (min-width: 970px){
+	  			padding-top: 24%;
+	  			border-radius: 50%;
+	  			background: rgba(0, 0, 0, 0.37);
+	  			width: calc((100% - ((3 - 1) * 14rem)) / 3);
+	  			font-size: 2.2rem;
+	  	}
+	  	@media (min-width: 1170px){
+	  				width: calc((100% - ((3 - 1) * 16rem)) / 3);
+	  					&:not(:nth-child(3)){
+	  						/*border-right: 2px solid color('dark-blue');*/
+	  							@media (max-width: 970px){
+	  							  border-right: 0px;
+	  							  border-bottom: 1px solid #fff;
+	  							}
+	  							margin-right: 14rem ;
+	  					}
+	  	}
+	  	@media (max-width: 970px){
+		  	margin-top: 0;
+	  		margin-bottom: 0;
+	  		padding: 0;
+	  	}
+
+	  	height: 10rem;
+
+	  	div{
+	  		padding: 0 40px;
+	  		color: #FFF;
+	  	}
+
+	  }
+
+	  .block-container{
+	    margin-bottom: 6rem;
+	    position: relative;
+	    &:after{
+	      content:'';
+	      clear: both;
+	      display: block;
+	    }
+	    .block{
+	      width: calc(33% - 5rem);
+	      float: left;
+	      text-align: center;
+	      margin-right: 6.6rem;
+	      @include font-rules('book');
+	      font-size: 1.6rem;
+
+	      border-right: 1px solid color('dark-blue');
+	      a{
+	        color: inherit;
+	        text-decoration: none;
+
+		}
+	      &:last-child{
+	        margin-right: 0;
+	      }
+	      img{
+	        width: 100%;
+	        border: 0;
+	        margin-bottom: .8rem;
+	      }
+	    }
+	    @media (max-width: 970px){
+	      display: none;
+	    }
+	  }
+	  a.button{
+	    width: 17rem;
+	    margin-bottom: 8rem;
+	  }
+
+}
+#solutions-case-studies-spotlight{
+	background-color: color(light-blue);
+	color:  white;
+	/*padding-bottom: 8rem;*/
+
+	overflow: hidden;
+	h2,p {
+		color:  white;
+	}
+	h3 {
+      @include font-rules('medium');
+      font-size: 2rem;
+      padding-top: 3rem;
+	  padding-bottom: 1rem;
+	}
+
+    ul{
+      margin-left: .5rem;
+      margin-right: .5rem;
+      list-style: none;
+
+      li{
+        @include font-rules('book');
+        line-height:60%;
+/*        font-size: 2.4rem;*/
+        margin-bottom: 1rem;
+/*        list-style-type: disc;
+        list-style-position: inside;*/
+        text-indent: -1em;
+        padding-left: 1em;
+        &:before {
+        	content: "•";
+        	color: 	color('dark-blue');
+        	padding: 1rem .5rem 1rem;
+        }
+      }
+    }
+    .spotlight-img{
+		/*margin-bottom: -650px;
+		height: 100%;
+		padding: 10px 15px 650px 15px;*/
+		min-height: 650px;
+    }
+    .spotlight-txt{
+    	padding-bottom: 4rem;
+    	padding-left: 4rem;
+    }
+    header {
+    	h2, p {color: color('dark-blue');}
+    	margin-top: 4rem;
+    }
+    #spotlight-project-info{
+    	h3{
+    		color: color('dark-blue');
+    	}
+    }
+    .cta{
+    	margin-top: 2rem;
+    	text-align: center;
+    }
+    @media (max-width: 970px){
+        ul{
+          li{
+            line-height:120%!important;
+          }
+        }
+        .spotlight-img{
+    		/*margin-bottom: -650px;
+    		height: 100%;
+    		padding: 10px 15px 650px 15px;*/
+    		min-height: 350px;
+    		margin-top: 4rem;
+    		margin-bottom: 4rem;
+        }
+     }
+
+}
+#solutions-analysis{
+	margin-bottom: 8rem;
+	h3 {
+	  @include font-rules('medium');
+	  font-size: 2rem;
+
+	  padding-bottom: 1rem;
+	}
+}
+#solutions-full-hero{
+  position: relative;
+  width: 100%;
+  height: 73rem;
+  .img-hero{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+   /* background-image: url(../img/solutions/desc-hero.jpg);*/
+    z-index: 1;
+  }
+  #solutions-description{
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 60rem;
+    background-color: rgba(51,101,127,.75);
+    h2,h3{
+      color: #FFF;
+      margin-left: 3.6rem;
+      margin-right: 4rem;
+      margin-bottom: 3.8rem;
+    }
+
+	h2 {
+      @include font-rules('medium');
+      font-size: 3.2rem;
+	  padding-top: 2.9rem;
+	}
+
+	h3 {
+		font-size: 2.4rem;
+	}
+
+    ul{
+      margin-left: 3.6rem;
+      margin-right: 3.8rem;
+
+      li{
+        color: #FFF;
+        @include font-rules('book');
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+        list-style-type: disc;
+        list-style-position: inside;
+        text-indent: -1em;
+        padding-left: 1em;
+      }
+    }
+  }
+
+  @media (max-width: 970px){
+
+    height: auto;
+    position: relative;
+    .img-hero{
+      height: 35.1rem;
+      position: relative;
+    }
+    #solutions-description{
+      position: relative;
+      width: 100%;
+      height: auto;
+      top: auto;
+
+    }
+  }
+}
+#solutions-case-studies{
+  .video, .image{
+    margin-bottom: 3.5rem;
+    @media (max-width: 970px){
+      margin-bottom: 7rem;
+    }
+  }
+  .button{
+    margin-bottom: 8rem;
+  }
+
+}

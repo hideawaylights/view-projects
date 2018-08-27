@@ -1,0 +1,210 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - base
+// project defaults for base elements - h1-h6, p, a, etc.
+
+html {
+    font-size: map-get($typography, root-font-size);
+    overflow-x: hidden;
+    }
+
+body {
+	font-size: map-get($typography, root-font-size);
+	line-height: map-get($typography, base-line-height);
+	color: color('base-font-color');
+	@include font-rules('book');
+	font-weight: $normal;
+	font-style: normal;
+    background: #fff;
+
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: none;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	}
+
+main {
+  position: relative;
+  z-index:1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+/*h2:not(.override), h3:not(.override){
+  @include font-rules('book');
+  font-size: 3.2rem;
+  line-height: 3.4rem;
+  color: color('dark-blue');
+  margin-bottom: 2rem;
+}*/
+
+img, svg {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+ul {
+  @include clearfix;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+}
+
+::-webkit-input-placeholder {
+   color: #1C3971;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #1C3971  ;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #1C3971  ;
+}
+
+:-ms-input-placeholder {
+   color: #1C3971  ;
+}
+a{
+  text-decoration: none;
+  color: color('light-blue');
+}
+input[type="search"] {
+  box-sizing: border-box;
+}
+iframe {
+	border: 0;
+}
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - documentation
+
+//  ddddddddddddd
+//  d::::::::::::ddd
+//  d:::::::::::::::dd
+//  ddd:::::ddddd:::::d
+//    d:::::d    d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d    d:::::d
+//  ddd:::::ddddd:::::d
+//  d:::::::::::::::dd
+//  d::::::::::::ddd
+//  ddddddddddddd
+
+// hologram documentation for base styles
+
+/*doc
+---
+title: h1
+name: 01-h1
+category: base
+---
+```html_example
+<h1>the quick brown fox...</h1>
+```
+*/
+
+
+/*doc
+---
+title: h2
+name: 02-h2
+category: base
+---
+```html_example
+<h2>the quick brown fox...</h2>
+```
+*/
+
+
+/*doc
+---
+title: h3
+name: 03-h3
+category: base
+---
+```html_example
+<h3>the quick brown fox...</h3>
+```
+*/
+
+
+/*doc
+---
+title: h4
+name: 04-h4
+category: base
+---
+```html_example
+<h4>the quick brown fox...</h4>
+```
+*/
+
+
+/*doc
+---
+title: h5
+name: 05-h3
+category: base
+---
+```html_example
+<h5>the quick brown fox...</h5>
+```
+*/
+
+
+/*doc
+---
+title: h6
+name: 06-h6
+category: base
+---
+```html_example
+<h6>the quick brown fox...</h6>
+```
+*/
+
+
+/*doc
+---
+title: p
+name: 07-p
+category: base
+---
+```html_example
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+```
+*/
+
+
+/*doc
+---
+title: a
+name: 08-a
+category: base
+---
+```html_example
+<a href="#">The quick brown fox...</a>
+```
+*/

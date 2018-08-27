@@ -1,0 +1,197 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - solutions module
+// styles for the solutions module
+
+// - - - - - - - - - - - - - - - - - - -
+#portfolio-hero{
+  width: 100%;
+  height: 73rem;
+  /*height: 80vh;*/
+  background-color: color('dark-gray');
+  position: relative;
+  @media (max-width: 970px){
+    height: 73rem;
+  }
+  .img-hero{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*background-image: url(../img/solutions/welcome.jpg);*/
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  #portfolio-hero-txt{
+    position: relative;
+    top: 26rem;
+    left: 0;
+    h1{
+      @include font-rules('light');
+      font-size: 7.2rem;
+      line-height: 1;
+      margin-bottom: 1.3rem;
+      color: #FFF;
+      width: 60rem;
+      text-shadow: 0 .2rem .4rem rgba(0,0,0,0.50);
+    }
+    h2{
+      @include font-rules('book');
+      font-size: 2rem;
+      line-height: 1.05;
+      color: #FFF;
+      width: 55rem;
+      text-shadow: 0 .2rem .4rem rgba(0,0,0,0.50);
+    }
+    @media (max-width: 970px){
+      height: 55rem;
+      top: 15rem;
+      h1{
+        padding-left: 3rem;
+        font-size: 4rem;
+        width: auto;
+      }
+      h2{
+        @include font-rules('light');
+        padding-left: 3rem;
+        margin-top: 2rem;
+        font-size: 2rem;
+        width: 25.5rem;
+      }
+    }
+  }
+}
+
+.portfolio-heading {
+	text-align: left;
+
+	h1, h2 {
+	    font-family: Gotham A,Gotham B,sans-serif;
+		color: #FFF;
+		width: 700px;
+		width: 70rem;
+		text-shadow: 0 2px 4px rgba(0,0,0,.5);
+		text-shadow: 0 0.2rem 0.4rem rgba(0,0,0,.5);
+	}
+
+	h1 {
+
+		font-weight: 300;
+		font-size: 72px;
+		font-size: 7.2rem;
+		line-height: 1;
+		margin-bottom: 13px;
+		margin-bottom: 1.3rem;
+	}
+
+	h2 {
+		font-weight: 400;
+		font-size: 20px;
+		font-size: 2rem;
+		line-height: 1.05;
+
+	}
+}
+#map{
+	position: relative;
+}
+#portfolio-intro, #portfolio-case-study, #portfolio{
+  padding-bottom: 6rem;
+  text-align: center;
+  h1{
+
+    @include font-rules('light');
+    font-size: 3.2rem;
+    color: color('dark-blue');
+  }
+  p{
+    @include font-rules('book');
+    font-size: 1.8rem;
+    color: color('dark-gray');
+  }
+}
+
+#portfolio-map {
+	width: 100%;
+	height: 600px;
+
+	h3 {
+		font-size: 2rem;
+		margin-bottom: 10px;
+	}
+}
+#portfolio-map-stats{
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 20px 0px 30px;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	-webkit-transition: font-size .5s;
+	transition: font-size .5s;
+	.number{
+		font-size: 8rem;
+		-webkit-transition: padding .5s;
+		transition: padding .5s;
+	}
+	.stats{
+		-webkit-transition: font-size .5s;
+		transition: font-size .5s;
+	}
+
+	&.active{
+		.number{
+			font-size: 3rem;
+		}
+		.stats{
+			font-size: 1.1rem;
+		}
+		padding: 10px 0 20px;
+	}
+	@media (max-width: 970px){
+	  .grid-large-column-3{
+	  	width: calc((100% - ((2) * 1rem)) / 3);
+	  	padding: 0 1rem;
+	  }
+	  .number{
+	  	font-size: 4rem;
+	  }
+	  .stats{
+	  	font-size: 1.4rem;
+	  }
+	}
+}
+
+#portfolio-wrapper, #portfolio-filter {
+	background-color: color('light-gray');
+}
+#portfolio-filter {
+	padding-top: 2rem;
+}
+
+/*#portfolio-filter + .grid-container {
+	background-color: color('light-gray');
+}*/
+
+#portfolio {
+	.grid-filter-gutter {
+		width: 2%;
+	}
+
+	.portfolio-container {
+		width: 32%;
+		margin-bottom: 2%;
+
+		@media (max-width: 480px) {
+			width: 100%;
+		}
+
+		img[alt="play"] {
+			position: absolute;
+			width: 25%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}

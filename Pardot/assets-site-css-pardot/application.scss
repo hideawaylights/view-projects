@@ -1,0 +1,91 @@
+// - - css-burrito v1.5 | mit license | github.com/jasonreece/css-burrito
+
+// - - - - - - - - - - - - - - - - - - -
+// - - application.scss
+// contains an import section for libs, core, and modules, the inbox,
+// and a shame section for quick fixes and hacks.
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - libs
+// add css frameworks and libraries here.
+// be sure to load them after the variable overrides file
+// if you want to change variable values.
+
+// - - variable overrides for sass libraries
+@import 'libs/library-variable-overrides';
+
+// - - normalize.css v3.0.2 - reset
+@import 'libs/normalize';
+
+// - -  bourbon neat - v1.7.1 - grid system
+@import 'libs/bourbon/bourbon';
+@import 'libs/neat/neat';
+
+// - -  slick - v1.3.15 - carousel
+// this file has been edited
+ @import 'libs/slick';
+
+// - - nouislider - jquery slider
+ @import 'libs/nouislider';
+
+// - - - - - - - - - - - - - - - - - - -
+// - - core
+
+// - - core/settings
+// @font-face declarations, variables
+@import 'core/settings';
+
+// - - core/utilities
+// extends, functions, and mixins
+@import 'core/utilities';
+
+// - - core/base
+// base-level tags (body, p, etc.)
+@import 'core/base';
+
+// - - core/layout
+// margin, padding, sizing
+@import 'core/layout';
+
+// - - core/skin
+// backgrounds, borders, box-shadow, etc
+@import 'core/skin';
+
+// - - core/typography
+// fonts and colors
+ @import 'core/typography';
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - modules
+// add new modules to the modules/_modules.scss file and they'll get pulled in here.
+@import 'modules/modules';
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - inbox
+// the inbox allows developers, and those not actively working on the project
+// to quickly add styles that are easily seen by the maintainer of the file.
+
+
+    // Pardot overrides and developer styles // mike@ofad.co
+
+    // Pardon "main.css" import
+    @import 'overrides/legacy/pardot-main-import';
+
+    // @import 'overrides/utilities/vars';
+    @import 'overrides/utilities/functions';
+    @import 'overrides/utilities/mixins';
+
+    // New core
+    @import 'overrides/core/forms';
+    // @import 'overrides/core/table';
+
+    // Grid framework
+    @import 'overrides/layout/framework-grid';
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - shame
+// need to add a quick fix, hack, or questionable technique?  add it here, fix it later.

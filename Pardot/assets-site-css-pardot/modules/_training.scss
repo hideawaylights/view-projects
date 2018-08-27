@@ -1,0 +1,25 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - training module
+// styles for the training module
+
+.training-image {
+  display: none;
+  @include breakpoint(bp('tablet')){
+    @include clearfix;
+    @include span-columns(5 of 10);
+    position: absolute;
+    bottom: 0;
+    height: 40rem;
+    $training-images: ('occupants', 'electricians', 'glaziers'); 
+    @each $img in $training-images {
+      &--#{$img} {
+        background: url('../img/training/#{$img}.png') center bottom no-repeat; 
+        background-size: contain; 
+      }
+    }
+  }
+}
+
+.training-image-mobile {
+  max-height: 40rem;
+}

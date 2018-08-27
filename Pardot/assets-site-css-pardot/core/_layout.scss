@@ -1,0 +1,140 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - layout
+// global layout classes - height, width, padding, margin, etc.
+
+.l-section-heading {
+  padding-bottom: 2.5rem;
+  padding-top: 5rem;
+  text-align: center;
+  @include breakpoint(bp('tablet')){
+    p {
+      padding: 0.5rem 0;
+    }
+  }
+}
+
+.l-section-heading-mobile {
+  text-align: center;
+  padding-top: 1.2rem;
+}
+
+.l-section-footer {
+  text-align: center;
+  padding-top: 1.2rem;
+  padding-bottom: 3.2rem;
+  @include breakpoint(bp('tablet')){
+    padding-bottom: 6rem;
+    padding-top: 3rem;
+  }
+}
+
+.l-text-padding-top + .l-text-padding-top {
+  padding-top: 1rem;
+}
+
+.l-link-arrow-list {
+  li {
+    float: left;
+    margin-right: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.l-link-arrow {
+  display: inline-block;
+  padding-top: 1rem;
+  &:after {
+    content: ' \203A';
+  }
+}
+
+.l-link-arrow-white {
+  @include link-color(#fff);
+  display: inline-block;
+  padding-top: 1rem;
+  &:after {
+    content: ' \203A';
+  }
+}
+
+.l-link-arrow-simple {
+  &:after {
+    content: ' \203A';
+  }
+}
+
+.l-animation-container {
+  overflow: hidden;
+}
+
+.l-image-loaded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+  margin-top: -25px;
+  margin-left: -25px;
+  z-index: 2;
+}
+
+/* START fancy line title */
+.fancy-container{
+	img{
+		width: 40px;
+		display: block;
+		margin: 0 auto;
+		margin-top: 2rem;
+	}
+	.subtitle {
+	  margin: 2rem 0 4em;
+	  font-size: 1.2rem;
+	  @include font-rules('bold');
+	  color: color('dark-blue');
+	  &.orange {
+	  	color: color('orange');
+	  }
+	  &.alt-dark-blue {
+	  	color: color('alternate-dark-blue');
+	  }
+	}
+	.fancy {
+	  line-height: 0.5;
+	  text-align: center;
+	}
+	.fancy span {
+	  display: inline-block;
+	  position: relative;  
+	}
+	.fancy span:before,
+	.fancy span:after {
+	  content: "";
+	  position: absolute;
+	  height: 3px;
+	  border-bottom: 1px solid color('dark-blue');
+	/*  border-top: 1px solid color('dark-blue');*/
+	  top: 0;
+	  width: 70px;
+	}
+	.fancy.orange span:before,
+	.fancy.orange span:after {
+	  	border-bottom: 1px solid color('orange');
+	}
+	.fancy.alt-dark-blue span:before,
+	.fancy.alt-dark-blue span:after {
+	  	border-bottom: 1px solid color('alternate-dark-blue');
+	}
+	
+	.fancy span:before {
+	  right: 100%;
+	  margin-right: 15px;
+	}
+	.fancy span:after {
+	  left: 100%;
+	  margin-left: 15px;
+	}
+}
+
+/* END fancy line title */

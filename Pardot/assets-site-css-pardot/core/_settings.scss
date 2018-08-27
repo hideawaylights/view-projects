@@ -1,0 +1,126 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - settings
+// @font-face declarations, variables
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - @font-face
+// add fonts to project as needed by updating the $fonts map below in the following format -
+// 'font-family-name': 'font-weight'
+
+// The comment below is required as part of the license agreement with fontspring.com
+
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2015 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Mark Simonson Studio
+ * License URL: http://www.fontspring.com/licenses/mark-simonson-studio/webfont
+ *
+ *
+ */
+
+// - - - - - - - - - - - - - - - - - - -
+// - - variables
+
+$typography: (
+    root-font-size: 		62.5%,
+	base-font-size: 		16px,
+	secondary-font-size: 	20px,
+	base-line-height: 		1.8,
+	secondary-line-height: 	2,
+	condensed-line-height: 	1.5,
+	base-margins-type: 		2rem,
+);
+
+// Variables > Typography
+$ultra-light: 	100;
+$light: 		300;
+$normal: 		400;
+$semi-bold: 	600;
+$bold: 			700;
+$ultra-bold:	900;
+
+// Common font sizing
+$smallest-font-size: 	0.8125rem; 	// =   13px
+$tiny-font-size: 		0.875rem; 	// =   14px
+$small-font-size: 		0.9375rem; 	// =   15px
+$base-font-size: 		1.063rem; 	// =   17px
+$secondary-font-size: 	1.25rem; 	// =   20px
+$large-font-size: 		1.375rem; 	// =   22px
+$larger-font-size: 		1.625rem; 	// =   26px
+
+$letter-spacing-1:		-.02em;
+$letter-spacing-2:		.02em;
+$letter-spacing-3:		.03em;
+$letter-spacing-4:		.06em;
+$letter-spacing-5:		.085em;
+
+
+// - - colors
+$colors: (
+  'darker-blue':            #333f48,
+  'dark-blue':              #34657F, // Primary header color
+  'alternate-dark-blue':    #023c5d,
+  'alternate-dark-blue2':   #0c242f,
+  'alternate-dark-blue3':   #344148,
+  'alternate-mid-blue':     #327dae,
+  'alternate-mid-blue2':    #397CAE,
+  'mid-blue':               #8dc0d1,
+  'light-blue':             #95BFD1, // Primary link color
+  'neon-blue':              #009ACB,
+  'neon-blue2':             #00B4CB,
+  'dark-gray':              #4A4A4A, // Primary font color
+  'light-gray':             #F0F0F0,
+  'mid-gray':               #7D8287, // Secondary link color
+  'alternate-mid-gray':     #a4aab1,
+  'alternate-mid-gray2':    #4b4b4b,
+  'orange':                 #f56026,
+  'grey-bg':                #D6E1E6,
+
+  'base-font-color':        #4A4A4A,
+  'alt-font-color':         #34657F,
+  'link-color':             #95BFD1,
+  'alt-link-color':         #7D8287,
+);
+
+// - - typography
+$fonts: (
+  'bold': ("Gotham A", "Gotham B", sans-serif),
+  'book': ("Gotham A", "Gotham B", sans-serif),
+  'light': ("Gotham A", "Gotham B", sans-serif),
+  'medium': ("Gotham A", "Gotham B", sans-serif)
+);
+
+$fonts-weight: (
+  'bold': 700,
+  'book': 400,
+  'light': 300,
+  'medium': 500
+);
+
+// - - breakpoints
+$breakpoints: (
+  'mobile': 480px,
+  'tablet': 768px,
+  'desktop': 960px
+);
+
+// - - grid
+$grid-settings: (
+  'margin': 1.76991%
+);

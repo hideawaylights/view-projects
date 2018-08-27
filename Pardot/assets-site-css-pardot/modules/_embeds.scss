@@ -1,0 +1,109 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - embeds module
+// styles for the embeds module
+
+// - - - - - - - - - - - - - - - - - - -
+// - - marketo embed overrides
+#mktoForm_1033 {
+  font-size: 1.6rem !important;
+  width: 100% !important;
+}
+
+.embed-contact-form {
+  min-height: 69.8rem;
+  @include breakpoint(bp('mobile')){
+    min-height: 78.6rem;
+  }
+  @include breakpoint(bp('tablet')){
+    min-height: auto;
+  }
+  .mktoForm .mktoFormCol {
+    margin-bottom: 0 !important;
+    width: 100% !important;
+  }
+
+  .mktoForm .mktoOffset {
+    float: none !important;
+    height: auto !important;
+    width: auto !important;
+  }
+
+  .mktoForm .mktoFieldWrap {
+    float: none !important;
+    height: auto !important;
+    width: auto !important;
+  }
+
+  .mktoForm .mktoGutter {
+    float: none !important;
+    height: auto !important;
+    width: auto !important;
+  }
+
+  .mktoForm input[type=text],
+  .mktoForm input[type=url],
+  .mktoForm input[type=email],
+  .mktoForm input[type=tel],
+  .mktoForm input[type=number],
+  .mktoForm input[type=date],
+  .mktoForm select.mktoField,
+  .mktoForm textarea.mktoField {
+    border: 0.2rem solid #999 !important;
+    box-shadow: none  !important;
+    color: color('dark-blue') !important;
+    font-family: font('light') !important;
+    line-height: inherit !important;
+    margin: 0.6rem 0 !important;
+    padding: 1.5rem 1rem !important;
+    width: 100% !important;
+    &:focus {
+      border: 0.2rem solid #999 !important;
+    }
+  }
+
+  .mktoForm label {
+    color: color('dark-gray') !important;
+    font-family: font('light');
+    font-weight: normal;
+    width: 100% !important;
+    // display: none !important;
+  }
+
+  .mktoForm .mktoAsterix {
+    float: left !important;
+    padding: 0 1rem 0 0 !important;
+  }
+
+  .mktoForm select.mktoField {
+    height: 5rem;
+    background: #fff !important;
+  }
+
+  .mktoForm .mktoButtonWrap {
+    margin: 0 !important;
+  }
+
+  .mktoForm .mktoButtonWrap.mktoInset .mktoButton {
+    background-color: color('dark-blue') !important;
+    background-image: none !important;
+    border-radius: 2.6rem !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #fff !important;
+    font-size: 1.8rem !important;
+    font-family: font('book') !important;
+    letter-spacing: 0.045rem !important;
+    margin: 0.25rem !important;
+    padding: 1rem 2rem !important;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - vidyard embed overrides
+
+// - - - - - - - - - - - - - - - - - - -
+// - - forces vidyard inline embed to not be fixed height and width
+.embed-vidyard-inline span[id*="vidyard_span_"] {
+  height: 100% !important;
+  width: 100% !important;
+}

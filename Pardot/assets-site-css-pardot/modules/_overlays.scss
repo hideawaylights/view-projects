@@ -1,0 +1,526 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - overlays module
+// styles for the overlays module
+
+// - - - - - - - - - - - - - - - - - - -
+// - - overlay-wrapper
+.overlay-wrapper {
+  position: relative;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - overlay-cover
+.overlay-cover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.overlay-play-button-hero {
+  background: url('../img/video-play-button.png') center center no-repeat;
+  height: 8.2rem;
+  width: 8.2rem;
+  margin: 0 auto;
+}
+
+.overlay-read-button-hero {
+  background: url('../img/read-button.png') center center no-repeat;
+  height: 8.2rem;
+  width: 8.2rem;
+  margin: 0 auto;
+}
+
+.overlay-play-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 35%;
+  background: url('../img/video-play-button.png') center center no-repeat;
+  background-size: contain;
+  height: 25%;
+  margin: 0 auto;
+  width: 25%;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - overlay-container
+.overlay-container {
+  position: relative;
+  overflow: hidden;
+  img {
+    width: 100%;
+    max-width: none;
+  }
+  @include attention() {
+    .overlay-rollover {
+      bottom: 0;
+      opacity: 1;
+      transition: all 0.1s ease-in;
+    }
+    .overlay-full {
+      bottom: 3.8rem;
+      background: color('dark-blue');
+      opacity: 0.88;
+      transition: all 0.1s ease-in;
+    }
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - overlay-hero
+.overlay-hero {
+  padding: 2.5rem 0 3.5rem;
+  text-align: center;
+  @include breakpoint(bp('tablet')){
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    max-width: 55rem;
+  }
+}
+
+.overlay-hero-img {
+  display: block;
+  margin: 0 auto;
+  max-width: none;
+  min-height: 20rem;
+  width: 100%;
+  @include breakpoint(bp('tablet')){
+    min-height: 41.4rem;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - overlay-play-button
+.overlay-play-button-container {
+  display: block;
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - overlay-tint-container
+.overlay-tint-container {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.overlay-tint-wrapper {
+  display: inline-block;
+  padding: 0.5rem;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  @include attention(){
+    background: color('orange');
+  }
+  &--small {
+    padding: 0.2rem;
+  }
+  &--active {
+    background: color('orange');
+  }
+}
+
+.overlay-tint-icon {
+  background-size: cover;
+  cursor: pointer;
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  @include breakpoint(bp('tablet')){
+    height: 4.4rem;
+    width: 4.4rem;
+  }
+}
+
+.overlay-hero-background {
+  @include gradient;
+  @include breakpoint(bp('tablet')){
+    background: none;
+  }
+}
+
+.overlay-heading {
+  font-family: font('book');
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  @include breakpoint(bp('tablet')){
+    font-size: 4rem;
+    line-height: 4.3rem;
+    padding-bottom: 1rem;
+  }
+  @include breakpoint(bp('desktop')){
+    font-size: 5rem;
+    line-height: 5.3rem;
+  }
+}
+
+.overlay-text {
+  font-family: font('medium');
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  padding-top: 1rem;
+  @include breakpoint(bp('tablet')){
+    font-size: 1.8rem;
+    line-height: 1.9rem;
+  }
+}
+
+.overlay-hero-heading {
+  font-size: 3.4rem;
+  line-height: 3.7rem;
+}
+
+.overlay-hero-text {
+  color: rgba(255, 255, 255, 0.7);
+  padding-bottom: 1.5rem;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - overlay-corner-top
+.overlay-corner-top {
+  display: none;
+  @include breakpoint(bp('tablet')){
+    position: absolute;
+    top: -0.1rem;
+    right: 0;
+    display: block;
+    background: #1f272f;
+    color: rgba(255,255,255, 0.5);
+    font-family: font('book');
+    font-size: 1.4rem;
+    max-width: 11rem;
+    padding: 1rem 0;
+    text-align: center;
+    width: 50%;
+    z-index: 1;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - overlay-full
+.overlay-full {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+  /*background: rgba(31,39,57, 0.62);*/
+  background: color('dark-blue');
+  color: #fff;
+  opacity: 0.88;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - overlay-full-cover
+.overlay-full-cover {
+  background: rgba(31,39,57, 0.62);
+  color: #fff;
+  opacity: 0;
+  padding: 0.5rem;
+  text-align: center;
+  transition: ease-in-out 0.3s all;
+  @include attention(){
+    opacity: 1;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  &.has-animation {
+    @for $i from 1 through 3 {
+      &.has-animation-delay-#{$i} {
+        animation: fade-in-out 1.2s ease-in-out;
+        animation-delay: $i * 0.6s;
+      }
+    }
+
+    &.has-animation-delay-4 {
+      animation: fade-in 1.2s ease-in-out;
+      animation-delay: 2.4s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+}
+
+.overlay-full-cover-text-container {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1rem 0;
+}
+
+.overlay-full-cover-video-small {
+  display: none;
+  @include breakpoint(bp('desktop')){
+    display: inline-block;
+    height: 4rem;
+    margin-bottom: 0.5rem;
+    width: 4rem;
+  }
+}
+
+.overlay-full-cover-video-large {
+  display: none;
+  @include breakpoint(bp('desktop')){
+    display: inline-block;
+    height: 5rem;
+    margin-bottom: 0.5rem;
+    width: 5rem;
+  }
+}
+
+.overlay-full-cover-heading {
+  font-size: 1.8rem;
+  line-height: 1.9rem;
+  &--large {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+}
+
+.overlay-full-cover-subheading {
+  color: #d8dfe0;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  &--large {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - overlay-rollover
+.overlay-rollover {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+  background: color('dark-gray');
+  color: #fff;
+  opacity: 0;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - overlay-carousel-base
+// overlay-carousel-container-left
+// overlay-carousel-container-right
+// overlay-portfolio-container
+@mixin overlay-carousel-base {
+  position: absolute;
+  width: 48rem;
+  padding: 4rem 4rem 0;
+  color: #fff;
+  @include breakpoint(bp('tablet')){
+    background: rgba(0,81,107,0.8);
+  }
+}
+
+// - - overlay-carousel-container
+.overlay-carousel-container-left {
+  @include overlay-carousel-base;
+  padding-bottom: 4rem;
+  bottom: 4.5rem;
+  left: 0;
+}
+
+// - - overlay-carousel-container
+.overlay-carousel-container-right {
+  @include overlay-carousel-base;
+  padding-bottom: 4rem;
+  bottom: 4.5rem;
+  right: 0;
+}
+
+// - - overlay-portfolio-container
+.overlay-portfolio-container {
+  @include overlay-carousel-base;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  padding-bottom: 2rem;
+  &--small {
+    padding: 2rem;
+    @include breakpoint(bp('desktop')) {
+      padding: 3rem 2rem;
+    }
+  }
+}
+
+.overlay-headshot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: #8dc0d1;
+  opacity: 0;
+  overflow: auto;
+  padding-bottom: 2.5rem;
+  transition: top 0.4s ease-in-out;
+  z-index: -1;
+  &.is-active {
+    transition: top 0.2s ease-in-out;
+    top: 0;
+    opacity: 1;
+    z-index: 2;
+    .overlay-headshot-close {
+      z-index: 3;
+    }
+  }
+}
+
+.overlay-headshot--dark {
+  background: #08232f;
+}
+
+.overlay-headshot-close {
+  position: absolute;
+  right: 0;
+  top: 3rem;
+  cursor: pointer;
+}
+
+.overlay-headshot-thumbnail {
+  @include span-columns(3 of 10);
+  border-radius: 50%;
+  margin-top: 3.5rem;
+}
+
+.overlay-headshot-text {
+  @include span-columns(6.75 of 10);
+  @include omega;
+  color: #fff;
+  margin-top: 3.5rem;
+}
+
+.overlay-headshot-board-thumbnail {
+  @include span-columns(2 of 10);
+  border-radius: 50%;
+  margin-top: 3.5rem;
+}
+
+.overlay-headshot-board-text {
+  @include span-columns(7.75 of 10);
+  @include omega;
+  color: #fff;
+  margin-top: 3.5rem;
+}
+
+.overlay-careers-thumbnail {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  @include breakpoint(bp('tablet')){
+    float: right;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - documentation
+
+//  ddddddddddddd
+//  d::::::::::::ddd
+//  d:::::::::::::::dd
+//  ddd:::::ddddd:::::d
+//    d:::::d    d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d    d:::::d
+//  ddd:::::ddddd:::::d
+//  d:::::::::::::::dd
+//  d::::::::::::ddd
+//  ddddddddddddd
+
+/*doc
+---
+title: overlay video
+name: 01/overlay-video
+category: overlays
+---
+```html_example
+<div class="overlay-wrapper">
+  <div class="hero-home-girl"></div>
+  <div class="overlay-play-button-container">
+    <header>
+      <h2 class="u-hide-mobile overlay-heading">A more intelligent window</h2>
+    </header>
+    <div class="overlay-play-button-hero"></div>
+    <p class="overlay-text">Watch Video</p>
+  </div>
+  <div class="u-hide-all">
+    <div class="js-carousel-mobile-heading carousel-mobile-container">
+      <h2 class="carousel-mobile-heading">A more intelligent window</h2>
+    </div>
+  </div>
+</div>
+
+```
+*/
+
+/*doc
+---
+title: overlay full
+name: 02/overlay-full
+category: overlays
+---
+```html_example
+<div class="overlay-container">
+  <div class="overlay-full">W Hotel</div>
+  <div class="overlay-rollover">Hospitality</div>
+  <img src="../img/portfolio/featured-carousel/large/435-indio-way.jpg" alt="Indio Way">
+</div>
+```
+*/
+
+/*doc
+---
+title: overlay corner top
+name: 03/overlay-corner-top
+category: overlays
+---
+```html_example
+<div class="overlay-container">
+  <img src="../img/portfolio/featured-carousel/large/centurylink-technology-center.jpg" alt="CenturyLink">
+  <div class="overlay-corner-top">Workplace</div>
+</div>
+```
+*/
+
+/*doc
+---
+title: hero overlay
+name: 04/overlay-hero
+category: overlays
+---
+```html_example
+<section>
+  <div class="overlay-wrapper">
+    <img class="overlay-hero-img" src="../img/contact/contact-large.jpg" alt="A World of Options">
+    <div class="overlay-hero-background">
+      <div class="grid-container">
+        <div class="grid-shift">
+          <div class="overlay-hero">
+            <h2 class="contact-hero-heading">A World of Options</h2>
+            <p class="contact-hero-text">Discover how the gold standard in architectural glass can transform your space.</p>
+            <a class="button-light" href="#">End-to-End Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+```
+*/

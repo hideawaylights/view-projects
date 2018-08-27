@@ -1,0 +1,249 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - accordions module
+// styles for the accordions module
+
+.accordion-container {
+  position: relative;
+  cursor: pointer; 
+}
+
+.accordion-hidden-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - accordion-recent-buzz
+
+.accordion-recent-buzz-container {
+  position: relative;
+  text-align: center;
+  @include breakpoint(bp('tablet')){
+    background: url('../img/svg/chevron-down.svg') no-repeat 2rem center;
+    margin-bottom: 1.5rem;
+    .is-active & {
+      background: url('../img/svg/chevron-up.svg') no-repeat 2rem center;
+    }
+  }
+}
+
+.accordion-image-wrapper {
+  cursor: pointer;
+  display: block;
+  height: 8.5em;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+  white-space: nowrap;
+  @include breakpoint(bp('tablet')){
+    height: 8rem;
+  }
+}
+
+.accordion-center-vert {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.accordion-image-center-vert {
+  vertical-align: middle;
+}
+
+.accordion-recent-buzz-link-list {
+  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  text-align: center;
+  @include breakpoint(bp('tablet')){
+    padding-top: 0.5rem;
+    text-align: left;
+  }
+
+  li {
+    margin-bottom: 1rem;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - accordion dark
+.accordion-dark {
+  padding-top: 2rem;
+}
+
+.accordion-padding {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - accordion careers-item
+@mixin accordion-dark-item-base {
+  background-color: color('dark-blue');
+  border-radius: 3rem;
+  color: #fff;
+  
+  .accordion-career-location {
+    color: #fff;
+  }
+} 
+
+.accordion-dark-item {
+  @include clearfix;
+  padding: 1.5rem 2% 1.5rem 0;
+  margin-top: 1rem;
+
+  @include attention(){
+    @include accordion-dark-item-base;
+  }
+
+  .is-active & {
+    @include accordion-dark-item-base;
+  }
+}
+
+// - - accordion-hot-spot
+.accordion-hot-spot {
+  background: url('../img/svg/hot-spot.svg') no-repeat center center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-left: 1rem;
+  margin-top: -1.8rem;
+  height: 3.6rem;
+  width: 3.6rem;
+
+  .is-active & {
+    background: url('../img/svg/hot-spot-close.svg') no-repeat center center;
+    transform: rotate(90deg);
+  }
+}
+
+.accordion-career-heading {
+  float: left;
+  font-family: font('medium');
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  max-width: 80%;
+  padding-top: 0.5rem;
+  padding-left: 6rem;
+  text-align: left;
+
+  @include breakpoint(bp('tablet')){
+    padding-right: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.7rem;
+    max-width: 55%;
+  }
+}
+
+.accordion-career-location {
+  color: color('dark-gray');
+  float: right;
+  font-family: font('book');
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  max-width: 35%;
+  padding-top: 0.5rem;
+  text-align: right;
+}
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - accordion-list 
+// on training landing pages - occupants, glaziers, etc.
+
+.accordion-list {
+  margin-left: 1%;
+  width: 98%;
+  li {
+    background: #d6e1e6;
+    &:nth-child(2n) {
+      background: #fff;
+    }
+    @include attention() {
+      background: color('dark-blue');
+    }
+  }
+  a {
+    @include link-color(color('dark-gray'));
+    display: block;
+    padding-left: 5.5rem;
+    padding-bottom: 1.75rem;
+    padding-top: 1.75rem;
+    &:focus {
+      @include link-color('dark-gray');
+      text-decoration: none;
+    }
+    &:hover,
+    &:active, {
+      @include link-color(#fff);
+      text-decoration: none;
+    }
+  }
+}
+
+.accordion-icon-pdf {
+  background: url('../img/training/icons/pdf.png') 1rem center no-repeat;
+}
+
+.accordion-icon-video {
+  background: url('../img/training/icons/video.png') 1rem center no-repeat;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - documentation
+
+//  ddddddddddddd
+//  d::::::::::::ddd
+//  d:::::::::::::::dd
+//  ddd:::::ddddd:::::d
+//    d:::::d    d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d    d:::::d
+//  ddd:::::ddddd:::::d
+//  d:::::::::::::::dd
+//  d::::::::::::ddd
+//  ddddddddddddd
+
+/*doc
+---
+title: accordion
+name: accordion
+category: accordion
+---
+```html_example
+<section>
+  <ul class="accordion-dark">
+    <li>
+      <div class="js-accordion accordion-container accordion-dark-item">
+        <span class="accordion-hot-spot"></span>
+        <span class="accordion-career-heading">Heading One</span>
+      </div>
+      <div class="accordion-hidden-container">
+        <div class="accordion-padding">
+          <h2>Hidden Heading One</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dolor non, deserunt, consequatur ipsa molestiae repellendus doloribus provident facere nulla debitis quas ut sed quasi voluptatum illum incidunt veritatis. Similique?</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="js-accordion accordion-container accordion-dark-item">
+        <span class="accordion-hot-spot"></span>
+        <span class="accordion-career-heading">Heading Two</span>
+      </div>
+      <div class="accordion-hidden-container">
+        <div class="accordion-padding">
+          <h2>Hidden Heading Two</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dolor non, deserunt, consequatur ipsa molestiae repellendus doloribus provident facere nulla debitis quas ut sed quasi voluptatum illum incidunt veritatis. Similique?</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+```
+*/

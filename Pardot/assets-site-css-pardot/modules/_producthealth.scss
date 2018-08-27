@@ -1,0 +1,549 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - product health and welness module
+// styles for the product module
+// This page is highly customized in terms of style and difer quite a bit from the other pages of the site.
+// In the future a designer should look at consolidating styling and then have a developer go through CSS
+// and consolidate there as well.
+/*.subnav-wrapper{
+	height: 8rem;
+	padding-bottom: 10px;
+	.grid-container{
+/*		background-color: #fcfcfc;*!/
+	}
+}*/
+#delightful-environments{
+	padding-top: 12.5rem;
+	padding-bottom: 9.6rem;
+	background-color: color('light-gray');
+	text-align: center;
+	img{
+		max-width: 90px;
+		display: block;
+		margin:0 auto;
+	}
+	h2{
+		color:  color('darker-blue');
+		margin-top: 1.9rem;
+		margin-bottom: 1.7rem;
+		font-family: Gotham A, Gotham B, sans-serif;
+		font-size: 3.9rem;
+		letter-spacing: .05rem;
+	}
+	p{
+		color:  color('darker-blue');
+		font-size:  1.96rem;
+		letter-spacing: .015rem;
+
+	}
+	 @media (max-width: 970px){
+	 	padding-top: 4rem;
+	 }
+	.block-container{
+		margin-top: 5.7rem;
+		margin-top: 6rem;
+		position: relative;
+		&:after{
+	      content:'';
+	      clear: both;
+	      display: block;
+	    }
+		.block{
+	      width: 33%;
+	      img{
+	      	width: 100%;
+	      	max-width: 100%;
+	      }
+	      @media (max-width: 800px){
+	      	width: 50%;
+	      	&:nth-child(2n){
+	      		border-right: none;
+	      		width: 50%;
+	      	}
+	      	&:nth-child(3n){
+	      		margin-left: 25%;      			
+	      	}
+	      	&:nth-child(1), &:nth-child(2){
+	      		border-bottom: 1px solid color('darker-blue');
+	      	}
+	      	
+
+	      }
+
+
+	      float: left;
+	      text-align: center;
+	      @include font-rules('book');
+	      font-size: 1.6rem;
+	      color: color('darker-blue');
+	      border-right: 1px solid color('darker-blue');
+	      &:last-child{
+	      	border-right: none;
+	      }
+	      img.arrow{
+	      	float: left;
+	      	width: 4.8rem;
+	      	margin-top: 5px;
+	      }
+
+	    }
+	}
+
+	.button {
+		margin-top: 20px;
+	}
+}
+#quotes, #quotes2{
+
+	//background-image: url(/assets/img/svg/product/health-welness/bg-quote.svg);
+	//background-size: cover;
+
+	color: #FFF;
+	text-align:center;
+	position: relative;
+	.top-title{
+		position: absolute;
+		top: 5rem;
+		left: 0;
+		width: 100%;
+		z-index: 100;
+	}
+	.grid-container{
+		padding: 0 1rem 0 4rem;
+	}
+	h3{
+		text-align: left;
+		padding-top: 2rem;
+		padding-bottom: 4rem;
+	}
+	img{
+		max-width: 125px;
+		display: block;
+		margin:0 auto;
+	}
+	.js-carousel{
+		z-index: 50;
+		min-height: 480px;
+		.js-carousel-slide{
+			//padding-bottom: 2rem;
+		}
+		.js-carousel-arrows--desktop{
+			.slick-prev, .slick-next{
+				top: 40%;
+			}
+		}
+	}
+
+	.carousel-light .carousel-controls {
+	    background: none;
+	}
+	.carousel-light .slick-list:after {
+	    border-width: 0px;
+	}
+
+	
+	blockquote{
+		padding-top: 12rem;
+		padding-bottom:4rem;
+		margin-before:0;
+		margin-after:0;
+		margin-start:0;
+		margin-end:0;
+		margin-block-start:0;
+		margin-block-end: 0;
+		-webkit-margin-before: 0;
+		-webkit-margin-after: 0;
+		-webkit-margin-start: 0;
+		-webkit-margin-end: 0;
+		-moz-margin-before: 0;
+		-moz-margin-after: 0;
+		-moz-margin-start: 0;
+		-moz-margin-end: 0;
+		position: relative;
+		height: 48.8rem;
+		text-align: left;
+		&:after{
+			background: -webkit-linear-gradient(left, rgba(44,123,152,1) 52.7%, rgba(44, 122, 151, 0) 71.9%, rgba(43, 121, 151, 0) 79.6%, rgba(44,123,152,1) 91.1%);
+		background: -moz-linear-gradient(left, rgba(44,123,152,1) 52.7%, rgba(44, 122, 151, 0) 71.9%, rgba(43, 121, 151, 0) 79.6%, rgba(44,123,152,1) 91.1%);
+		background: linear-gradient(to right, rgba(44,123,152,1) 52.7%, rgba(44, 122, 151, 0) 71.9%, rgba(43, 121, 151, 0) 79.6%, rgba(44,123,152,1) 91.1%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c7b98', endColorstr='#2c7b98',GradientType=1 );
+			content: '';
+			z-index: 1;
+			position: absolute;
+			top:0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		img.back{
+			z-index: -2;
+			position: absolute;
+			right: -4%;
+			top: 0;
+			height: 100%;
+			max-width: none;
+		}
+
+		.grid-container{
+			z-index: 3;
+/*			position: relative;
+			margin: 0 auto;*/
+			max-width: 80%;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			margin-left: 10%;
+		}
+		p{
+			@include font-rules('light');
+			font-size: 2.7rem;
+			padding-bottom: 3rem;
+			padding-right: 40%;
+			letter-spacing: 0.01rem;
+			line-height: 3.45rem;
+
+			&:before {
+			    content: '“';
+			    margin-left: -30px;
+			    font-size: 8rem;
+			    margin-right: 0px;
+			    margin-top: 10px;
+			    position: absolute;
+			}
+
+			&:after {
+			    content: '”';
+			    font-size: 8rem;
+			    margin-top: 10px;
+			    margin-left: 7px;
+			    position: absolute;
+			}
+		}
+		small{
+			font-size: 90%;
+			strong{
+				font-size: 1.95rem;
+				@include font-rules('medium');
+			}
+			cite{
+				font-style: normal;
+				font-size: 105%;
+				@include font-rules('light');
+			}
+		}
+
+	}
+
+	@media (min-width: 1200px){
+		.back{
+			right: 3%!important;
+		}
+	}
+
+	@media (max-width: 970px){
+		.js-carousel{
+			min-height: 480px;
+		}
+		.js-carousel-controls{
+
+		}
+		.grid-container{
+			p{
+				padding-right: 0%;
+			}
+			h3{
+				text-align: center;
+			}
+		}
+		.back{
+			display: none;
+
+		}
+		blockquote{
+		height: 70rem;
+		padding-top: 10rem!important;
+		p{
+			font-size: 2rem;
+			&:before {
+			    margin-top: 10px;
+			}
+
+			&:after {
+			    margin-top: 10px;
+			}
+		}
+		&:after{
+			background: -webkit-linear-gradient(left, rgba(44,123,152,1) 0%, rgba(44,123,152,1) 100%);
+			background: -moz-linear-gradient(left, rgba(44,123,152,1) 0%, rgba(44,123,152,1) 100%);
+			background: linear-gradient(to right, rgba(44,123,152,1) 0%, rgba(44,123,152,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c7b98', endColorstr='#2c7b98',GradientType=1 );
+		}
+		}
+	}
+}
+
+#learn-from-experts{
+	grid-container{
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+	header{
+		margin-top: 6.7rem;
+		margin-bottom: 6.7rem;
+	}
+	h2{
+		/*color:  color('darker-blue');
+		@include font-rules('medium');*/
+		font-size: 3.9rem;
+		letter-spacing: 0.01rem;
+		color:  color('darker-blue');
+		line-height: 4rem;
+	}
+	h3{
+		color:  color('darker-blue');
+		@include font-rules('book');
+		font-size: 2.4rem;
+		padding-bottom: 1.2rem;
+		line-height: 2.5rem;
+
+	}
+	p{
+		padding-bottom: 2rem;
+		min-height: 75px;
+		padding-left: 28px;
+		line-height: 1.8rem;
+		font-size: 1.3rem;
+	}
+	.grid-large-2{
+		position: relative;
+		.play-btn{
+				position: absolute;
+				z-index: 1;
+				left: 50%;
+				top: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%)
+		}
+		picture{
+			img{
+				max-height: 280px;
+				width: 100%;
+			}
+		}
+			}
+	.social{
+		float:right;
+		padding-top: 10px;
+		img{
+			width: 25px;
+
+		}
+	}
+	padding-bottom: 9.4rem;
+/*	.arrow-down{
+		margin-top: 8rem;
+		margin-bottom: 4rem;
+	}*/
+	@media (max-width: 970px){
+		.grid-large-half:first-of-type{
+			margin-bottom: 4rem;
+		}
+		.grid-large-2{
+			picture{
+				img{
+					max-height: none;
+					height: 100%;
+				}
+			}
+		}
+
+	}
+}
+#blog-series {
+	.grid-container{
+		padding: 0rem 0 4.9rem 0;
+		margin:  auto!important;
+	}
+
+	background-color: color('light-gray');
+/*	h2{
+		color:  color('alternate-dark-blue');
+	}*/
+	header{
+		margin-top: 6.7rem;
+		margin-bottom: 5.2rem;
+	}
+	h2{
+		color:  color('darker-blue');
+		margin-top: 2.4rem;
+		margin-bottom: 2rem;
+		font-family: Gotham A, Gotham B, sans-serif;
+		font-size: 4rem;
+		line-height: 4rem;
+	}
+	h3{
+		color:  color('darker-blue');
+		font-family: Gotham A, Gotham B, sans-serif;
+		font-size: 1.98rem;
+	}
+	@media (min-width: 971px){
+	  .grid-large-column-3 {
+	  	width: calc((100% - ((2) * 2.8rem)) / 3);
+	      margin-right: 2.8rem
+	  }
+	  .grid-large-column-3:last-child {
+	      margin-right: 0
+	  }
+	  .blog-column{
+	  	width: 81%;
+	  	}
+	  h2{
+	  	margin-bottom: 0;
+	  }
+	}
+
+	.blog-column{
+		h3, p{
+			color:  color('darker-blue');
+
+		}
+		h3{
+			font-size: 2.6rem;
+			margin-bottom: .5rem;
+			@include font-rules('medium');
+		}
+		.image{
+			margin-bottom: 2.4rem;
+			height: auto;
+		}
+		.text{
+			min-height: 85px;
+		}
+		p{
+			font-size: 1.8rem;
+			min-height: 55px;
+
+		}
+		a{
+			font-size: 1.3rem;
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+		@media (max-width: 970px){
+			.grid-large-column-3{
+				margin-bottom: 4rem;
+			}
+		}
+	}
+}
+#indepth-study{
+	text-align: center;
+	padding-bottom: 6.2rem;
+	header{
+		margin-bottom: 5.8rem;
+	}
+	h2{
+		color:  color('darker-blue');
+		margin-top: 2.4rem;
+		margin-bottom: 1rem;
+		font-family: Gotham A, Gotham B, sans-serif;
+		font-size: 4rem;
+		line-height: 4rem;
+	}
+	p{
+		margin-top: 4rem;
+		color: color('darker-blue');
+		line-height: 1.4;
+		@include font-rules('book');
+		font-size: 2rem;
+	}
+	img{
+		max-height: 420px;
+	}
+	.button.primary{
+		margin: 6.6rem;
+		white-space: nowrap;
+	    width: auto;
+	    padding-left: 30px;
+	    padding-right: 30px;
+	    /* margin-bottom: 20px; */
+	    height: 50px;
+	    font-size: 1.74rem;
+	    font-weight: 500;
+	    padding-top: 8px;
+	}
+
+
+}
+#keep-reading{
+	//background-color: color('light-gray');
+	padding-bottom: 8rem;
+	header{
+	   margin-top: 5.5rem;
+	}
+	h2{
+	  font-size: 4rem;
+	  line-height: 4rem;
+	}
+	h2,h3,p {
+		color: color('darker-blue');
+	}
+	.grid-container{
+		max-width: 660px;
+		margin:  auto!important;
+		.grid-large-column-3{
+			.image{
+				height: 18rem;
+			}
+			img{
+				width:120px;
+			}
+			h3{
+				@include font-rules('medium');
+				font-size:  2rem;
+			}
+		}
+	}
+	@media (max-width: 970px){
+		.image{
+			margin-bottom: 0rem;
+		}
+		h3{
+			margin-bottom: 4rem;
+		}
+	}
+}
+
+
+	.slick-prev,
+	.slick-next {
+		top: 50%!important;
+		transform: translateY(-50%);
+		height: 45px;
+		text-align: center;
+/*
+
+		@include breakpoint(bp('tablet')){
+			width: 5rem;
+			height: 2rem;
+
+			&::before {
+				font-size: 72pt;
+			}
+
+			&:hover::before {
+				color: #34657f;
+			}
+		}*/
+
+		@include breakpoint(bp('desktop')) {
+			width: 4rem!important;
+			height: 5rem!important;
+			padding-left: 9rem!important;
+			padding-right: 11rem!important;
+
+			&::before {
+				font-size: 50pt!important;
+			}
+		}
+	}

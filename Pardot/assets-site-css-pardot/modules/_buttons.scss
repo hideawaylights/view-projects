@@ -1,0 +1,265 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - buttons module
+// styles for the buttons module
+
+$buttons: (
+  'dark': (
+    'bg-color': color('dark-blue'),
+    'text-color': #fff
+  ),
+  'light': (
+    'bg-color': #fff,
+    'text-color': color('light-blue')
+  ),
+  'clear': (
+    'bg-color': transparent,
+    'text-color': #fff
+  ),
+  'orange': (
+    'bg-color': transparent,
+    'text-color': color('orange')
+  ),
+  'blue-outline': (
+    'bg-color': transparent,
+    'text-color': color('dark-blue')!important,
+    'border-color': color('neon-blue')
+  )
+);
+
+@mixin button-base {
+  border-radius: 26px;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-family: font('book');
+  letter-spacing: 0.045rem;
+  margin: 0.25rem;
+  padding: 1rem 2rem;
+  &:after {
+    content: ' \203A';
+  }
+  @include attention() {
+    @include link-color(#fff);
+    background: color('orange');
+    text-decoration: none;
+  }
+}
+
+.button-wrapper {
+  text-align: center;
+  padding-bottom: 45px;
+}
+
+.button-margin {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.button-no-margin {
+  margin-left: 0rem!important;
+  margin-right: 0rem!important;
+}
+
+@each $button-name, $button-settings in $buttons {
+  .button-#{$button-name}){ // button-dark, button-light
+    @include button-base;
+    background: #{map-get($button-settings, 'bg-color')};
+    color: #{map-get($button-settings, 'text-color')};
+    &:visited {
+      color: #{map-get($button-settings, 'text-color')};
+    }
+  }
+}
+.button{
+  display: inline-block;
+  position: relative;
+  margin: 0 .4rem;
+  @include font-rules('book');
+  color: #FFF;
+  font-size: 1.4rem;
+  line-height: 3.6rem;
+  height: 3.6rem;
+/*  padding-left: 10px;
+  padding-right: 10px;*/
+  width: 17rem;
+  text-align: center;
+  //padding-left: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  z-index: 1;
+  background-color: rgba(255,255,255,.4);
+  transition: all .2s;
+  &:visited{
+    color: #FFF;
+  }
+  &:hover{
+    text-decoration: none;
+    background-color: rgba(255,255,255,.7);
+  }
+  &.long{
+    width: 29rem;
+  }
+  &.blue{
+    background-color: rgba(52,101,127,.8);
+    &:hover{
+      background-color: rgba(52,101,127,1);
+      color: #FFF;
+    }
+  }
+  &.orange{
+    background-color: color('orange');
+    &:hover{
+      background-color: color('orange');
+      color: #FFF;
+    }
+  }
+  &.grey{
+    background-color: color('mid-gray');
+    &:hover{
+      background-color: color('dark-gray');
+      color: #FFF;
+    }
+  }
+  &.blue-outline{
+  	color: color('darker-blue')!important;
+  	border: 1px solid color('alternate-mid-blue2')!important;
+  	@include font-rules('medium');
+  	
+  }
+  &.round{
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+    background-color: color('dark-blue');
+    color: #FFF;
+    position: absolute;
+    z-index: 5;
+    left: calc(50% - 2.5rem);
+    margin-top: -2.5rem;
+    padding-left: 0;
+    border-radius: 5rem;
+    cursor: pointer;
+    span{
+      display: none;
+    }
+    &:after{
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 5rem;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\f107";
+    }
+  }
+  &.round-small{
+  	width: 2.5rem;
+  	height: 2.5rem;
+  	line-height: 2.5rem;
+  	color: #FFF;
+  	position: absolute;
+  	left: calc(50% - 1.25rem);
+  	margin-top: -1.25rem;
+  	padding-left: 0;
+  	border-radius: 2.5rem;
+  	cursor: pointer;
+  	span{
+  	  display: none;
+  	}
+  	&:after{
+  	  font-family: FontAwesome;
+  	  font-weight: normal;
+  	  font-style: normal;
+  	  font-size: 2.5rem;
+  	  text-rendering: auto;
+  	  -webkit-font-smoothing: antialiased;
+  	  -moz-osx-font-smoothing: grayscale;
+  	  content: "\f107";
+  	}
+  }
+  /*
+  &.download:after{
+    position: absolute;
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 3rem;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    top: 0;
+    right: 1.2rem;
+    z-index: 2;
+    content: "\f107";
+  }
+  &.link:after{
+    position: absolute;
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 3rem;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    top: 0;
+    right: 1.2rem;
+    z-index: 2;
+    content: "\f105";
+  }
+  */
+}
+// - - - - - - - - - - - - - - - - - - -
+// - - documentation
+
+//  ddddddddddddd
+//  d::::::::::::ddd
+//  d:::::::::::::::dd
+//  ddd:::::ddddd:::::d
+//    d:::::d    d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d     d:::::d
+//    d:::::d    d:::::d
+//  ddd:::::ddddd:::::d
+//  d:::::::::::::::dd
+//  d::::::::::::ddd
+//  ddddddddddddd
+
+
+/*doc
+---
+title: button light
+name: button-01/button-light
+category: buttons
+---
+```html_example
+<a class="button-light" href="#">Button Light</a>
+````
+*/
+
+
+/*doc
+---
+title: button dark
+name: button-02/button-dark
+category: buttons
+---
+```html_example
+<a class="button-dark" href="#">Button Dark</a>
+````
+*/
+
+/*doc
+---
+title: button clear
+name: button-03/button-clear
+category: buttons
+---
+```html_example
+<a class="button-clear" href="#">Button Clear</a>
+````
+*/

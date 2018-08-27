@@ -1,0 +1,325 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - utilities
+// mixins, functions, and utility classes
+
+// - - - - - - - - - - - - - - - - - - -
+// - - mixins
+
+// - - clearfix
+// clears floats
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  & {
+    *zoom: 1;
+  }
+}
+
+// - - breakpoint
+// adds responsive breakpoints.
+@mixin breakpoint($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+// - - attention
+// adds accessibility pseudo selectors to hover states.
+@mixin attention() {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - sets link color for element and visited pseudo class
+@mixin link-color($color) {
+  color: $color;
+  &:visited {
+    color: $color;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - creates triangle
+@mixin arrow-base {
+  position: relative;
+  &:after {
+    position: absolute;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    pointer-events: none;
+    width: 0;
+  }
+}
+
+@mixin arrow-down($color) {
+  @include arrow-base;
+  &:after {
+    top: 100%;
+    left: 50%;
+    border-top-color: $color;
+    border-width: 2rem;
+    margin-left: -2rem;
+  }
+}
+
+@mixin arrow-up($color) {
+  @include arrow-base;
+  &:after {
+    bottom: 100%;
+    left: 50%;
+    border-bottom-color: $color;
+    border-width: 2rem;
+    margin-left: -2rem;
+  }
+}
+
+@mixin arrow-left($color) {
+  @include arrow-base;
+  &:after {
+    right: 100%;
+    top: 50%;
+    border-right-color: $color;
+    border-width: 1.6rem;
+    margin-top: -1.6rem;
+  }
+}
+
+@mixin arrow-right($color) {
+  @include arrow-base;
+  &:after {
+    left: 100%;
+    top: 50%;
+    border-left-color: $color;
+    border-width: 1.6rem;
+    margin-top: -1.6rem;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - resets bourbon's omega class inside media query
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - adds background image
+@mixin hero-image-helper($url, $width, $height) {
+  $image-padding: percentage($height / $width);
+  background: url($url) no-repeat center center;
+  background-size: cover;
+  padding-bottom: $image-padding / 2;
+  padding-top: $image-padding / 2;
+  max-height: $height;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - svg with fallback
+@mixin svg($url) {
+  background-image: url(#{$url}.png);
+  background-image:
+    linear-gradient(transparent, transparent),
+    url(#{$url}.svg);
+  background-repeat: no-repeat;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - gradient
+// defaults to dark-blue with white text
+@mixin gradient($fallback: #2f3e45, $colors: (#4b616c, #2f3e45), $text-color: #fff) {
+  background: $fallback;
+  background-image: linear-gradient($colors);
+  color: $text-color;
+}
+
+@mixin font-rules($key) {
+  font-family: font($key);
+  font-weight: font-weight($key);
+}
+
+@mixin image($src, $width, $height, $src-retina:'') {
+	background-image: url($src);
+	background-repeat: no-repeat;
+	background-size: $width $height;
+	width: $width;
+	height: $height;
+
+	@if $src-retina != '' {
+		@media
+		only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (   min--moz-device-pixel-ratio: 2),
+		only screen and (     -o-min-device-pixel-ratio: 2/1),
+		only screen and (        min-device-pixel-ratio: 2),
+		only screen and (                min-resolution: 192dpi),
+		only screen and (                min-resolution: 2dppx) {
+			background-image: url($src-retina);
+		}
+	}
+}
+
+@mixin background-image($src, $src-retina:'') {
+	@include image($src, 100%, 100%, $src-retina);
+	background-size: cover;
+	background-position: center center;
+}
+
+@mixin height-in-lines($nLines, $lineHeight) {
+    line-height: $lineHeight;
+    min-height: $nLines * $lineHeight;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+@mixin height-in-lines-force($nLines, $lineHeight) {
+    line-height: $lineHeight;
+    height: $nLines * $lineHeight;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - functions
+
+// grab colors from $colors map
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+// grab fonts from $fonts map
+@function font($key) {
+  @if map-has-key($fonts, $key) {
+    @return map-get($fonts, $key);
+  }
+  @warn "Unknown `#{$key}` in $fonts.";
+  @return null;
+}
+@function font-weight($key) {
+  @if map-has-key($fonts-weight, $key) {
+    @return map-get($fonts-weight, $key);
+  }
+  @warn "Unknown `#{$key}` in $fonts-weight.";
+  @return null;
+}
+
+// grab breakpoint from $breakpoints map
+@function bp($key) {
+  @if map-has-key($breakpoints, $key) {
+    @return map-get($breakpoints, $key);
+  }
+  @warn "Unknown `#{$key}` in $breakpoints.";
+  @return null;
+}
+
+// grab breakpoint from $grid-settings map
+@function grid($key) {
+  @if map-has-key($grid-settings, $key) {
+    @return map-get($grid-settings, $key);
+  }
+  @warn "Unknown `#{$key}` in $grid-settings.";
+  @return null;
+}
+
+// generate responsive sizing
+@function responsive($target, $context) {
+  @return percentage($target / $context);
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - utilities
+
+.u-display-block {
+  display: block;
+}
+
+.u-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-text-center--mobile {
+  text-align: center;
+  @include breakpoint(bp('tablet')){
+    text-align: inherit;
+  }
+}
+
+.u-right-text {
+  text-align: right;
+}
+
+.u-pull-left {
+  float: left;
+}
+
+.u-pull-right {
+  float: right;
+}
+
+.u-padding-top {
+  padding-top: 50px;
+}
+
+.u-padding-bottom {
+  padding-bottom: 50px;
+}
+
+.u-padding-vert {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.u-hide-mobile {
+  display: none !important;
+  visibility: hidden !important;
+  @include breakpoint(bp('tablet')){
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+.u-hide-desktop {
+  display: block !important;
+  @include breakpoint(bp('tablet')){
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.u-hide-all {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+// maintains aspect ratio
+.u-aspect-ratio-wrapper {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%; // 16:9
+  .u-aspect-ratio-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}

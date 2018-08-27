@@ -1,0 +1,484 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - portfolio module
+// styles for the portfolio module
+// - - - - - - - - - - - - - - - - - - -
+// - - portfolio detail
+
+/*
+IMPORTANT: there are 2 types of portfolio.
+Type old = The old portfolio format
+Type new = The new portfolio format
+There is a major change in data set and layout/look
+Any portfolio without a type definied will not be assumed to be of type old
+New portfolio are wrapped into a div with ID new-portfolio
+*/
+
+$portfolio-detail-bg: #f5f5f5;
+$portfolio-detail-color-blue: #34657f;
+$portfolio-detail-color-orange: #fe5000;
+
+#new-portfolio{
+	h2:not(.override), h3:not(.override){
+	  @include font-rules('book');
+	  font-size: 4.2rem;
+	  line-height: 3.4rem;
+	  color: color('dark-blue');
+	  margin-bottom: 2rem;
+	}
+	/* OVERWRITE VIDEO PLAY BUTTON PLACEMENT */
+	.grid-large-columns-6 {
+		.image a {
+		    position: relative;
+		    z-index: 1;
+		    display: inline-block;
+		    margin-top: calc((650px)/2);
+		    max-width: 120px;
+		    img{
+		    	position: relative;
+		    }
+		}
+		.video {
+			height: 0;
+		}
+	}
+	.grid-large-half{
+		text-align:left;
+	}
+	.portfolio-body-part2{
+		.grid-large-half:not(.full-width):nth-child(2n) {
+		    padding-left: 3rem
+		}
+	}
+	#sub-nav {
+		padding-top: 260px;
+		a{
+			color: white;
+			&:visited{
+				color: white;
+			}
+			&.is-active{
+				@include font-rules('bold');
+			}
+		}
+
+	}
+
+
+	#portfolio-overview{
+		margin-bottom: 80px;
+		background-color: #95bfd1;
+		color: white;
+		overflow: hidden;
+		h2 {
+			color: white;
+		}
+		.right-col{
+			text-align: left;
+			margin: 0 0 40px 0;
+		}
+		p{
+		  line-height: 2.2rem;
+		}
+
+		.portfolio_overview_details{
+
+			.portfolio_overview_details_list{
+				padding-top: 50px;
+			}
+
+		    ul{
+		      margin-left: .5rem;
+		      margin-right: .5rem;
+		      list-style: none;
+		
+		      li{
+		        @include font-rules('book');
+/*		        line-height:60%;*/
+		/*        font-size: 2.4rem;*/
+		        margin-bottom: 1rem;
+		/*        list-style-type: disc;
+		        list-style-position: inside;*/
+		        text-indent: -1.1em;
+		        padding-left: 1em;
+		        &:before {
+		        	content: "•";
+		        	color: 	color('dark-blue');
+		        	padding: 1rem .5rem 1rem;
+		        }
+		      }
+		    }
+		}
+
+/*		@include breakpoint(bp('desktop')) {
+		  .portfolio_overview_details{
+		  	position: absolute;
+		  	height: 100%;
+		  	width: 100%;
+		  	.portfolio_overview_details_list{
+		  		position: absolute;
+		  		bottom: 10px;
+		  		width: 100%;
+			}
+		  }
+		}*/
+
+	}
+	.portfolio-detail-heading {
+	  font-size: 5rem;
+	  line-height: 4.5rem;
+	  color: $portfolio-detail-color-blue;
+	  @include breakpoint(bp('tablet')) {
+	    font-size: 6.5rem;
+	    line-height: 7rem;
+	  }
+	}
+	.portfolio-detail-heading-description {
+		font-size: 2.5rem;
+		font-weight: 200;
+		padding-bottom: 20px;
+	}
+	#heading-description-block{
+		width: 80px;
+		height: 10px;
+		background-color: color('light-blue');
+	}
+	.portfolio-body-part1, .portfolio-body-part2{
+		margin-bottom: 4rem;
+		p{
+		  line-height: 2.2rem;
+		}
+	}
+	.img1{
+		width: 100%;
+/*		margin-bottom: 40px;*/
+		/*clip-path: rect(0px, 0px, 30px, 40px);*/
+	}
+	.img2{
+		width:  100%;
+		margin-bottom: 40px;
+		/*clip-path: rect(10px, 20px, 30px, 40px);*/
+	}
+	
+	.cta {
+		padding: 0;
+	}
+	
+	#portfolio-specs{
+		padding: 3rem;
+		background-color: color('light-blue');
+		.grid-xsmall{
+			margin-bottom: 3rem;
+		}
+		h3{
+			color: white;
+		}
+		h4{
+			color: color('dark-blue');
+			@include font-rules('bold');
+			margin-bottom: 10px;
+			font-size: 1.8rem;
+		}
+		.label{
+			color: color('dark-blue');
+			font-size: 1.4rem;
+			@include font-rules('medium');
+		}
+		.value{
+			color: white;
+			font-size: 1.4rem;
+			@include font-rules('light');
+		}
+		li{
+			margin-bottom: 10px;
+		}
+	}
+	.portfolio-hero-img{
+		height: auto;
+	}
+	
+	@include breakpoint(bp('tablet')) {
+		#portfolio-overview{
+			.right-col{
+				text-align: left;
+				margin: 4rem 0 4rem 4rem;
+			}
+		}
+		.portfolio-body-part1, .portfolio-body-part2{
+			margin: 4rem 0 4rem 0;
+		}
+		.portfolio-hero-img{
+			min-height: 650px;
+			.mobile-image{
+				display: none;
+			}
+		}
+	}
+	@include breakpoint(bp('desktop')){
+		.img1{
+			width: 90%;
+			margin-bottom: 4rem;
+		}
+		.img2{
+			width:  60%;
+			margin-bottom: 4rem;
+		}
+	}	
+}
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - portfolio detail hero
+.portfolio-detail-hero {
+  background-color: $portfolio-detail-bg;
+  background-image: linear-gradient(#fff, $portfolio-detail-bg);
+  border-bottom: 2px solid #d6d6d6;
+  @include breakpoint(bp('tablet')) {
+    padding-top: 3rem;
+  }
+}
+
+.portfolio-detail-heading {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  color: color('light-blue');
+  margin-bottom: 2rem;
+  @include breakpoint(bp('tablet')) {
+    font-size: 5.5rem;
+    line-height: 6rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.portfolio-detail-location {
+  color: color('light-blue');
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  @include breakpoint(bp('tablet')) {
+    font-size: 3.8rem;
+    margin-top: 3rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.portfolio-detail-text {
+  color: #1c2b39;
+  font-family: font('light');
+  font-size: 2.5rem;
+  line-height: 4.5rem;
+  margin-bottom: 2rem;
+  @include breakpoint(bp('tablet')) {
+    margin-top: 6rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.portfolio-detail-benefits {
+  color: $portfolio-detail-color-blue;
+  font-family: font('book');
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  padding-top: 1rem;
+  li {
+    list-style: inherit;
+    margin: 2rem 0 2rem 2rem;
+  }
+}
+
+.portfolio-detail-quote {
+  color: $portfolio-detail-color-blue;
+  font-family: font('book');
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  }
+
+// - - - - - - - - - - - - - - - - - - -
+// - - portfolio detail summary
+.portfolio-detail-summary {
+  background-color: $portfolio-detail-bg;
+  border: 1px solid #e5e5e5;
+  padding: 3rem;
+  margin-bottom: 3rem;
+}
+
+.portfolio-detail-summary-heading {
+  color: $portfolio-detail-color-orange;
+  font-size: 3.2rem;
+  padding-bottom: 3rem;
+}
+
+.portfolio-detail-summary-text {
+  color: #5f626a;
+  font-family: font('light');
+  font-size: 2.4rem;
+  line-height: 4rem;
+  + .portfolio-detail-summary-text {
+    padding-top: 4rem;
+  }
+}
+
+.portfolio-detail-summary-list {
+  li {
+    color: #5f626a;
+    font-family: font('light');
+    font-size: 2.4rem;
+    line-height: 4rem;
+    list-style: inherit;
+    list-style-position: inside;
+    margin-bottom: 1rem;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - portfolio detail specifications
+.portfolio-detail-spec-background {
+  background-color: $portfolio-detail-bg;
+  border-top: 1px solid #e5e5e5;
+}
+
+.portfolio-detail-spec-heading {
+  color: #1c2b39;
+  font-family: font('light');
+  font-size: 4rem;
+}
+
+.portfolio-detail-spec-grid {
+  @include breakpoint(bp('tablet')) {
+    @include span-columns(3.3333333333333335 of 10);
+    @include omega(3n);
+  }
+}
+
+.project-detail-spec-subheading {
+  color: $portfolio-detail-color-orange;
+  font-size: 2.3rem;
+  padding-bottom: 2.3rem;
+  padding-top: 2.3rem;
+}
+
+.project-detail-spec-category {
+  color: $portfolio-detail-color-blue;
+  font-size: 2.3rem;
+  line-height: 3rem;
+}
+
+.project-detail-spec-info {
+  color: $portfolio-detail-color-blue;
+  font-family: font('light');
+  font-size: 2.3rem;
+  line-height: 3.2rem;
+  padding-bottom: 1rem;
+}
+
+.portfolio-detail-button {
+  text-align: center;
+  @include breakpoint(bp('tablet')) {
+    text-align: left;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - portfolio-landing
+// education, government, healthcare, hospitality, and workplaces
+
+// - -  hero
+
+.portfolio-landing-heading {
+  font-size: 2.5rem;
+  line-height: 2.6rem;
+  padding-bottom: 0.5rem;
+  @include breakpoint(bp('tablet')) {
+    font-family: font('book');
+  }
+  @include breakpoint(bp('desktop')) {
+    font-size: 3rem;
+    line-height: 4.3rem;
+  }
+}
+
+.portfolio-landing-text {
+  color: rgba(255,255,255, 0.52);
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  padding-bottom: 1.5rem;
+  @include breakpoint(bp('tablet')) {
+    color: #d8d8d8;
+  }
+  @include breakpoint(bp('desktop')) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+
+.portfolio-landing-hero {
+  background: color('dark-blue');
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+// - -  portfolio landing resources
+
+.portfolio-landing-resources {
+  @include arrow-up(#a0afb8);
+  background: #a0afb8;
+  color: #fff;
+  padding-top: 6rem;
+  padding-bottom: 12rem;
+}
+
+.portfolio-landing-resources-list {
+  padding: 2.4rem 0;
+  li {
+    padding-bottom: 1rem;
+  }
+  a {
+    @include link-color(#fff);
+  }
+}
+
+.portfolio-landing-resources-list-heading {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  text-align: center;
+  @include breakpoint(bp('tablet')) {
+    font-size: 3rem;
+    text-align: left;
+  }
+}
+
+.portfolio-landing-resources-links {
+  li:before {
+    position: relative;
+    top: 0.5rem;
+    content: "\2023";
+    font-size: 2.5rem;
+    padding-right: 1rem;
+  }
+  li {
+    padding-left: 2rem;
+    text-indent: -2rem;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - portfolio landing resources icons
+
+.portfolio-landing-icon {
+  float: left;
+  height: 2rem;
+  margin-right: 1rem;
+  width: 2rem;
+}
+
+.portfolio-landing-icon--round {
+  border-radius: 50%;
+}
+
+$portfolio-landing-icons: ('pdf', 'video', 'event');
+@each $icon in $portfolio-landing-icons {
+  .portfolio-landing-icon--#{$icon} {
+    @include svg('../img/svg/portfolio/#{$icon}');
+    @include breakpoint(bp('tablet')) {
+      @include svg('../img/svg/portfolio/#{$icon}');
+    }
+  }
+}

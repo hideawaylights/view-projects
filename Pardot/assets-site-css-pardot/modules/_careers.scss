@@ -1,0 +1,135 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - careers module
+// styles for the careers module
+
+// - - careers hero 
+
+.careers-heading {
+  font-size: 2.5rem;
+  line-height: 2.6rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  @include breakpoint(bp('tablet')){
+    font-size: 5rem;
+    line-height: 5.3rem;
+    padding-right: 3rem;
+    text-align: left;
+  }
+}
+
+.careers-subheading {
+  color: rgba(255,255,255, 0.6);
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  @include breakpoint(bp('tablet')){
+    font-size: 2.6rem;
+    line-height: 3.1rem;
+    padding-right: 3rem;
+    text-align: left;
+  }
+}
+
+.careers-text {
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+  padding-top: 2rem;
+  text-align: center;
+  @include breakpoint(bp('tablet')){
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    padding-right: 3rem;
+    padding-top: 0;
+    text-align: left;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - careers quote 
+
+.careers-quote-container {
+  background: url('../img/company/careers/quote-small.png') no-repeat top left;
+  padding-top: 3rem;
+  @include breakpoint(bp('tablet')){
+    background: url('../img/company/careers/quote.png') no-repeat top left;
+    padding-top: 0;
+    padding-left: 10.4rem;
+  }
+}
+
+.careers-quote-heading {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  @include breakpoint(bp('tablet')){
+    font-size: 2.6rem;
+    line-height: 2.7rem;
+    text-align: left;
+  }
+}
+
+.careers-quote-text {
+  color: rgba(255,255,255,0.5);
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+  @include breakpoint(bp('tablet')){
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
+}
+
+.careers-quote-details {
+  color: #327e90;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  text-align: left;
+  &:first-child {
+    font-size: 1.4rem;
+  }
+  @include breakpoint(bp('tablet')){
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    padding-top: 2rem;
+    &:first-child {
+      font-size: 1.9rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - careers listing 
+
+.careers-listing-heading {
+  color: color('dark-blue');
+  font-family: font('book');
+  font-size: 2.5rem;
+  line-height: 2.7rem;
+  text-align: center;
+  @include breakpoint(bp('tablet')){
+    float: left;
+    font-size: 2.6rem;
+    line-height: 2.8rem;
+    padding-top: 2rem;
+  }
+}
+
+.careers-listing-subheading {
+  color: color('mid-gray');
+  float: right;
+  font-family: font('medium');
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  margin-left: 1.5rem;
+  padding-top: 3rem;
+}
+
+.careers-hero {
+	padding-top: 150px
+}
+.careers-subnav{
+	top: 90rem!important;
+}

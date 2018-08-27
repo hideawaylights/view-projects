@@ -1,0 +1,1216 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - company module
+// styles for the company module
+.subnav-wrapper.subnav-company{
+  top: 91rem;
+}
+.button.round.down.company{
+  margin-top: -10.2rem;
+  background-color: transparent;
+  border: 1px solid #FFF;
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  &:after{
+    font-size: 3rem;
+  }
+  &.grey{
+    border-color: #333F48;
+    color: #333F48;
+  }
+}
+/*header.nav.company-nav{
+  #contact-nav{
+    background-color: rgba(240,87,67,.5);
+    &:hover{
+      background-color: rgba(240,87,67,.87);
+    }
+  }
+}*/
+
+
+#company-hero{
+  height: 91rem;
+  
+  .grid-container{
+    position: relative;
+    height: 100%;
+  }
+  @media only screen and (max-width: 1024px) {
+    .hero-heading-container{
+      width: 100%;
+    }
+  }
+  .hero-heading{
+    text-align: center;
+    border: 6px solid #FFF;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 16rem);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    top: 38%;
+  }
+  #company-hero-txt{
+    position: relative;
+    top: 26rem;
+    left: 0;
+  }
+	h1{
+      @include font-rules('light');
+      font-size: 8.7rem;
+      line-height: 1;
+      margin-bottom: 1.3rem;
+      color: #FFF;
+      padding: 0 3rem;
+      width: 100%;
+      
+      text-shadow: 0 .2rem .4rem rgba(0,0,0,0.50);
+      text-align: center;
+    }
+    h2{
+      @include font-rules('book');
+      font-size: 4.6rem;
+      line-height: 1.05;
+      color: #FFF;
+      padding: 0 3rem;
+      width: 100%;
+      text-shadow: 0 .2rem .4rem rgba(0,0,0,0.50);
+      text-align: center;
+    }
+    @media (max-width: 970px){
+      height: 55rem;
+      //top: 15rem;
+      h1{
+        //padding-left: 3rem;
+        font-size: 4rem;
+        width: auto;
+      }
+
+	  h2{
+        @include font-rules('light');
+        //padding-left: 3rem;
+        margin-top: 2rem;
+        font-size: 2rem;
+        //width: 25.5rem;
+      }
+    }
+  
+}
+.company-hero{
+
+  .img-hero {
+	  @include background-image('/assets/img/company/hero/MobileSmall_480x262.jpg', '/assets/img/company/hero/MobileSmall_960x523.jpg');
+
+	  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+		  @include background-image('/assets/img/company/hero/Mobile_1024x558.jpg', '/assets/img/company/hero/Mobile_2048x1116.jpg');
+	  }
+
+	  @media only screen and (min-width: 1025px) {
+		  @include background-image('/assets/img/company/hero/Desktop_1440x785.jpg', '/assets/img/company/hero/Desktop_2880x1570.jpg');
+	  }
+	  &:after{
+	    background-color: rgba(0	,0,0,.1);
+	  }
+  }
+
+}
+.company-Leadership-hero{
+
+  .img-hero {
+	  @include background-image('/assets/img/company/hero-leadership/MobileSmall_480x262.jpg', '/assets/img/company/hero-leadership/MobileSmall_960x523.jpg');
+
+	  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+		  @include background-image('/assets/img/company/hero-leadership/Mobile_1024x558.jpg', '/assets/img/company/hero-leadership/Mobile_2048x1116.jpg');
+		 
+	  }
+
+	  @media only screen and (min-width: 1025px) {
+		  @include background-image('/assets/img/company/hero-leadership/Desktop_1440x785.jpg', '/assets/img/company/hero-leadership/Desktop_2880x1570.jpg');
+		  background-size: 170%;
+		  background-position-x: -220px;
+		  background-position-y: -45px;
+	  }
+	  @media only screen and (min-width: 1400px) {
+	  	  background-size: 140%;
+	  	  background-position-x: -220px;
+	  	  background-position-y: -165px;
+	  }
+}
+
+	.hero-heading{
+	  width: calc(100% - 55rem)!important;
+	  top: 49%!important;
+	}
+	@media only screen and (max-width: 1100px) {
+		.hero-heading{
+		  width: calc(100% - 45rem)!important;
+		}
+	}
+	@media only screen and (max-width: 768px) {
+		.hero-heading{
+		  width: calc(100% - 10rem)!important;
+		}
+		.hero-heading-container{
+			margin-top: 20%;
+		}
+	}
+	
+	
+}
+// - - - - - - - - - - - - - - - - - - -
+// - - company Our-Story
+#our_story {
+  position: relative;
+  height: 66.5rem;
+  .img-hero {
+    @include background-image('/assets/img/company/our-story/MobileSmall_480x217.jpg', '/assets/img/company/our-story/MobileSmall_960x433.jpg');
+
+    @media only screen and (min-width: 481px) and (max-width: 1024px) {
+      @include background-image('/assets/img/company/our-story/Mobile_1024x462.jpg', '/assets/img/company/our-story/Mobile_2048x923.jpg');
+    }
+
+    @media only screen and (min-width: 1025px) {
+      @include background-image('/assets/img/company/our-story/Desktop_1440x649.jpg', '/assets/img/company/our-story/Desktop_2880x1298.jpg');
+    }
+    &:after{
+      background-color: rgba(57,179,202,.8);
+    }
+  }
+  .hero-heading{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 25rem);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    top: 40%;
+    h2{
+      @include font-rules('book');
+      width: 100%;
+      font-size: 5.2rem;
+      text-shadow: none;
+      padding-bottom: 3rem;
+      letter-spacing: 0.05rem;
+    }
+    p{
+      @include font-rules('book');
+      letter-spacing: 0.05rem;
+      color: #FFF;
+      font-size: 2rem;
+      line-height: 2;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+  	.hero-heading{
+  	  width: calc(100% - 9rem);
+  	  p{
+  	  	line-height: 1.6;
+  	  }
+  	  
+  	}
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - company leading_investors
+#leading_investors{
+  position: relative;
+  background-color: #333F48;
+  text-align: center;
+  color: #FFF;
+  padding-top: 10rem;
+  padding-bottom: 15rem;
+  h2{
+    @include font-rules('book');
+      width: 100%;
+      font-size: 5.2rem;
+      text-shadow: none;
+      padding-bottom: 9rem;
+      letter-spacing: 0.05rem;
+  }
+  img{
+    margin-bottom: 10rem;
+    &#bain{
+      width: 250px;
+      margin-top: 15px;
+      padding: 0 10px;
+      
+    }
+    &#blackrock{
+      width: 250px;
+      margin-top: 15px;
+      padding: 0 10px;
+      
+    }
+	&#madrone{
+	  width: 180px;
+	  padding: 0 20px;
+	  margin-top: -20px
+	}
+	&#nz{
+	  width: 250px;
+	  margin-top: -10px;
+	  padding: 0 10px;
+	  
+	}
+	&#tiaa{
+	  width: 210px;
+	  margin-top: -10px;
+	  padding: 0 10px;
+	  
+	}
+  }
+
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - company leading_organizations_choose_view
+#leading_organizations{
+  position: relative;
+  background-color: #FFF;
+  text-align: center;
+  color: #2C7B98;
+  padding-top: 10rem;
+  padding-bottom: 16rem;
+  h2{
+    @include font-rules('book');
+      width: 100%;
+      font-size: 5.2rem;
+      text-shadow: none;
+      padding-bottom: 8rem;
+      letter-spacing: 0.05rem;
+  }
+  .grid-container{
+    padding: 0;
+  }
+  .leading_org_columns{
+    width: calc(100% / 6);
+    min-width: 20rem;
+    padding-top: 0rem;
+    padding-bottom: 5rem;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    h3{
+      @include font-rules('book');
+      font-size: 2.3rem;
+      color: #333F48;
+      letter-spacing: -0.1rem;
+      margin-bottom: 5rem;
+    }
+    div.org_logo{
+      display: inline-block;
+      width: 13rem;
+      height: 4.1rem;
+      margin-top: 2.5rem;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      overflow: hidden;
+      text-indent: -300rem;
+    }
+    &:before{
+      position: absolute;
+      top: 5rem;
+      width: 12.5rem;
+      height: 1rem;
+      background-color: #000;
+      content:'';
+      left: calc((100% - 12.5rem) / 2);
+    }
+    &#leading_org_workplace:before{
+      background-color: #2F7A96;
+    }
+    &#leading_org_healthcare:before{
+      background-color: #334047;
+    }
+    &#leading_org_education:before{
+      background-color: #F05B43;
+    }
+    &#leading_org_airports:before{
+      background-color: #D6D2CA;
+    }
+    &#leading_org_developers:before{
+      background-color: #33AEC6;
+    }
+    &#leading_org_real_estate_equity{
+      &:before{
+        background-color: #75787A;
+      }
+      div.org_logo{
+        height: 3.75rem;
+        margin-top: 1.5rem;
+      }
+    }
+
+    
+
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - company World-Class manufacturing
+
+#world-class_manufacturing{
+  min-height: 60rem;
+  position: relative;
+  padding-top: 8rem;
+  color: #FFF;
+  text-align: center;
+  @include background-image('/assets/img/company/manufacturing/MobileSmall_480x171.jpg', '/assets/img/company/manufacturing/MobileSmall_960x342.jpg');
+
+    @media only screen and (min-width: 481px) and (max-width: 1024px) {
+      @include background-image('/assets/img/company/manufacturing/Mobile_1024x365.jpg', '/assets/img/company/manufacturing/Mobile_2048x729.jpg');
+    }
+
+    @media only screen and (min-width: 1025px) {
+      @include background-image('/assets/img/company/manufacturing/Desktop_1440x513.jpg', '/assets/img/company/manufacturing/Desktop_2880x1025.jpg');
+    }
+  h2{
+    @include font-rules('book');
+
+      width: 100%;
+      font-size: 5.2rem;
+      text-shadow: none;
+      padding-bottom: 8rem;
+      letter-spacing: 0.05rem;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - company latest news
+
+#lastest_news{
+  position: relative;
+  padding-top: 10rem;
+  padding-bottom: 17.5rem;
+  text-align: center;
+  h2{
+    @include font-rules('book');
+      color: #2C7B98;
+      width: 100%;
+      font-size: 5.2rem;
+      text-shadow: none;
+      padding-bottom: 1.8rem;
+      letter-spacing: 0.05rem;
+  }
+  .grid-container{
+    padding: 0 4rem;
+  }
+  .news{
+    float: left;
+    width: calc(100% / 3);
+    padding: 5rem 2rem 5rem 2rem;
+    text-align: left;
+    height: 625px;
+    position: relative;
+    a{
+    	bottom: 50px;
+    	position: absolute;
+    }
+    @media only screen and (max-width: 1025px) {
+      width: calc(100% / 2);
+      @media only screen and (max-width: 600px) {
+        width: 100%;
+        border-bottom: 1px solid #CCC;
+        &:last-child{
+          border-bottom: none;
+        }
+      }
+    }
+    .publication{
+       	padding-top: 10px;
+    	img{
+    		height: 40px;
+ 
+    	}
+    }
+    .date{
+      @include font-rules('book');
+      font-size: 1.8rem;
+      color: #000;
+    }
+    h3{
+      @include font-rules('medium');
+      font-size: 2.7rem;
+      color: #000;
+      letter-spacing: -0.03rem;
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+    }
+    p{
+      padding-top: 2rem;
+      display: block;
+      @include font-rules('book');
+      font-size: 1.8rem;
+      color: #333F48;
+      letter-spacing: 0.1rem;
+      padding-bottom: 4.5rem;
+    }
+    a{
+      display: block;
+      width: 60%;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: #39B3CA;
+      color: #FFF;
+      @include font-rules('medium');
+      font-size: 1.36rem;
+      line-height: 2.5;
+    }
+  }
+}
+
+/*#upcoming_events_mobile{
+	display: none;
+}
+@media only screen and (max-width: 750px) {
+	#upcoming_events{
+		display: none;
+	}
+	#upcoming_events_mobile{
+		display: block;
+	}
+}*/
+// - - - - - - - - - - - - - - - - - - -
+// - - company upcoming events
+#upcoming_events/*, #upcoming_events_mobile*/{
+  position: relative;
+  padding-top: 10.5rem;
+  padding-bottom: 20rem;
+  text-align: center;
+
+  @include background-image('/assets/img/company/events/MobileSmall_480x287.jpg', '/assets/img/company/events/MobileSmall_960x573.jpg');
+
+    @media only screen and (min-width: 481px) and (max-width: 1024px) {
+      @include background-image('/assets/img/company/events/Mobile_1024x611.jpg', '/assets/img/company/events/Mobile_2048x1222.jpg');
+    }
+
+    @media only screen and (min-width: 1025px) {
+      @include background-image('/assets/img/company/events/Desktop_1440x859.jpg', '/assets/img/company/events/Desktop_2880x1718.jpg');
+    }
+  h2{
+    @include font-rules('book');
+      color: #FFF;
+      width: 100%;
+      font-size: 5.2rem;
+      text-shadow: none;
+      padding-bottom: 9rem;
+      letter-spacing: 0.05rem;
+  }
+  .carousel-alternate-dark .slick-prev, .carousel-alternate-dark .slick-next{
+    background-color: transparent;
+    height: auto !important;
+  }
+  .carousel-alternate-dark .slick-prev:before, .carousel-alternate-dark .slick-next:before{
+    height: inherit;
+  }
+  .js-carousel-slide{
+    .event{
+      color: #FFF;
+      text-align: left;
+      padding-bottom: 0rem;
+      padding-top: 0rem;
+      border-bottom: 1px solid #FFF;
+      margin-bottom: 3.2rem;
+      position: relative;
+      min-height: 13rem;
+      &:after{
+        clear: both;
+        content:'';
+        display: block;
+      }
+      &:last-child{
+        border-bottom: 0px;
+      }
+      .date{
+        float: left;
+        width: 16.5rem;
+        border-right: 1px solid #FFF;
+        padding-right: 3.9rem;
+        h4{
+          line-height: 1;
+          text-transform: uppercase;
+          text-align: right;
+          padding-bottom: .5rem;
+          @include font-rules('bold');
+          font-size: 4.8rem;
+          span{
+            display: block;
+            line-height: 1;
+            letter-spacing: -0.1rem;
+            margin-top: -1rem;
+            font-size: 4.3rem;
+            padding-top: 10px;
+          }
+        }
+      }
+      .info{
+        float: left;
+        padding-left: 3rem;
+        padding-right: 2rem;
+        width: calc(100% - 15.5rem);
+        h3{
+          @include font-rules('medium');
+          font-size: 3.1rem;
+          padding-bottom: .5rem;
+        }
+        p{
+          @include font-rules('book');
+          font-size: 1.85rem;
+        }
+        @include breakpoint(bp('desktop')){
+          
+          width: calc(100% - 15rem - 30rem);
+        }
+      }
+      a{
+        @include font-rules('medium');
+        font-size: 1.4rem;
+        float: right;
+        margin-bottom: 2rem;
+        width: 20.5rem;
+        text-align: center;
+        line-height: 2.8;
+        background-color: #F05743;
+        text-transform: uppercase;
+        color: #FFF;
+        border: none;
+        border-radius: 0;
+        margin-top: 3rem;
+        &:after{
+          content:'';
+          clear: both;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 750px) {
+	.slick-prev, .slick-next{
+		padding: 0px;
+	}
+	.slick-prev{
+		margin-left: -30px;
+	}
+	.slick-next{
+		margin-right: -30px;
+	}
+	.grid-container{
+		/*padding: 0 4rem;*/
+		.carousel-wrapper{
+		  padding-left:3rem;
+		  padding-right:3rem;
+		}
+	}
+  		
+  	.js-carousel-slide{
+  	  .event{
+  	  
+  	  
+  	    &:after{
+  	    }
+  	    &:last-child{
+  	    }
+  	    
+  	    
+  	    .date{
+  	      padding-right: 1rem;
+  	      border-right: 0px ;
+  	      width: 90%;
+  	      h4{
+  	      	text-align: left;
+  	      	font-size: 3rem;
+  	        span{
+  	        	display:inline;
+  	        	font-size: 3rem;
+  	        	padding-left: .5rem;
+  			
+  		}
+  	      }
+  	    }
+  	    
+  	    .info{
+  	      padding-left: 0rem;
+  	      padding-right: 0rem;
+  	      width: 100%;
+  	      h3{
+  	      	font-size: 2.5rem;
+  	      }
+  	      p{
+  	      }
+
+  	    }
+  	    
+  	    a{
+  	    	width: 90%;
+  	    	margin-right: 5%;
+  	    }
+  	    
+  	  }
+  	}
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - careers section
+#careers{
+  background-image: url(/assets/img/company/careers/careers_bkg.svg);
+  background-repeat: no-repeat;
+  background-position: left 40%;
+  background-size: 100% auto;
+  padding-top: 8rem;
+  padding-bottom: 11.5rem;
+  .grid-container{
+    padding: 0 16rem;
+    @media only screen and (max-width: 1024px) {
+      padding: 0 2rem;
+    }
+  }
+  h2{
+    @include font-rules('book');
+    text-align: center;
+      color: #2C7B98;
+      width: 100%;
+      font-size: 5.2rem;
+      text-shadow: none;
+      padding-bottom: 3.5rem;
+      letter-spacing: 0.05rem;
+  }
+  p{
+    @include font-rules('book');
+    padding: 0 2rem 4rem 2rem;
+    font-size: 2rem;
+    letter-spacing: 0.12rem;
+    line-height: 1.85;
+    color: #333F48;
+    padding-bottom: 6rem;
+    text-align: center;
+  }
+  h3{
+    position: relative;
+    clear: both;
+    text-align: center;
+    @include font-rules('medium');
+    font-size: 3rem;
+    letter-spacing: .15rem;
+    color: #333F48;
+    padding-top: 7rem;
+    padding-bottom: 3.5rem;
+  }
+  ul#company_benefits{
+    column-count: 2;
+    column-gap: 8rem;
+    list-style: disc;
+    list-style-position: inside;
+    padding: 0 1rem 6.5rem 1rem;
+    
+
+    li{
+      list-style-position: inside;
+      list-style: disc;
+      @include font-rules('book');
+      font-size: 1.7rem;
+      letter-spacing: 0.09rem;
+      color: #333F48;
+      padding-bottom: 1.15rem;
+
+    }
+    @media only screen and (max-width: 750px) {
+      column-count: 1;
+      padding: 0 2rem;
+      li{
+        list-style: disc;
+      }
+    }
+  }
+  a.button-company{
+    @include font-rules('bold');
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 3;
+    padding: 0 4rem;
+    color: #FFF;
+    background-color: #F05743;
+    text-transform: uppercase;
+  }
+}
+.company-careers-heading {
+  color: color('dark-blue');
+  font-size: 2.5rem;
+  line-height: 2.6rem;
+  h2{
+    @include font-rules('book');
+      color: #2C7B98;
+      width: 100%;
+      font-size: 5.2rem;
+      text-shadow: none;
+      padding-bottom: 8rem;
+      letter-spacing: 0.05rem;
+  }
+  @include breakpoint(bp('tablet')){
+    font-size: 5rem;
+    line-height: 5.3rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.company-careers-subheading {
+  color: color('dark-blue');
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+  @include breakpoint(bp('tablet')){
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+  }
+}
+
+// - - background images for grid
+
+@for $i from 1 through 5 {
+  .company-careers-image-#{$i} {
+    position: relative;
+    background: url('../img/company/careers/2-#{$i}.jpg') no-repeat center center;
+    background-size: cover;
+  }
+}
+#grid-company-container{
+  display: block;
+  position: relative;
+  &:after{
+    content:'';
+    clear: both;
+  }
+}
+.grid-company2-careers-1{
+  float: left;
+  width: calc(31% - 1.5rem);
+  height: calc(40rem - 1.5rem);
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.grid-company2-careers-2{
+  float: left;
+  width: calc(33% - 3rem);
+  height: calc(25rem - 1.5rem);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.grid-company2-careers-3{
+  float: left;
+  width: calc(36% - 1.5rem);
+  height: calc(25rem - 1.5rem);
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.grid-company2-careers-4{
+  float: right;
+  width: calc(69% - 1.5rem);
+  height: calc(36rem - 1.5rem);
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+}
+.grid-company2-careers-5{
+  float: left;
+  width: calc(31% - 1.5rem);
+  height: calc(21rem - 1.5rem);
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
+  &:after{
+    clear: both;
+    content:'';
+    display: block;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .grid-company2-careers-1{
+    height: calc(30vw - 1.5rem);
+  }
+  .grid-company2-careers-2, .grid-company2-careers-3, .grid-company2-careers-5{
+    height: calc(20vw - 3rem);
+  }
+  .grid-company2-careers-4{
+    height: calc(30vw - 1.5rem);
+  }
+  
+}
+@media only screen and (max-width: 750px) {
+  .grid-company2-careers-1{
+    height: calc(30vw - 1vw);
+    margin-right: 1vw;
+    width: calc(31% - 1vw);
+    margin-bottom: 1vw;
+  }
+  .grid-company2-careers-2, .grid-company2-careers-3, .grid-company2-careers-5{
+    height: calc(20vw - 1vw);
+    margin-bottom: 1vw;
+  }
+  .grid-company2-careers-2{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    width: calc(33% - 2vw);
+  }
+  .grid-company2-careers-3{
+    margin-left: 1vw;
+    width: calc(36% - 1vw);
+  }
+  .grid-company2-careers-5{
+    margin-bottom: 0;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    width: calc(31% - 1vw);
+  }
+  .grid-company2-careers-4{
+    height: calc(30vw - 1vw);
+    margin-top: 1vw;
+    margin-left: 1vw;
+    width: calc(69% - 1vw);
+  }
+}
+a.js-board-member{
+  text-decoration: none;
+}
+header.company-heading{
+  margin-top: 0 !important;
+  text-align: left !important;
+  h2{
+    text-align: left !important;
+  }
+  p{
+    text-align: left !important;
+    font-weight: 200 !important;
+  }
+  a{
+    text-decoration: none;
+  }
+}
+.s-background-dark-blue header.company-heading{
+  h2, p{
+    color: #FFF !important;
+  }
+}
+
+
+//--- leadership
+// - - - - - - - - - - - - - - - - - - -
+// - - company executive grid
+
+
+.leadership-hero{
+	/*height: 41rem !important;*/
+}
+
+@mixin company-grid-base {
+  @include span-columns(6);
+  @include omega(1n);
+  /*padding-bottom: 2rem;*/
+  /*text-align: center;*/
+  @include attention(){
+    text-decoration: none;
+  }
+}
+
+.company-executive-grid {
+  @include company-grid-base;
+  @include breakpoint(bp('tablet')){
+    @include omega-reset(2n);
+    @include span-columns(3.3333333333333335 of 10);
+    @include omega(3n);
+  }
+}
+
+.company-board-grid {
+  @include company-grid-base;
+  @include breakpoint(bp('tablet')){
+    @include omega-reset(1n);
+    @include span-columns(2.5 of 10);
+    @include omega(4n);
+  }
+}
+
+.company-executive-grid-two {
+  @include company-grid-base;
+  @include breakpoint(bp('tablet')){
+    @include omega-reset(1n);
+    @include omega(2n);
+  }
+}
+
+.company-executive-grid-four-two {
+	@include company-grid-base;
+		&:nth-child(2n+1){
+			padding-left: 15%;
+		}
+		&:nth-child(2n) {
+			padding-right: 15%;
+		}
+	@media (max-width: 768px){
+			&:nth-child(2n+1){
+				padding-left: 0;
+			}
+			&:nth-child(2n) {
+				padding-right: 0;
+			}
+  	}
+}
+
+.company-board-grid-two {
+  @include company-grid-base;
+}
+
+.company-board-grid-three {
+  @include company-grid-base;
+  @include breakpoint(bp('tablet')){
+    @include omega-reset(1n);
+    @include span-columns(3.333 of 10);
+    @include omega(3n);
+  }
+}
+
+.company-executive-grid-four-two {
+ @include company-grid-base;
+  &:nth-child(2n+1){
+    padding-left: 15%;
+  }
+  &:nth-child(2n) {
+    padding-right: 15%;
+  }
+  @media (max-width: 768px){
+    &:nth-child(2n+1){
+      padding-left: 0;
+    }
+    &:nth-child(2n) {
+      padding-right: 0;
+    }
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - company headshots
+// executives and board of directors
+#leadership, #board-of-directors-list{
+	padding-bottom: 15rem;
+	min-height: 450px;
+	padding-top: 0px;
+}
+#board-of-directors, #people{
+	h2 {
+		font-size: 5.2rem;
+		line-height: 5rem
+	}
+	@media (max-width: 960px){
+		h2{
+			font-size: 3rem;
+			line-height: 3rem
+		}
+	}
+}
+#board-of-directors h2{
+	color: white;
+}		
+.company-headshot-name {
+  font-family: font('medium');
+  padding-top: 1rem;
+  @include breakpoint(bp('tablet')){
+    font-size: 2.1rem;
+    
+  }
+}
+
+.company-headshot-title {
+  font-family: font('book');
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+
+}
+
+.company-headshot-overlay-name {
+  font-family: font('book');
+  font-size: 2.6rem;
+  line-height: 2.2rem;
+  padding-bottom: 1rem;
+  @include breakpoint(bp('tablet')){
+    font-size: 3rem;
+  }
+}
+
+.company-headshot-overlay-title {
+  font-size: 1.7rem;
+  line-height: 1.8rem;
+  padding-bottom: 1rem;
+  @include breakpoint(bp('tablet')){
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+.company-headshot-overlay-text {
+  /*border-top: 1px solid #fff;*/
+  padding-top: 1rem;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  @include breakpoint(bp('tablet')){
+    font-size: 1.3rem;
+    line-height:2.2rem;
+  }
+}
+
+.company-headshot-overlay-name{
+	font-size: 2.6rem;
+}
+.company-headshot-overlay-title{
+	font-size: 1.8rem;
+}
+
+//--- end leadership
+
+.overlay-headshot-close{
+	z-index: 100;
+}
+.js-executive{
+	border: 1px solid color('alternate-mid-gray');
+	position: relative;
+	margin-bottom: 15px;
+	img{
+		width: 45%;
+		/*bottom: 0;
+		position: absolute;
+		z-index: -1*/
+		float: left;
+	}
+	.linkedin{
+		position: absolute;
+		top: 0;
+		right:0;
+		width: 30px;
+	}
+	h3{
+		font-weight: 500;
+	}
+	.button{
+		margin-top: 10px;
+		width: auto;
+		padding-left: 20px;
+		padding-right: 20px;
+		height: 30px;
+		line-height: 3rem;
+	}
+	div{
+		padding-top:30px;
+		/*margin-left: 45%;*/
+	}
+	@media (max-width: 960px){
+			.button{
+				margin-top: 10px
+			}
+
+			&.company-executive-grid-two{
+				width: 100%;
+			}
+	}
+
+}
+.js-executive-bio-details{
+	.overlay-headshot-thumbnail{
+		border-radius: 0;
+		margin-left: -50px;
+		margin-bottom: -10px;
+		width: 35%;
+		&.u-hide-desktop{
+			margin-left: 0px;
+		}
+	}
+	.overlay-wrapper{
+		overflow: hidden;
+	}
+	.overlay-headshot-text{
+		color: color('darker-blue');
+		width: 65%!important;
+		h3{
+			color: color('alternate-mid-blue');
+			@include font-rules('medium');
+			font-size: 3rem;
+			line-height: 3rem;
+		}
+		h4{
+			color: color('alternate-mid-gray2');
+			@include font-rules('medium');
+		}
+	}
+		@media (max-width: 768px){
+				.overlay-headshot-text{
+					width: 100%!important;
+					margin-top: -50px;
+				}
+				h3,h4{
+					margin-left: 150px;
+				}
+		}
+}
+#people{
+	.t-main-heading{
+		color: color('alternate-dark-blue3')!important;
+	}
+}
+#board-of-directors, #people{
+	.t-main-heading{
+		font-weight: 500;
+		letter-spacing: 1px;
+		@include font-rules('book');		
+	}	
+}
+.js-board-member{
+    margin-bottom: 80px;
+	@media (max-width: 768px){
+			text-align: center;
+			width: 100%;
+			margin-bottom: 20px;
+	}
+}
+.js-board-member-bio-details{
+	.overlay-headshot-text, .overlay-headshot-board-text {
+		width: 100%!important;
+	}
+}
+.js-board-member-bio, .js-executive-bio{
+	position: absolute;
+	min-height: 400px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: scroll;
+	opacity: 0;
+	padding-bottom: 2.5rem;
+	  transition: top 0.4s ease-in-out;
+	  z-index: -1;
+	&.is-active {
+	    transition: top 0.2s ease-in-out;
+	    top: 0;
+	    opacity: 1;
+	    z-index: 2;
+	    .overlay-headshot-close {
+	      z-index: 3;
+	      width: 30px;
+	      margin-right: 50px;
+	    }
+	  }
+	  .js-carousel-boardMember{
+	  	min-height: 400px;
+	  }
+}
+@media (max-width: 768px){
+		.carousel-light .slick-list:after{
+			border-bottom-color: none;
+			border-bottom-style: none;
+		}
+		.carousel-light .carousel-controls{
+			background: none;
+		}
+
+}
+
+.slick-prev:before, .slick-next:before{
+	color: #34657f
+}

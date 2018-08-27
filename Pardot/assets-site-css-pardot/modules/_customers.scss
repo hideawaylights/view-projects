@@ -1,0 +1,33 @@
+// - - - - - - - - - - - - - - - - - - -
+// For new customers page
+
+#product-window-welness.customer-sec{
+	h2{
+		@include font-rules('book');
+		color: #333f48;
+		font-size: 4rem;
+
+	}
+}
+
+#blog-series.customer-sec2{
+	.grid-container{
+		padding-bottom: 0;
+	}
+}
+#customers-hero {
+	.img-hero {
+		@include background-image('/assets/img/customers/hero/480x244.jpg', '/assets/img/customers/hero/960x487.jpg');
+
+		@media only screen and (min-width: 481px) and (max-width: 1024px) {
+			@include background-image('/assets/img/customers/hero/1024x519.jpg', '/assets/img/customers/hero/2048x1038.jpg');
+		}
+
+		@media only screen and (min-width: 1025px) {
+		  	@include background-image('/assets/img/customers/hero/1440x730.jpg', '/assets/img/customers/hero/2880x1460.jpg');
+		}
+	}
+}
+#keep-reading.customers-keep-reading .image img{
+    max-height: 21.3rem;
+}

@@ -1,0 +1,103 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - typography
+// global typography styles
+
+@font-face {
+    font-family: proxima-nova-bold;
+    src: url(/assets/fonts/proxima-nova/proxima-nova-bold/proxima-nova-bold.eot);
+    src: url(/assets/fonts/proxima-nova/proxima-nova-bold/proxima-nova-bold.eot?#iefix) format('embedded-opentype'), url(/assets/fonts/proxima-nova/proxima-nova-bold/proxima-nova-bold.woff2) format('woff2'), url(/assets/fonts/proxima-nova/proxima-nova-bold/proxima-nova-bold.woff) format('woff'), url(/assets/fonts/proxima-nova/proxima-nova-bold/proxima-nova-bold.ttf) format('truetype'), url(/assets/fonts/proxima-nova/proxima-nova-bold/proxima-nova-bold.svg#proxima-nova-bold) format('svg')
+}
+
+@font-face {
+    font-family: proxima-nova-regular;
+    src: url(/assets/fonts/proxima-nova/proxima-nova-regular/proxima-nova-regular.eot);
+    src: url(/assets/fonts/proxima-nova/proxima-nova-regular/proxima-nova-regular.eot?#iefix) format('embedded-opentype'), url(/assets/fonts/proxima-nova/proxima-nova-regular/proxima-nova-regular.woff2) format('woff2'), url(/assets/fonts/proxima-nova/proxima-nova-regular/proxima-nova-regular.woff) format('woff'), url(/assets/fonts/proxima-nova/proxima-nova-regular/proxima-nova-regular.ttf) format('truetype'), url(/assets/fonts/proxima-nova/proxima-nova-regular/proxima-nova-regular.svg#proxima-nova-regular) format('svg')
+}
+
+@font-face {
+    font-family: proxima-nova-light;
+    src: url(/assets/fonts/proxima-nova/proxima-nova-light/proxima-nova-light.eot);
+    src: url(/assets/fonts/proxima-nova/proxima-nova-light/proxima-nova-light.eot?#iefix) format('embedded-opentype'), url(/assets/fonts/proxima-nova/proxima-nova-light/proxima-nova-light.woff2) format('woff2'), url(/assets/fonts/proxima-nova/proxima-nova-light/proxima-nova-light.woff) format('woff'), url(/assets/fonts/proxima-nova/proxima-nova-light/proxima-nova-light.ttf) format('truetype'), url(/assets/fonts/proxima-nova/proxima-nova-light/proxima-nova-light.svg#proxima-nova-light) format('svg')
+}
+
+@font-face {
+    font-family: proxima-nova-semi;
+    src: url(/assets/fonts/proxima-nova/proxima-nova-semi/proxima-nova-semi.eot);
+    src: url(/assets/fonts/proxima-nova/proxima-nova-semi/proxima-nova-semi.eot?#iefix) format('embedded-opentype'), url(/assets/fonts/proxima-nova/proxima-nova-semi/proxima-nova-semi.woff2) format('woff2'), url(/assets/fonts/proxima-nova/proxima-nova-semi/proxima-nova-semi.woff) format('woff'), url(/assets/fonts/proxima-nova/proxima-nova-semi/proxima-nova-semi.ttf) format('truetype'), url(/assets/fonts/proxima-nova/proxima-nova-semi/proxima-nova-semi.svg#proxima-nova-semi) format('svg')
+}
+
+@font-face {
+    font-family: proxima-nova-thin;
+    src: url(/assets/fonts/proxima-nova/proxima-nova-thin/proxima-nova-thin.eot);
+    src: url(/assets/fonts/proxima-nova/proxima-nova-thin/proxima-nova-thin.eot?#iefix) format('embedded-opentype'), url(/assets/fonts/proxima-nova/proxima-nova-thin/proxima-nova-thin.woff2) format('woff2'), url(/assets/fonts/proxima-nova/proxima-nova-thin/proxima-nova-thin.woff) format('woff'), url(/assets/fonts/proxima-nova/proxima-nova-thin/proxima-nova-thin.ttf) format('truetype'), url(/assets/fonts/proxima-nova/proxima-nova-thin/proxima-nova-thin.svg#proxima-nova-thin) format('svg')
+}
+
+.t-main-heading {
+  font-size: 3.6rem;
+  line-height: 3.8rem;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - filter nav on portfolio and resources page
+.t-filter-nav-heading {
+  color: color('mid-gray');
+  font-size: 2.5rem;
+  line-height: 2.6rem;
+  text-align: center;
+  @include breakpoint(bp('tablet')){
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    text-align: left;
+    @include font-rules('light');
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - popular resources
+
+.t-popular-heading {
+  font-size: 3.6rem;
+  line-height: 3.8rem;
+  padding: 2.4rem 0 0.4rem;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - detail section
+// specify and applications pages
+
+.t-detail-section-heading {
+  color: color('dark-blue');
+  font-size: 2.5rem;
+  line-height: 2.6rem;
+  padding-bottom: 1.8rem;
+  &--white {
+    color: #fff !important;
+  }
+  @include breakpoint(bp('tablet')){
+    font-size: 5rem;
+    line-height: 5.3rem;
+  }
+}
+
+.t-detail-section-subheading {
+  padding-bottom: 2rem;
+  &--white {
+    color: #fff !important;
+  }
+  @include breakpoint(bp('tablet')){
+    font-size: 2.5rem;
+    line-height: 2.6rem;
+  }
+}
+
+.t-detail-section-text {
+  padding-bottom: 1.7rem;
+}
+
+.t-footnote {
+	vertical-align: top;
+	position: relative;
+	top: -0.25rem;
+	font-size: 1.1rem;
+	cursor: pointer;
+}

@@ -1,0 +1,84 @@
+/*
+  Functional styling;
+  These styles are required for noUiSlider to function.
+  You don't need to change these rules to apply your design.
+ */
+
+.noUi-target,
+.noUi-target * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.noUi-base {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.noUi-origin {
+  position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+}
+.noUi-handle {
+  position: relative;
+  z-index: 1;
+}
+/* This class is applied to the lower origin when its values is > 50%. */
+.noUi-stacking .noUi-handle {
+  z-index: 10;
+}
+/* Fix stacking order in IE7, which incorrectly creates a new context for the origins. */
+.noUi-stacking + .noUi-origin {
+  *z-index: -1;
+}
+.noUi-state-tap .noUi-origin {
+  -webkit-transition: top 0.2s, left 0.2s;
+  transition: top 0.2s, left 0.2s;
+}
+.noUi-state-drag * {
+  cursor: inherit !important;
+}
+
+/* Slider size and handle placement */
+.noUi-horizontal {
+  height: 5px;
+}
+.noUi-horizontal .noUi-handle {
+  height: 20px;
+  width: 20px;
+  top: -7.5px; left: -7.5px;
+}
+.noUi-horizontal.noUi-extended {
+  padding: 0 5px;
+}
+.noUi-horizontal.noUi-extended .noUi-origin  {
+  right: -5px;
+}
+
+/* Styling */
+.noUi-background {
+  background-color: #fff;
+}
+.noUi-origin {
+  border-radius: 10px;
+}
+.noUi-target {
+  border-radius: 10px;
+}
+
+/* Handles and cursors */
+.noUi-dragable {
+  cursor: w-resize;
+}
+.noUi-vertical .noUi-dragable {
+  cursor: n-resize;
+}
+.noUi-handle {
+  border-radius: 50%;
+  background-color: #36657e;
+  border: 3px solid #fff;
+  cursor: move;
+}

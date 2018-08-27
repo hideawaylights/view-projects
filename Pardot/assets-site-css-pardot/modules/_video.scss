@@ -1,0 +1,36 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - video module
+// styles for the video module
+.video-menu-under{
+  background-color: color('dark-blue');
+  width: 100%;
+  height: 32rem;
+}
+.video-heading {
+  color: color('dark-blue');
+  font-size: 3rem;
+  line-height: 3.2rem;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+}
+
+.video-subhead {
+  color: color('dark-blue');
+  font-size: 2rem;
+  line-height: 2.1rem;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+}
+
+.video-related-heading {
+  font-size: 2.4rem;
+  font-size: 2.6rem;
+  float: left;
+  padding-bottom: 2.2rem;
+}
+
+.video-all-heading {
+  @include link-color(color('orange'));
+  float: right;
+  margin-top: -0.4rem;
+}

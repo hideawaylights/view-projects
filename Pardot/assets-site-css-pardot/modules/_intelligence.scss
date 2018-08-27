@@ -1,0 +1,471 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - intelligence module
+// styles for the intelligence module
+
+.intelligence-hide-mobile {
+  display: none !important;
+  visibility: hidden !important;
+  @include breakpoint(1040px){
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+.intelligence-hide-desktop {
+  display: block !important;
+  @include breakpoint(1040px){
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - intelligence description
+
+.intelligence-description-container {
+  @include arrow-down(color('dark-gray'));
+  background: color('dark-gray');
+  color: #fff;
+  padding-bottom: 8rem;
+  &:after {
+    z-index: 2;
+  }
+}
+
+.intelligence-description-container--left {
+  padding-bottom: 5rem;
+  @include breakpoint(bp('tablet')){
+    @include span-columns(4 of 10);
+    padding-bottom: 0;
+  }
+}
+
+.intelligence-description-container--right {
+  @include breakpoint(bp('tablet')){
+    @include span-columns(6 of 10);
+    @include omega;
+  }
+}
+
+.intelligence-description {
+  @include clearfix;
+  padding: 1rem 0;
+}
+
+// - -  intelligence description icons
+
+.intelligence-description-icon {
+  @include span-columns(2.5 of 10);
+  height: 8.4rem;
+  @include breakpoint(bp('tablet')){
+    @include span-columns(1 of 4);
+  }
+}
+
+.intelligence-description-icon--glare {
+  background: url('../img/product/intelligence-description/glare.png') center center no-repeat;
+  background-size: contain;
+
+}
+
+.intelligence-description-icon--heat {
+  background: url('../img/product/intelligence-description/heat.png') center center no-repeat;
+  background-size: contain;
+}
+
+.intelligence-description-icon--daylighting {
+  background: url('../img/product/intelligence-description/daylighting.png') center center no-repeat;
+  background-size: contain;
+}
+
+.intelligence-description-text {
+  @include span-columns(7.5 of 10);
+    @include omega;
+  @include breakpoint(bp('tablet')){
+    @include span-columns(3 of 4);
+  }
+}
+
+.intelligence-description-video-thumbnail {
+  background: url(../img/product/intelligence-description/intelligence-description-video-thumbnail.png) center center no-repeat;
+}
+
+// - -  intelligence description text
+header.intelligence-heading-container{
+  margin-top: 4rem !important;
+}
+.intelligence-description-heading {
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  letter-spacing: 0;
+  @include breakpoint(bp('tablet')){
+    font-family: font('medium');
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+}
+
+.intelligence-description-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.4rem;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - intelligence outside and inside
+
+.intelligence-outside-hero {
+  position: relative;
+  transition: all 0.6s ease-in-out;
+  @include hero-image-helper('../img/product/intelligence-outside/latitude.jpg', 192.1rem, 108rem);
+  &.intelligence-outside-hero-0,
+  &.intelligence-outside-hero-5 {
+    @include hero-image-helper('../img/product/intelligence-outside/cloud-cover.jpg', 192.1rem, 108rem);
+  }
+  &.intelligence-outside-hero-1,
+  &.intelligence-outside-hero-6 {
+    @include hero-image-helper('../img/product/intelligence-outside/always-on.jpg', 192.1rem, 108rem);
+  }
+  &.intelligence-outside-hero-2,
+  &.intelligence-outside-hero-7 {
+    @include hero-image-helper('../img/product/intelligence-outside/angle.jpg', 192.1rem, 108rem);
+  }
+  &.intelligence-outside-hero-3,
+  &.intelligence-outside-hero-8 {
+    @include hero-image-helper('../img/product/intelligence-outside/latitude.jpg', 192.1rem, 108rem);
+  }
+  &.intelligence-outside-hero-4,
+  &.intelligence-outside-hero-9 {
+    @include hero-image-helper('../img/product/intelligence-outside/architectural-details.jpg', 192.1rem, 108rem);
+  }
+}
+
+.intelligence-inside-hero {
+  @include hero-image-helper('../img/product/intelligence-inside/glare-1.jpg', 220rem, 130.2rem);
+  position: relative;
+  transition: background-image 1s ease-in-out;
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    content: ' ';
+    transition: background-image 1s ease-in-out;
+  }
+  &.intelligence-inside-hero-on-load {
+    &:after {
+      @include hero-image-helper('../img/product/intelligence-inside/glare-1.jpg', 220rem, 130.2rem);
+    }
+  }
+  &.intelligence-inside-hero-0,
+  &.intelligence-inside-hero-4 {
+    @include hero-image-helper('../img/product/intelligence-inside/glare-1.jpg', 220rem, 130.2rem);
+    &:after {
+      @include hero-image-helper('../img/product/intelligence-inside/glare-2.jpg', 220rem, 130.2rem);
+    }
+  }
+
+  &.intelligence-inside-hero-1,
+  &.intelligence-inside-hero-5 {
+    @include hero-image-helper('../img/product/intelligence-inside/daylighting-1.jpg', 220rem, 130.2rem);
+    &:after {
+      @include hero-image-helper('../img/product/intelligence-inside/daylighting-2.jpg', 220rem, 130.2rem);
+    }
+  }
+
+  &.intelligence-inside-hero-2,
+  &.intelligence-inside-hero-6 {
+    @include hero-image-helper('../img/product/intelligence-inside/lightsensors-1.jpg', 220rem, 130.2rem);
+    &:after {
+      @include hero-image-helper('../img/product/intelligence-inside/lightsensors-2.gif', 220rem, 130.2rem);
+    }
+  }
+
+  &.intelligence-inside-hero-3,
+  &.intelligence-inside-hero-7 {
+    @include hero-image-helper('../img/product/intelligence-inside/heat-1.jpg', 220rem, 130.2rem);
+    &:after {
+      @include hero-image-helper('../img/product/intelligence-inside/heat-2.jpg', 220rem, 130.2rem);
+    }
+  }
+}
+
+.intelligence-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  max-width: 108rem;
+  width: 100%;
+}
+
+.intelligence-viewport {
+  position: absolute;
+  top: 50%;
+  height: 0.1rem;
+  width: 100%;
+}
+
+.intelligence-heading-container {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 108rem;
+  text-align: center;
+  width: 100%;
+  @include breakpoint(bp('mobile')){
+    top: 2.5rem
+  }
+  @include breakpoint(1040px){
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+.intelligence-heading {
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  @include breakpoint(bp('tablet')){
+    font-size: 6rem;
+    line-height: 6.4rem;
+  }
+}
+
+$intelligence-outside-icon-coordinates: (
+  'cloud': (
+    top: responsive(185, 325),
+    left: responsive(21, 320),
+    top-desktop: responsive(407, 856),
+    left-desktop: responsive(360, 1440),
+    offset: 3rem
+  ),
+  'always-on': (
+    top: responsive(120, 325),
+    left: responsive(175, 320),
+    top-desktop: responsive(185, 856),
+    left-desktop: responsive(673, 1440),
+    offset: 3.7rem
+  ),
+  'angle': (
+    top: responsive(96, 325),
+    left: responsive(280, 320),
+    top-desktop: responsive(277, 856),
+    left-desktop: responsive(1152, 1440),
+    offset: 3.5rem
+  ),
+  'latitude': (
+    top: responsive(243, 325),
+    left: responsive(112, 320),
+    top-desktop: responsive(600, 856),
+    left-desktop: responsive(627, 1440),
+    offset: 2rem
+  ),
+  'architectural-details': (
+    top: responsive(203, 325),
+    left: responsive(256, 320),
+    top-desktop: responsive(450, 856),
+    left-desktop: responsive(900, 1440),
+    offset: 3rem
+  )
+);
+
+// - - - - - - - - - - - - - - - - - - -
+// - - intelligence-icons
+
+$intelligence-inside-icon-coordinates: (
+  'glare': (
+    top: responsive(170, 325),
+    left: responsive(50, 320),
+    top-desktop: responsive(345, 856),
+    left-desktop: responsive(266, 1440),
+    offset: 2.8rem
+  ),
+  'daylighting': (
+    top: responsive(150, 325),
+    left: responsive(270, 320),
+    top-desktop: responsive(370, 856),
+    left-desktop: responsive(1200, 1440),
+    offset: 2.9rem
+  ),
+  'light-sensors': (
+    top: responsive(92, 325),
+    left: responsive(220, 320),
+    top-desktop: responsive(250, 856),
+    left-desktop: responsive(1000, 1440),
+    offset: 2.9rem
+  ),
+  'heat': (
+    top: responsive(145, 325),
+    left: responsive(130, 320),
+    top-desktop: responsive(440, 856),
+    left-desktop: responsive(750, 1440),
+    offset: 2.9rem
+  )
+);
+
+.intelligence-icon-wrapper {
+  position: absolute;
+  background: color('light-blue');
+  border-radius: 50%;
+  z-index: 2;
+  @include attention(){
+    background-color: color('orange') !important;
+    cursor: pointer;
+  }
+  &.is-active {
+    @include breakpoint(bp('tablet')){
+      background-color: color('orange') !important;
+    }
+  }
+  .has-animation & {
+    @for $i from 2 through 6 {
+      &.intelligence-animation-#{$i} {
+        animation: intelligence-icon 0.5s ease-in-out;
+        animation-delay: $i * 0.5s;
+      }
+    }
+
+    &.intelligence-outside-animation-active {
+      animation: intelligence-icon 0.5s 0.5s ease-in-out, intelligence-icon-active 0.5s 3s ease-in-out forwards;
+    }
+
+    + .intelligence-outside-animation-tooltip-active {
+      animation: fade-in 0.5s 3s ease-in-out forwards;
+      z-index: 3;
+    }
+
+    &.intelligence-inside-animation-active {
+      animation: intelligence-icon 0.5s 0.5s ease-in-out, intelligence-icon-active 0.5s 2.5s ease-in-out forwards;
+    }
+
+    + .intelligence-inside-animation-tooltip-active {
+      animation: fade-in 0.5s 2.5s ease-in-out forwards;
+      z-index: 3;
+    }
+  }
+}
+
+.intelligence-outside-hero-animation.has-animation {
+  animation: intelligence-outside-hero-animation 0.5s 3s ease-in-out forwards;
+}
+
+.intelligence-inside-hero-animation.has-animation {
+  animation: intelligence-inside-hero-animation 0.5s 2.5s ease-in-out forwards;
+}
+
+@mixin intelligence-icon-base {
+  background-size: contain;
+  display: block;
+  height: 2rem;
+  margin: 0.5rem;
+  width: 2rem;
+  @include breakpoint(bp('mobile')) {
+    height: 2.5rem;
+    margin: 0.75rem;
+    width: 2.5rem;
+  }
+  @include breakpoint(bp('tablet')){
+    height: 3rem;
+    margin: 1rem;
+    width: 3rem;
+  }
+}
+
+@each $icon, $coordinate in $intelligence-outside-icon-coordinates {
+  .intelligence-outside-info-wrapper-#{$icon}{
+    position: absolute;
+    top: #{map-get($coordinate, 'top')};
+    left: #{map-get($coordinate, 'left')};
+    @include breakpoint(bp('tablet')){
+      top: #{map-get($coordinate, 'top-desktop')};
+      left: #{map-get($coordinate, 'left-desktop')};
+      .intelligence-icon-wrapper {
+        margin-top: #{map-get($coordinate, 'offset')};
+      }
+    }
+  }
+
+  .intelligence-outside-icon-#{$icon} {
+    background: url('../img/svg/product/intelligence-outside/#{$icon}.png') no-repeat center center;
+    @include intelligence-icon-base;
+  }
+}
+
+@each $icon, $coordinate in $intelligence-inside-icon-coordinates {
+  .intelligence-inside-info-wrapper-#{$icon}{
+    position: absolute;
+    top: #{map-get($coordinate, 'top')};
+    left: #{map-get($coordinate, 'left')};
+    @include breakpoint(bp('tablet')){
+      top: #{map-get($coordinate, 'top-desktop')};
+      left: #{map-get($coordinate, 'left-desktop')};
+      .intelligence-icon-wrapper {
+        margin-top: #{map-get($coordinate, 'offset')};
+      }
+    }
+  }
+
+  .intelligence-inside-icon-#{$icon} {
+    background: url('../img/svg/product/intelligence-inside/#{$icon}.png') no-repeat center center;
+    @include intelligence-icon-base;
+  }
+}
+
+@mixin intelligence-tooltip-base {
+  display: none;
+  @include breakpoint(bp('tablet')){
+    background: rgba(31,39,47, 0.9);
+    color: #fff;
+    display: block;
+    opacity: 0;
+    padding: 1.5rem;
+    width: 32rem;
+    z-index: 1;
+    &.is-active {
+      opacity: 1;
+      z-index: 3;
+    }
+  }
+}
+
+.intelligence-tooltip-left {
+  @include intelligence-tooltip-base;
+  @include arrow-left(rgba(31,39,47, 0.9));
+  margin-left: 7.5rem;
+  &.is-active {
+    animation: fade-in 0.6s ease-in-out;
+  }
+}
+
+.intelligence-tooltip-right {
+  @include intelligence-tooltip-base;
+  @include arrow-right(rgba(31,39,47, 0.9));
+  margin-left: -34.5rem;
+  &.is-active {
+    animation: fade-in 0.6s ease-in-out;
+  }
+}
+
+.intelligence-tooltip-heading {
+  font-family: font('medium');
+  font-size: 1.8rem;
+  line-height: 1.9rem;
+}
+
+.intelligence-tooltip-text {
+  color: rgba(255,255,255, 0.7);
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+}
+
+.intelligence-tooltip-mobile {
+  // @include arrow-up(color('dark-blue'));
+  background: color('dark-blue');
+  color: #fff;
+  padding: 2.5rem 5rem;
+  text-align: center;
+}

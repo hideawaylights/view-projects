@@ -1,0 +1,25 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - applications module
+// styles for the applications module
+
+// - - - - - - - - - - - - - - - - - - -
+// - - applications
+
+.applications-container {
+  background: #08232f;
+}
+
+.applications-image {
+  @include clearfix;
+  @include span-columns(5 of 10);
+  position: absolute;
+  bottom: 0;
+  height: 40rem;
+  $applications-images: ('workplaces', 'healthcare', 'education', 'hospitality', 'government');
+  @each $img in $applications-images {
+    &--#{$img} {
+      background: url('../img/applications/#{$img}-large.png') center bottom no-repeat;
+      background-size: contain;
+    }
+  }
+}         

@@ -1,0 +1,62 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - specify module
+// styles for the specify module
+
+// - - - - - - - - - - - - - - - - - - -
+// - - hero 
+
+.specify-heading {
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  @include breakpoint(bp('tablet')){
+    font-size: 5.8rem;
+    line-height: 6.4rem;
+    margin-top: -9rem;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - specify sections 
+
+.specify-text-alignment {
+  text-align: center;
+  @include breakpoint(bp('tablet')){
+    text-align: left;
+  }
+}
+
+.specify-image {
+  display: block;
+  margin: 2.5rem auto;
+  @include breakpoint(bp('tablet')){ 
+    margin-top: 8.5rem;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - specify options
+
+.specify-options-container {
+  @include arrow-up(color('dark-gray'));
+  background: color('dark-gray');
+  color: #fff;
+}
+
+.specify-option-heading {
+  font-family: font('medium');
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  @include breakpoint(bp('tablet')){
+    font-size: 2rem;
+  }
+}
+
+.specify-option-text {
+  color: rgba(255,255,255, 0.52);
+  font-family: font('book');
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  @include breakpoint(bp('tablet')){
+    font-size: 1.5rem;
+  }
+}

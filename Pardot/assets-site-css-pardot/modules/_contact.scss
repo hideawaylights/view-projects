@@ -1,0 +1,457 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - contact module
+// styles for the contact module
+
+// - - - - - - - - - - - - - - - - - - -
+// - - hero
+#contact-hero{
+	.img-hero {
+		@include background-image('/assets/img/contact/contact-small.jpg');
+		@include breakpoint(bp('desktop')) {
+			@include background-image('/assets/img/contact/contact-large.jpg');
+		}
+	}
+
+	.hero-heading {
+		h1 {
+			width: 100%;
+		}
+	}
+	/*   width: 100%; */
+/*   height: 73rem; */
+/*   /\*height: 80vh;*\/ */
+/*   background-color: color('dark-gray'); */
+/*   position: relative; */
+/*   @media (max-width: 970px){ */
+/*     height: 73rem; */
+/*   } */
+/*   .img-hero{ */
+/*     position: absolute; */
+/*     width: 100%; */
+/*     height: 100%; */
+/*     background-image: url(../img/contact/contact-large.jpg); */
+/*     background-size: cover; */
+/*     background-position: top center; */
+/*     background-repeat: no-repeat; */
+/*   } */
+
+/*   .grid-container{ */
+/*     position: relative; */
+/*     height: 100%; */
+/*   } */
+/*   #contact-hero-txt{ */
+/*     position: relative; */
+/*     top: 26rem; */
+/*     left: 0; */
+/*     h1{ */
+/*       @include font-rules('light'); */
+/*       font-size: 7.2rem; */
+/*       line-height: 1; */
+/*       margin-bottom: 1.3rem; */
+/*       color: #FFF; */
+/*       width: 110rem; */
+/*       text-shadow: 0 .2rem .4rem rgba(0,0,0,0.50); */
+/*     } */
+/*     h2{ */
+/*       @include font-rules('book'); */
+/*       font-size: 2rem; */
+/*       line-height: 1.05; */
+/*       color: #FFF; */
+/*       width: 65rem; */
+/*       text-shadow: 0 .2rem .4rem rgba(0,0,0,0.50); */
+/*     } */
+/*     @media (max-width: 970px){ */
+/*       height: 55rem; */
+/*       top: 15rem; */
+/*       h1{ */
+/*         padding-left: 3rem; */
+/*         font-size: 4rem; */
+/*         width: auto; */
+/*       } */
+/*       h2{ */
+/*         @include font-rules('light'); */
+/*         padding-left: 3rem; */
+/*         margin-top: 2rem; */
+/*         font-size: 2rem; */
+/*         width: 25.5rem; */
+/*       } */
+/*     } */
+/*   } */
+}
+
+#contact-form{
+	
+}
+#us-offices, #canada-offices{
+	.address-item {
+		text-align: left;
+		padding: 2.5rem 0 1.5rem 1rem;
+	}
+	h2{
+		@include font-rules('medium');
+		padding-bottom: 1rem;
+	}
+}
+#main-office{
+	.contact-info{
+		text-align: left;
+	}
+}
+.contact-hero-bg.overlay-hero-background  {
+  background: #34657f;
+}
+
+.contact-arrow {
+  position: relative;
+  &:after {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    border: solid transparent;
+    border-top-color: color('dark-blue');
+    border-width: 1.5rem;
+    content: " ";
+    height: 0;
+    margin-left: -1.5rem;
+    width: 0;
+    @include breakpoint(bp('tablet')){
+      display: none;
+    }
+  }
+}
+
+.contact-hero-heading {
+  color: #fff;
+  font-size: 2.3rem;
+  line-height: 1.5;
+  padding-bottom: 1.5rem;
+  @include breakpoint(bp('tablet')) {
+    font-size: 4rem;
+    line-height: 4.4rem;
+  }
+  @include breakpoint(bp('desktop')) {
+    font-size: 5rem;
+    line-height: 5.4rem;
+  }
+}
+
+.contact-hero-text {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1.8rem;
+  @include breakpoint(bp('tablet')) {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+  @include breakpoint(bp('desktop')) {
+    line-height: 3.1rem;
+  }
+}
+
+.contact-heading {
+  color: color('light-blue');
+  padding-bottom: 25px;
+  text-align: center;
+
+  @include breakpoint(bp('tablet')) {
+    text-align: left;
+  }
+}
+
+.contact-bg {
+  background: #f0f0f0;
+  padding-top: 50px;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - contact card
+
+.contact-card-group {
+  @include breakpoint(bp('tablet')) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.contact-card {
+  background: #fff;
+  border: 2px solid #e4e4e4;
+  border-radius: 20px;
+  line-height: 1.5;
+  margin-bottom: 50px;
+  min-height: 0;
+  min-width: 0;
+  text-align: center;
+
+  @include breakpoint(bp('tablet')) {
+    flex: 1 1 calc(50% - 50px);
+    &:nth-child(odd){
+      margin-right: 50px;
+    }
+  }
+
+  @include breakpoint(1340px) {
+    flex: 1 1 calc(25% - 50px);
+    &:not(:nth-child(4n)){
+      margin-right: 50px;
+    }
+  }
+}
+
+.contact-card-header {
+  padding: 25px 50px;
+}
+
+.contact-card-image {
+  display: none;
+
+  @include breakpoint(bp('tablet')) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.contact-card-heading {
+  font-size: 3.2rem;
+  @include breakpoint(bp('tablet')) {
+    font-size: 2.2rem;
+  }
+}
+
+.contact-card-subheading {
+  color: color('light-blue');
+  font-size: 2.4rem;
+  text-transform: uppercase;
+
+  @include breakpoint(bp('tablet')) {
+    font-size: 1.6rem;
+  }
+}
+
+.contact-card-line {
+  border: 1px solid #e4e4e4;
+}
+
+.contact-card-list {
+  padding: 25px 50px;
+
+  li {
+    padding: 5px 0;
+  }
+
+  a {
+    position: relative;
+    color: color('dark-gray');
+    font-size: 2.2rem;
+
+    @include attention() {
+      color: color('dark-gray');
+    }
+
+    &:visited {
+      color: color('dark-gray');
+    }
+
+    &:before {
+      position: absolute;
+      right: 100%;
+      content: '';
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 2px;
+      height: 25px;
+      width: 25px;
+    }
+
+    @include breakpoint(bp('tablet')) {
+      word-wrap: break-word;
+      font-size: 1.5rem;
+
+      &:before {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}
+
+$contact-icons: ('map', 'phone', 'mail');
+@each $icon in $contact-icons {
+  .contact-icon-#{$icon}:before {
+    background: url('../img/contact/icons/#{$icon}.png') no-repeat center center;
+    background-size: contain;
+  }
+}
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - contact offices
+.contact-offices-card {
+  @include clearfix;
+  background: #fff;
+  border: 2px solid #e4e4e4;
+  border-radius: 20px;
+  line-height: 1.5;
+  padding: 50px;
+  margin-bottom: 50px;
+}
+
+.contact-offices-list {
+  font-family: font('medium');
+  font-size: 1.6rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  li {
+    cursor: pointer;
+  }
+
+  li:not(:last-child){
+    padding-bottom: 50px;
+  }
+
+  address {
+    color: color('mid-gray');
+    font-size: 1.4rem;
+  }
+
+  + .contact-offices-list {
+    padding-top: 50px;
+  }
+
+  @include breakpoint(bp('tablet')) {
+    @include span-columns(2.5 of 10);
+
+    + .contact-offices-list {
+      padding-top: 0;
+    }
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - contact steps
+
+.contact-steps-container {
+  @include clearfix;
+  border-bottom: 0.1rem solid #979797;
+  border-top: 0.1rem solid #fff;
+  padding: 1.5rem 0;
+  @include breakpoint(bp('tablet')){
+    padding: 2.5rem 0;
+  }
+  &:first-child {
+    border-top: none;
+    padding-top: 5rem;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+// - - contact steps icons
+
+.contact-steps-icon-container {
+  float: left;
+  margin-right: 2rem;
+  @include breakpoint(bp('tablet')){
+    @include span-columns(2.5 of 10);
+  }
+}
+
+.contact-steps-icon {
+  border-radius: 50%;
+  height: 9.7rem;
+  text-align: center;
+  width: 9.7rem;
+  @include breakpoint(bp('tablet')){
+    height: 15rem;
+    width: 15rem;
+  }
+}
+
+$contact-buy-icons: ('energy', 'process', 'design', 'drawing', 'installation', 'programming', 'commisioning', 'support');
+@each $icon in $contact-buy-icons {
+  .contact-steps-icon--#{$icon} {
+    background: color('mid-blue') url('../img/contact/buy/#{$icon}.png') no-repeat center center;
+  }
+}
+
+// - - contact steps description
+
+.contact-steps-description {
+  float: left;
+  padding-top: 1.5rem;
+  width: responsive(160, 320);
+  @include breakpoint(bp('tablet')){
+    @include span-columns(7.5 of 10);
+    padding-top: 0;
+  }
+}
+
+
+.contact-steps-description-heading {
+  color: color('dark-blue');
+  font-size: 2rem;
+  line-height: 2.1rem;
+  @include breakpoint(bp('tablet')){
+    font-size: 5rem;
+    line-height: 5.3rem;
+  }
+}
+
+.contact-steps-description-subheading {
+  color: rgba(48, 102,127, 0.58);
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  padding-top: 0.5rem;
+  @include breakpoint(bp('tablet')){
+    font-size: 2.4rem;
+    line-height: 2.5rem;
+    padding: 1rem 0;
+  }
+}
+
+.contact-steps-description-text {
+  color: color('dark-blue');
+  display: none;
+  line-height: 2.4rem;
+  a {
+    @include link-color(color('dark-blue'));
+  }
+  @include breakpoint(bp('tablet')){
+    display: block;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - contact info sidebar
+
+.contact-info {
+  padding: 2.5rem 0 1.5rem 1rem;
+  li {
+    padding: 1rem 0;
+  }
+}
+
+// - - contact info icons
+
+.contact-info-icon {
+  float: left;
+  height: 1.9rem;
+  width: 2.2rem;
+  margin-right: 1rem;
+  &--email {
+    margin-top: 0.3rem;
+  }
+}
+
+$contact-info-icons: ('phone', 'email');
+@each $icon in $contact-info-icons {
+  .contact-info-icon--#{$icon} {
+    @include svg('../img/svg/contact/#{$icon}');
+  }
+}
+
+#we-walk-with-you-every-step-of-the-way header h1{
+  color: #FFF;
+}

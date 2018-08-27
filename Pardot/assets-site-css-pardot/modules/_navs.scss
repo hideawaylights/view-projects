@@ -1,0 +1,480 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - navs module
+// styles for the navs module
+header.nav{
+  position: absolute;
+  top: 1.3rem;
+  left: 0;
+  width: 100%;
+  height: 8rem;
+  z-index: 11;
+  button.sandwich{
+    display: none;
+  }
+  .grid-container{
+    position: relative;
+  }
+  .nav-logo{
+    position: absolute;
+    top: 1rem;
+    left: .3rem;
+    width: 31.6rem;
+    height: 6rem;
+    img{
+      width: 31.6rem;
+      height: 6rem;
+    }
+  }
+  .nav-main{
+    position: absolute;
+    list-style: none;
+    top: 1.9rem;
+    left: 38rem;
+    & > li{
+      float: left;
+      display: block;
+      position: relative;
+      padding: 1rem 1.4rem;
+      a{
+        z-index: 1;
+        color: #FFF;
+        @include font-rules('book');
+        font-size: 1.8rem;
+        text-decoration: none;
+        &.is-active{
+          font-weight: bold;
+        }
+      }
+      & > ul{
+          display: none;
+		  white-space: nowrap;
+        padding: 1.5rem 1.5rem 0 1.5rem;
+        position: absolute;
+        left: 0;
+        top: 4.1rem;
+        background-color: rgba(155,155,155,.8);
+
+        /*-webkit-backdrop-filter: blur(.7rem);
+        backdrop-filter: blur(.7rem);*/
+        @supports ((-webkit-backdrop-filter: blur(.7rem)) or (backdrop-filter: blur(.7rem))) {
+        	background-color: rgba(255,255,255,.5);
+        	-webkit-backdrop-filter: blur(.7rem);
+        	backdrop-filter: blur(.7rem);
+         }
+        li{
+          float: initial;
+          padding-bottom: .8rem;
+          a{
+            font-size: 1.6rem;
+            font-weight: 400;
+            &:hover{
+              font-weight: 500;
+            }
+          }
+          .head{
+          	font-weight: bold;
+          	color: white;
+      		border-bottom: .1rem solid #FFF;
+      		width: 16rem;
+      		display: block;
+      		padding-bottom: 1rem;
+
+          }
+          ul{
+          	margin-top: 1rem;
+          }
+
+        }
+      }
+      &:hover{
+        background-color: rgba(155,155,155,.8);
+        /*-webkit-backdrop-filter: blur(.7rem);
+        backdrop-filter: blur(.7rem);*/
+        font-weight: 500;
+
+        ul{
+          display: block;
+
+        }
+        /* Gets applied if supported only */
+        @supports ((-webkit-backdrop-filter: blur(.7rem)) or (backdrop-filter: blur(.7rem))) {
+			background-color: rgba(255,255,255,.5);
+			-webkit-backdrop-filter: blur(.7rem);
+			backdrop-filter: blur(.7rem);
+         }
+      }
+      &:nth-child(2) ul{
+        width: 40rem;
+        height: 16.5rem;
+        & > li{
+          float: left;
+          position: relative;
+          width: 18rem;
+          & > b {
+			  color: white;
+          }
+          ul{
+            position: absolute;
+            top: 3rem;
+            left: 0;
+            background: none;
+            white-space: nowrap;
+            li{
+				float: none;
+              a{
+                font-weight: 400;
+                &:hover{
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #contact-mobile{
+    display:  none;
+    @media (max-width: 970px){
+      display: block;
+    }
+  }
+  #contact-nav{
+    background-color: rgba(52, 101, 127,.5);
+    &:hover{
+      background-color: rgba(52, 101, 127,.87);
+    }
+    position: absolute;
+    right: 0.1rem;
+    top: 2.5rem;
+    width: auto;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    @include font-rules('book');
+    &:hover{
+      font-weight: bold;
+    }
+    @media (max-width: 1100px){
+      display: none;
+    }
+  }
+  @media (max-width: 970px){
+    top: 0;
+    &.clicked{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.85);
+      -webkit-backdrop-filter: blur(4rem);
+      backdrop-filter: blur(4rem);
+    }
+    button.sandwich{
+      display: block;
+      position: absolute;
+      top: 3.2rem;
+      left: 3.4rem;
+      background-color: transparent;
+      width: 3.3rem;
+      height: 1.8rem;
+      border-top: .1rem solid #FFF;
+      border-bottom: .1rem solid #FFF;
+      z-index: 2;
+      &:after{
+        position: absolute;
+        content:'';
+        height: .1rem;
+        width: 100%;
+        left: 0;
+        top: calc((1.8rem / 2) - .1rem);
+        background-color: #FFF;
+      }
+      &.clicked{
+        top: 3rem;
+        left: 3.9rem;
+        border: none;
+        width: 2.3rem;
+        height: 2.3rem;
+        overflow: hidden;
+        background-image: url(../img/svg/close.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:after{
+          display: none;
+        }
+      }
+    }
+    .nav-logo{
+      top: 2.4rem;
+      left: 11.7rem;
+      z-index: 2;
+      width: auto;
+      &.menu_show{
+        position: fixed;
+      }
+      img{
+        width: 16.7rem;
+        height: 3.2rem;
+      }
+    }
+    .nav-main{
+      display: none;
+      &.display{
+        display: block;
+        position: relative;
+        overflow-y: auto;
+        width: 100%;
+        z-index: 1;
+        height: calc(100vh - 9.4rem);
+        top: 9.4rem;
+        left: 0;
+
+        & > li{
+          position: relative;
+          width: 100%;
+          padding-left: 3.8rem;
+          padding-right: 3.8rem;
+          padding-bottom: 2rem;
+          padding-top: 2rem;
+          a{
+            width: 100%;
+            display: block;
+            position: relative;
+            &.sub:after{
+              position: absolute;
+              right: 0;
+              font-family: FontAwesome;
+              font-weight: normal;
+              font-style: normal;
+              font-size: 3rem;
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              top: 0;
+              right: 1.2rem;
+              z-index: 2;
+              content: "\f105";
+            }
+          }
+          &:hover, &:nth-child(2):hover{
+            background-color: transparent;
+            a.sub:after{
+              content: "\f107";
+            }
+            ul{
+              height: auto;
+              width: auto;
+              padding-top: 0;
+              padding-bottom: 2rem;
+              display: block;
+              position: relative;
+              background-color: transparent;
+              & > li{
+                float: initial;
+                width: 100%;;
+                margin-bottom: 2rem;
+                margin-left: 1rem;
+                padding-right: 0;
+                a.sub:after{
+                  position: absolute;
+                  right: 0;
+                  font-family: FontAwesome;
+                  font-weight: normal;
+                  font-style: normal;
+                  font-size: 3rem;
+                  text-rendering: auto;
+                  -webkit-font-smoothing: antialiased;
+                  -moz-osx-font-smoothing: grayscale;
+                  top: 0;
+                  right: 1.2rem;
+                  z-index: 2;
+                  content: "\f105";
+                }
+                ul{
+                  display: none
+                }
+                &:hover {
+                  a.sub:after{
+                    content: "\f107";
+                  }
+                  ul{
+                    display: block
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// specific for firefox messing up with measurement
+@-moz-document url-prefix() {
+  header.nav .nav-main > li > ul{
+    top: 4.2rem;
+  }
+}
+
+header.nav.color {
+	position: initial;
+
+	.nav-main {
+		& > li {
+			a {
+				color: #30667f;
+			}
+
+			& > ul {
+				z-index: 2;
+				background-color: rgba(255, 255, 255, .95);
+				-moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.12);
+				box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.12);
+
+				li .head {
+				    color: #30667f;
+					border-bottom: .1rem solid #30667f;
+				}
+			}
+		}
+	}
+
+	#contact-nav {
+		background-color: #30667f;
+	}
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - nav-filter-list
+.nav-filter-list {
+  position: relative;
+  margin: 1rem auto 2rem;
+  max-height: 3.7rem;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  width: 19.6rem;
+  border-radius: 2.6rem;
+
+  &:before {
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    height: 0.6rem;
+    width: 0.9rem;
+    background: url('../img/svg/triangle-down.svg');
+    @include breakpoint(bp('tablet')){
+      display: none;
+    }
+  }
+
+  &.nav-is-open {
+    max-height: 19rem;
+    &:before {
+      transform: rotate(180deg);
+    }
+  }
+
+  .is-active {
+    @include link-color(#fff);
+    background: color('dark-blue');
+    @include breakpoint(bp('tablet')){
+      @include link-color(color('dark-gray'));
+      background: none;
+    }
+  }
+
+  li {
+    margin-bottom: 0.1rem;
+    text-align: center;
+    background: color('dark-blue');
+  }
+
+  a {
+    @include link-color(#fff);
+    padding: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    font-family: font('book');
+    font-size: 1.4rem;
+    @include attention(){
+      @include link-color(darken(#fff, 20%));
+    }
+  }
+
+  @include breakpoint(bp('tablet')){
+    margin: 1rem 0;
+    max-height: inherit;
+    width: auto;
+    border-radius: 0;
+
+    li {
+      float: left;
+      background: transparent;
+      margin-right: 2rem;
+      margin-bottom: 1rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      @include link-color(color('mid-gray'));
+
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      padding: 0;
+      @include attention(){
+        @include link-color(color('dark-gray'));
+      }
+    }
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - nav-resources-list
+.nav-resources-list {
+  position: relative;
+  margin-bottom: 1rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  overflow: hidden;
+  background: rgba(0,0,0, 0.5);
+
+  @include breakpoint(bp('tablet')){
+    max-width: 50%;
+    margin: 0 auto 1rem;
+  }
+
+  input {
+    @include span-columns(2.666666666666667 of 3.3333333333333335);
+    background: transparent;
+    border: none;
+    font-family: font('book');
+    font-size: 1.6rem;
+    height: 3.8rem;
+    line-height: 1.8rem;
+    outline: none;
+    padding-left: 1rem;
+  }
+
+  button {
+    @include span-columns(0.6666666666666667 of 3.3333333333333335);
+    background: url('../img/svg/search.svg') no-repeat center center;
+    height: 3.8rem;
+    font-size: 0;
+    line-height: 0;
+    @include attention(){
+      outline: none;
+    }
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - nav-resources-list-arrow
+.nav-resources-list-arrow {
+  position: absolute;
+  top: 1rem;
+  right: 1.7rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  background: url('../img/svg/chevron-down.svg') no-repeat center center;
+}

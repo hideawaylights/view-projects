@@ -1,0 +1,697 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - grid module
+// styles for the grid module
+
+// - - - - - - - - - - - - - - - - - - -
+// - - grid-container
+.grid-container {
+  @include clearfix;
+  padding: 0 1rem;
+  @include breakpoint(bp('tablet')){
+    @include outer-container;
+    /*padding: 0;*/
+  }
+  @media (min-width: 970px) and (max-width: 1220px) {
+    margin: 0 1rem;
+    position: relative;
+  }
+}
+
+.vertical-centered{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+.vertical-bottom {
+	position: absolute;
+	width: 100%;
+	bottom:0;
+}
+//TODO add reverse
+/*This code is backward. column 1 is full 6 columns
+Where as column 6 is a 6th of the width*/
+@for $i from 1 through 6 {
+  .grid-large-column-#{$i}{
+    float: left;
+    position: relative;
+    text-align: center;
+    width: calc((100% - ((#{$i - 1}) * 1rem)) / #{$i});
+	margin-right: .8rem;
+    a{
+      img {
+      	  position: absolute;
+      	  z-index: 1;
+      	  left: 50%;
+      	  top: 50%;
+      	  @include transform(translate(-50%, -50%));
+      }
+    }
+
+    & .video, & .image{
+      text-align: center;
+      position: relative;
+      width: 100%;
+      height: 21.3rem;
+     
+      &:before{
+        /*background-size: calc(100vw / #{$i}) auto;*/
+        /*background-size: calc(100vw / 1.5) auto;*/
+        position: absolute;
+        content:'';
+        top: 0;
+        height: 100%;
+        left: 0;
+        width: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: 0;
+        @media (max-width: 970px){
+          width: 100%;
+          background-size: cover;
+        }
+      }
+      a{
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        margin-top: calc((21.3rem - 6rem) / 2);
+        max-width: 60px;
+      }
+      @media (max-width: 970px){
+        margin-bottom: 7rem;
+      }
+    }
+ 
+ &:first-child, &:last-child{
+    & .video, & .image{
+      &:before{
+        background-size: calc(100vw / 1.5) auto;
+        @media (max-width: 970px){
+          width: 100%;
+          background-size: cover;
+        }
+      }
+    }
+ }
+    .image.cover:after{
+      position: absolute;
+      content:'';
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(52,101,128,.8);
+      z-index: 1;
+      @media (max-width: 970px){
+        width: 100%;
+      }
+    }
+    @if $i > 1 {
+	
+      &:not(.no-expand) {
+	      &:first-child .video:before, &:last-child .video:before, &:first-child .image:before, &:last-child .image:before{
+	
+	        @if $i > 1{
+	           width: calc(100% + ((100vw - (#{$i} * 100%) - ((#{$i} - 1) * .8rem)) / 2); 
+	        }
+	        background-size: cover;
+	
+	        @media (max-width: 970px){
+	          width: 100%;
+	        }
+	      }
+
+      }
+      &:first-child .video:before, &:first-child .image:before{
+        left: auto;
+        right: 0;
+      }
+      &:last-child .video:before, &:last-child .image:before{
+        left: 0;
+      }
+      &:first-child .image.cover:after{
+        width: calc(100% + ((100vw - (#{$i} * 100%) - ((#{$i} - 1) * .8rem)) / 2);
+        right: 0;
+        left: auto;
+        @media (max-width: 970px){
+          width: 100%;
+        }
+      }
+      &:last-child .image.cover:after{
+        width: calc(100% + ((100vw - (#{$i} * 100%) - ((#{$i} - 1) * .8rem)) / 2);
+        @media (max-width: 970px){
+          width: 100%;
+        }
+      }
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+    @media (max-width: 970px){
+      width: 100%;
+      padding: 0 3rem;
+    }
+  }
+}
+/*end @for $i from 1 through 6 */
+
+/* the code below is to compensate for the code above and provide the option to create column larger than 1
+*/
+@for $i from 1 through 12 {
+  .grid-large-columns-#{$i}{
+    float: left;
+    position: relative;
+    text-align: center;
+/*  width: calc((100% - ((1) * 1rem)) / 2);
+    width: calc((100% - ((5) * 1rem)) * 6);*/
+    width: calc((100% - ((#{$i * .1 - 1}) * 1rem)) * #{$i * .1});
+	margin-right: .8rem;
+    a{
+      img {
+      	  position: absolute;
+      	  z-index: 1;
+      	  left: 50%;
+      	  top: 50%;
+      	  @include transform(translate(-50%, -50%));
+      }
+    }
+
+    & .video, & .image{
+      text-align: center;
+      position: relative;
+      width: 100%;
+      height: 21.3rem;
+     
+      &:before{
+        /*background-size: calc(100vw / #{$i}) auto;*/
+        /*background-size: calc(100vw / 1.5) auto;*/
+        position: absolute;
+        content:'';
+        top: 0;
+        height: 100%;
+        left: 0;
+        width: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: 0;
+        @media (max-width: 970px){
+          width: 100%;
+          background-size: cover;
+        }
+      }
+      a{
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        margin-top: calc((21.3rem - 6rem) / 2);
+        max-width: 60px;
+      }
+      @media (max-width: 970px){
+        margin-bottom: 7rem;
+      }
+    }
+ 
+ &:first-child, &:last-child{
+    & .video, & .image{
+      &:before{
+        background-size: calc(100vw / 1.5) auto;
+        @media (max-width: 970px){
+          width: 100%;
+          background-size: cover;
+        }
+      }
+    }
+ }
+    .image.cover:after{
+      position: absolute;
+      content:'';
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(52,101,128,.8);
+      z-index: 1;
+      @media (max-width: 970px){
+        width: 100%;
+      }
+    }
+    @if $i > 1 {
+	
+      &:not(.no-expand) {
+	      &:first-child .video:before, &:last-child .video:before, &:first-child .image:before, &:last-child .image:before{
+	
+	        @if $i > 1{
+	           width: calc(100% + ((100vw - (#{$i * .1} * 100%) - ((#{$i * .1} - 1) * .8rem)) / 2); 
+	        }
+	        background-size: cover;
+	
+	        @media (max-width: 970px){
+	          width: 100%;
+	        }
+	      }
+
+      }
+      &:first-child .video:before, &:first-child .image:before{
+        left: auto;
+        right: 0;
+      }
+      &:last-child .video:before, &:last-child .image:before{
+        left: 0;
+      }
+      &:first-child .image.cover:after{
+        width: calc(100% + ((100vw - (#{$i * .1} * 100%) - ((#{$i * .1} - 1) * .8rem)) / 2);
+        right: 0;
+        left: auto;
+        @media (max-width: 970px){
+          width: 100%;
+        }
+      }
+      &:last-child .image.cover:after{
+        width: calc(100% + ((100vw - (#{$i * .1} * 100%) - ((#{$i * .1} - 1) * .8rem)) / 2);
+        
+        @media (max-width: 970px){
+          width: 100%;
+        }
+      }
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+    @media (max-width: 970px){
+      width: 100%;
+      padding: 0 3rem;
+    }
+  }
+}
+/*end @for $i from 1 through 6 */
+
+
+.grid-large-half{
+  float: left;
+  position: relative;
+  text-align: center;
+  width: calc(((100% - .8rem) / 2);
+  &:not(.full-width){
+	  &:nth-child(2n){
+	    padding-right: 6.3rem;
+	  }
+	  &:nth-child(2n+1){
+	    padding-left: 6.3rem;
+	  }
+  }
+  margin-right: .8rem;
+  &:last-child{
+    margin-right: 0;
+  }
+  @media (max-width: 970px){
+    width: 100%;
+    &:not(.full-width){
+    	&:nth-child(2n), &:nth-child(2n+1){
+    	  padding: 0 3rem 0 3rem;
+    	}
+    }
+  }
+}
+.grid-large-third{
+  float: left;
+  position: relative;
+  text-align: center;
+  width: calc(((100% - 3rem) / 3);
+  margin-right: .8rem;
+  &:last-child{
+    margin-right: 0;
+  }
+  @media (max-width: 970px){
+    width: 100%;
+    &:nth-child(2n), &:nth-child(2n+1){
+      padding: 0 3rem;
+    }
+  }
+}
+.grid-large-two-third{
+  float: left;
+  position: relative;
+/*  text-align: center;*/
+  width: calc((((100% - 3rem) / 3)*2);
+  margin-right: .8rem;
+  &:last-child{
+    margin-right: 0;
+  }
+  @media (max-width: 970px){
+    width: 100%;
+    &:nth-child(2n), &:nth-child(2n+1){
+      padding: 0 3rem;
+    }
+  }
+}
+.grid-large-quarter{
+  float: left;
+  position: relative;
+  text-align: center;
+  width: calc(((99.9% - 3.9rem) / 4);/* 99.9 instead of 100% because of IE */
+  margin-right: 1.3rem;
+  &:last-child{
+    margin-right: 0;
+  }
+  @media (max-width: 970px){
+    width: 100%;
+    &:nth-child(2n), &:nth-child(2n+1){
+      padding: 0 3rem;
+    }
+  }
+}
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - grid-shift
+.grid-shift {
+  @include breakpoint(bp('tablet')){
+    @include span-columns(10);
+    @include shift(1);
+  }
+}
+
+.grid-shift-small {
+  @include breakpoint(bp('tablet')){
+    @include span-columns(8);
+    @include shift(2);
+  }
+}
+
+.grid-shift-half {
+  @include breakpoint(bp('tablet')){
+    @include clearfix;
+    @include span-columns(5 of 10);
+    @include shift(5);
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - grid-half
+.grid-half {
+  @include breakpoint(bp('tablet')){
+    @include span-columns(5 of 10);
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - grid-half-reverse
+.grid-half-reverse {
+  @include direction-context(right-to-left) {
+    @include breakpoint(bp('tablet')){
+      @include span-columns(5 of 10);
+    }
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - grid-large
+.grid-large {
+  @include breakpoint(bp('tablet')){
+    @include span-columns(6 of 10);
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - grid-small
+
+.grid-small {
+  @include breakpoint(bp('tablet')){
+    @include span-columns(3.5 of 10);
+    @include shift(0.5);
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - grid-small
+
+.grid-xsmall {
+  @include breakpoint(bp('tablet')){
+    @include span-columns(2 of 10);
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - grid-filter
+.grid-filter {
+  margin-bottom: grid('margin');
+  text-align: center;
+  width: 100%;
+  @include breakpoint(bp('tablet')){
+    width: 49.11504%;
+  }
+}
+
+.grid-filter-gutter {
+  width: 1.47059%;
+  @include breakpoint(bp('tablet')){
+    width: grid('margin');
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - grid-home-event
+.grid-home-event {
+  margin-top: 3rem;
+  text-align: center;
+  @include breakpoint(bp('tablet')){
+    @include span-columns(5 of 10);
+    @include omega(2n);
+  }
+  @include breakpoint(bp('desktop')){
+    @include omega-reset(2n);
+    @include span-columns(3.3333333333333335 of 10);
+    @include omega(3n);
+  }
+}
+
+.grid-home-hot-item {
+  text-align: center;
+  margin-bottom: 3rem;
+  @include breakpoint(bp('tablet')){
+    @include span-columns(3.3333333333333335 of 10);
+    @include omega(3n);
+    text-align: left;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - grid-home-customers
+.grid-home-customers {
+  max-height: 15.5rem;
+  margin-bottom: grid('margin');
+  &--1 {
+    @include span-columns(5 of 10);
+    max-height: 33rem;
+  }
+  &--2 {
+    @include span-columns(2.5 of 10);
+  }
+  &--3 {
+    @include span-columns(2.5 of 10);
+    @include omega;
+  }
+  &--4 {
+    @include span-columns(5 of 10);
+    @include omega;
+  }
+  &--5 {
+    @include span-columns(2.5 of 10);
+    clear: both;
+  }
+  &--6 {
+    @include span-columns(5 of 10);
+  }
+  &--7 {
+    @include span-columns(2.5 of 10);
+    @include omega;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - grid-home-company
+.grid-home-company-left {
+  display: none;
+  @include breakpoint(bp('tablet')){
+    @include span-columns(2.75 of 10);
+  }
+}
+
+@mixin grid-home-company-image-base {
+  @include link-color(#fff);
+  display: block;
+  width: 100%;
+}
+
+.grid-home-company-left-image {
+  @include grid-home-company-image-base;
+  margin-bottom: grid('margin') * 4;
+  padding-bottom: (100 - grid('margin') * 4) / 2;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.grid-home-company-right {
+  width: 100%;
+  @include breakpoint(bp('tablet')){
+    @include span-columns(7.25 of 10);
+  }
+}
+
+.grid-home-company-right-image {
+  @include grid-home-company-image-base;
+  padding-bottom: 55.95078%;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - grid-portfolio
+.grid-portfolio {
+  display: block;
+  margin-bottom: grid('margin');
+  @include breakpoint(bp('tablet')){
+    @include span-columns(5 of 10);
+    @include omega(2n);
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - grid-recent-buzz
+.grid-recent-buzz {
+  text-align: center;
+  @include breakpoint(bp('tablet')){
+    @include span-columns(3.3333333333333335 of 10);
+    @include omega(3n);
+    text-align: left;
+  }
+}
+
+.grid-contact-large-reverse {
+  @include direction-context(right-to-left) {
+    @include breakpoint(bp('tablet')){
+      @include span-columns(6 of 10);
+    }
+  }
+}
+
+.grid-contact-small-reverse {
+  @include direction-context(right-to-left) {
+    @include breakpoint(bp('tablet')){
+      @include span-columns(4 of 10);
+    }
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - -  grid-company-careers
+@for $i from 1 through 4 {
+  .grid-company-careers-#{$i} {
+    @include span-columns(6 of 12);
+    margin-bottom: grid('margin');
+    padding-bottom: 49.26471%;
+  }
+}
+
+.grid-company-careers-2 {
+  margin-right: 0;
+  @include breakpoint(bp('tablet')){
+    padding-bottom: (49.26471 - grid('margin')) / 2;
+  }
+}
+
+.grid-company-careers-3 {
+  @include breakpoint(bp('tablet')){
+    @include span-columns(2 of 8);
+    padding-bottom: (49.26471 - grid('margin')) / 2;
+  }
+}
+
+.grid-company-careers-4 {
+  @include breakpoint(bp('tablet')){
+    @include span-columns(2 of 8);
+    padding-bottom: (49.26471 - grid('margin')) / 2;
+  }
+}
+
+.grid-company-event-thumbnail-container {
+  @include span-columns(2 of 4);
+  height: 100%;
+}
+
+.grid-company-event-detail {
+  @include span-columns(2 of 4);
+  @include omega;
+  padding-right: 1rem;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - specify
+.grid-specify-options {
+  padding-bottom: 3rem;
+  @include breakpoint(bp('tablet')){
+    @include span-columns(3.3333333333333335 of 10);
+    padding-right: 2rem;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - applications
+
+.grid-applications-detail-thumb {
+  @include span-columns(2 of 5);
+}
+
+.grid-applications-detail {
+  @include span-columns(3 of 5);
+  @include omega;
+}
+
+.grid-search-container {
+  @include clearfix;
+}
+
+.grid-search-input {
+  @include span-columns(2.5 of 3.5);
+  @include omega;
+}
+
+.grid-search-btn {
+  @include span-columns(1 of 3.5);
+  @include omega;
+}
+
+// - - - - - - - - - - - - - - - - - - -
+// - - AnimOnScroll
+
+.anim-grid a {
+  opacity: 0;
+}
+
+.anim-grid a.shown,
+.no-js .anim-grid a,
+.no-cssanimations .anim-grid a {
+  opacity: 1;
+}
+
+.anim-grid a a,
+.anim-grid a img {
+  outline: none;
+  border: none;
+  display: block;
+  max-width: 100%;
+}
+
+/* Effect 3: Scale up */
+.anim-grid.effect-3 a.animate {
+  transform: scale(0.6);
+  animation: scaleUp 0.65s ease-in-out forwards;
+}
+
+@keyframes scaleUp {
+  0% { }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,172 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - heros module
+// styles for the heros module
+
+.img-hero, .movie-hero, .js-carousel-hero {
+	width: 100%;
+	height: 100%;
+
+	&:not(.js-carousel-hero) {
+		position: absolute;
+	}
+
+	&:after{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: -moz-linear-gradient(top, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+		content:'';
+	}
+}
+
+.movie-hero {
+	iframe{
+		border: none;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.hero {
+	position: relative;
+	background-color: color('dark-gray');
+	padding-top: 8rem;
+
+	@include breakpoint(bp('tablet')) {
+		padding-top: 10rem;
+	}
+
+	@include breakpoint(bp('mobile')) {
+		height: 51.9rem;
+	}
+
+	@include breakpoint(bp('tablet')) {
+		height: 73rem;
+	}
+
+	.img-hero, .movie-hero {
+		margin-top: -8rem;
+
+		@include breakpoint(bp('tablet')) {
+			margin-top: -10rem;
+		}
+	}
+	&.small{
+		height: 30rem;
+		.hero-heading-container {
+			top: 10rem;
+		}
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.hero-heading-container {
+		position: relative;
+		max-width: calc(100% - 2rem);
+
+		@media (max-width: 1199px) {
+			margin-left: 1rem;
+		}
+
+		@include breakpoint(bp('mobile')) {
+			position: absolute;
+			top: 8rem;
+			height: calc(100% - 80px);
+
+			@media (min-width: 1200px) {
+				width: 1200px;
+				left: 50%;
+				@include transform(translateX(-50%));
+			}
+		}
+
+		.hero-heading {
+			text-align: left;
+			padding-bottom: 3rem;
+
+			@include breakpoint(bp('mobile')) {
+				position: relative;
+				top: 50%;
+				@include transform(translateY(-50%));
+			}
+
+			h1,h2 {
+				color: white;
+				text-shadow: 0 .2rem .4rem rgba(0,0,0,0.50);
+			}
+
+			h1 {
+				@include font-rules('light');
+				line-height: 1;
+				font-size: 3rem;
+				margin-bottom: 1rem;
+
+				@include breakpoint(bp('tablet')){
+					width: 80rem;
+					font-size: 5rem;
+				}
+
+				@include breakpoint(bp('desktop')){
+					@include font-rules('light');
+					font-size: 7.2rem;
+					margin-bottom: 1.3rem;
+				}
+			}
+
+			h2 {
+				@include breakpoint(bp('mobile')) {
+					width: 80%;
+				}
+
+				@include breakpoint(bp('tablet')) {
+					width: 65rem;
+					@include font-rules('book');
+					font-size: 2rem;
+				}
+			}
+
+			.button:not(:first-child) {
+				margin: 2rem 0 0 0;
+			}
+		}
+	}
+}
+
+// - - - - - - - - - - - - - - - - - -
+// - - portfolio
+$hero-portfolio-carousel: ('girl', 'intelligence','overstock','blackrock', 'centurylink-technology-center');
+@each $img in $hero-portfolio-carousel {
+  .hero-portfolio-#{$img} {
+    @include hero-image-helper('../img/portfolio/carousel-1/small/#{$img}-small.jpg', 76.8rem, 48.1rem);
+    @include breakpoint(bp('tablet')){
+      @include hero-image-helper('../img/portfolio/carousel-1/large/#{$img}-large.jpg', 255rem, 113.2rem);
+    }
+  }
+}
+
+.hero-portfolio-events {
+  background: url('../img/portfolio/carousel-1/small/events-small.jpg')no-repeat center center;
+  background-size: cover;
+  max-height: 48.1rem;
+  padding-bottom: 62.6302%;
+  @include breakpoint(bp('tablet')){
+    background: url('../img/portfolio/carousel-1/large/events-large.jpg')no-repeat center center;
+    padding-bottom: 44.39216%;
+  }
+}
+
+$hero-portfolio-mobile-portfolio: ('centurylink-technology-center','ciri-fireweed-business-center', 'humber-river-hospital', 'helmerich-center-for-american-research', 'the-anita-and-truman-arnold-dining-commons', 'the-lory-student-center-at-csu', 'clovis-community-medical-center');
+@each $img in $hero-portfolio-mobile-portfolio {
+  .hero-portfolio-portfolio-mobile-#{$img} {
+    @include hero-image-helper('../img/portfolio/portfolio/small/#{$img}.jpg', 76.8rem, 48.1rem);
+  }
+}

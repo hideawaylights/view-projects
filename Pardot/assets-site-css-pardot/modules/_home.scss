@@ -1,0 +1,225 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - home module
+// styles for the home module
+
+// - - - - - - - - - - - - - - - - - - -
+#home-welcome{
+  width: 100%;
+  max-height: 73rem;
+  height: 80vh;
+  background-color: color('dark-gray');
+  position: relative;
+
+  .grid-container{
+    position: relative;
+    height: 100%;
+  }
+  #home-welcome-message{
+    position: relative;
+    top: 45%;
+    left: 0;
+    text-align: center;
+    h1{
+      @include font-rules('light');
+      font-size: 6.4rem;
+      line-height: 6rem;
+      margin-bottom: 4rem;
+      color: #FFF;
+      text-shadow: 0 .2rem .4rem rgba(0,0,0,0.50);
+    }
+    .button{
+      text-align: center;
+      padding: 0;
+
+    }
+  }
+  @media (max-width: 970px){
+    height: 100vh;
+    #home-welcome-message{
+      top: 20%;
+    }
+  }
+}
+#home-news-highlight{
+	height: 450px;
+	margin-bottom: 20px;
+  .img{
+
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+	.grid-container{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		padding-right: 20px;
+		h2{
+			color:white;
+			text-align: right;
+		}
+		a{
+		  color:white;
+		}
+		.button {
+			float: right;
+		}
+	}
+
+
+	@media only screen and (max-width: 1024px) {
+
+		@include background-image('/assets/img/home/new-highlight/Mobile/1024x285/verge.jpg', '/assets/img/home/new-highlight/Mobile/2048x569/verge.jpg');
+		background-position: 30% center;
+		.grid-container{
+			h2{
+				font-size: 2.5rem;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1025px) {
+	  	@include background-image('/assets/img/home/new-highlight/Desktop/1440x400/verge.jpg', '/assets/img/home/new-highlight/Desktop/2880x800/verge.jpg');
+	  	background-position: center center;
+
+		}
+    }
+}
+#home-leading-orgs{
+  margin-bottom: 3rem;
+
+  h3{
+    @include font-rules('book');
+    font-size: 2.4rem;
+    color: color('dark-gray');
+    margin-bottom: 3.5rem;
+  }
+  .grid-large-column-3 {
+	  a {
+		  position: relative;
+		  display: block;
+		  width: 100%;
+		  height: 100%;
+
+		  img {
+			  position: absolute;
+			  z-index: 1;
+			  left: 50%;
+			  top: 50%;
+			  @include transform(translate(-50%, -50%));
+		  }
+	  }
+  }
+
+  .grid-large-column-3:first-child .video:before{
+    background-image: url(../img/home/leading-orgs/overstock.jpg);
+  }
+  .grid-large-column-3:nth-child(2) .video:before{
+    background-image: url(../img/home/leading-orgs/lake-union.jpg);
+  }
+  .grid-large-column-3:last-child .video:before{
+	  background-image: url('../img/home/leading-orgs/centurylink-1200x250.jpg');
+
+	  @include breakpoint(bp('desktop')) {
+		  background-image: url('../img/home/leading-orgs/centurylink-2400x500.jpg');
+	  }
+  }
+  #home-leading-logo{
+    text-align: center;
+    margin-top: 0rem;
+    margin-bottom: 5rem;
+    img{
+      margin-right: 5rem;
+      vertical-align: middle;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 970px){
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+}
+
+#home-why{
+	background-color: rgb(212, 225, 229);
+	text-align: center;
+	padding-bottom: 8rem;
+
+	header h2 {
+		color: rgb(52,101,127);
+	}
+
+	.grid-large-quarter {
+		padding: 0 3.7rem;
+		color: rgb(52,101,127);
+		background-color: rgb(223, 234, 237);
+
+		img {
+			height: 100px;
+			margin: 40px 0 20px 0;
+		}
+
+		h3 {
+			@include font-rules('book');
+			font-size: 1.9rem;
+			margin-bottom: 20px;
+			font-weight: 500;
+		}
+
+		p {
+			@include font-rules('book');
+			font-size: 1.6rem;
+			margin-bottom: 20px;
+
+			@media (min-width: 970px) and (max-width: 1051px) {
+				@include height-in-lines(5, 1.2em);
+			}
+
+			@media (min-width: 1052px) and (max-width: 1218px) {
+				@include height-in-lines(4, 1.2em);
+			}
+		}
+
+		.button {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+#home-new{
+header h2{
+  color: #FFF;
+}
+  background-color: #8cc3da;
+  color: white;
+  text-align: center;
+  .image{
+    position: relative;
+    /*height: 12rem;*/
+    width: 100%;
+    img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+	  max-width: 100%;
+	  margin-top: 0;
+    }
+    margin-bottom: 2.5rem;
+  }
+  a{
+    /*display: inline-block;*/
+    display: block;
+    color: #FFF !important;
+    /*@include font-rules('bold');*/
+    color: color('dark-blue');
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    text-decoration: none;
+  }
+  padding-bottom: 4rem;
+}
