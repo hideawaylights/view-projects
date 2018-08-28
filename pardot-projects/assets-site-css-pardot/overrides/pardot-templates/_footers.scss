@@ -3,5 +3,121 @@
 
 // Simple form footer
 footer.simple-footer {
+    font-weight: $light;
+    font-size: $small-font-size;
+    color: color('white');
+    line-height: map-get($typography, size-2-line-height);
     background-color: color('brand-blue-4');
+
+    a:not([class]) {
+        color: color('white');
+
+        &:hover {
+            color: color('brand-blue-1');
+            text-decoration: none;
+            }
+
+        }
+
+    .content-section {
+        padding-top: $section-padding-4;
+        padding-bottom: $section-padding-2;
+        }
+
+    .copyright-container {
+        font-size: $tiny-font-size;
+        padding: 4rem 0 0;
+
+        @include small-device {
+            padding: 0;
+
+            .copyright { display: block; }
+
+            }
+
+        }
+
+    .divider {
+        display: inline-block;
+        margin: 0 .5rem;
+        opacity: .5;
+
+        @include small-device { &.first { display: none; } }
+
+        }
+
+    h3 {
+        font-size: $small-font-size;
+        text-transform: uppercase;
+        font-weight: $semi-bold;
+        margin-bottom: 1rem;
+        color: color('brand-blue-1');
+        }
+
+    .footer-logo {
+        display: block;
+        width: 14rem;
+        margin-bottom: 1rem;
+        }
+
+    .logo-container { margin-bottom: 2.5rem; }
+
+    .site-nav {
+
+        li {
+            margin-right: 1rem;
+            text-transform: uppercase;
+            display: inline-block;
+
+            @include small-device { display: block; }
+
+            }
+
+        }
+
+    .social-container {
+        padding-top: 2.5rem;
+        text-align: right;
+
+        @include tablet { text-align: left; }
+
+        a {
+            width: 5rem;
+            height: 5rem;
+            @include border-radius(100%);
+            display: flex;
+
+            &:hover { background-color: color('brand-blue-3'); }
+
+            img {
+                margin: auto;
+                max-width: 80%;
+                }
+
+            }
+
+        li {
+            display: inline-block;
+            margin: 0 0 0 .5rem;
+
+            @include tablet { margin: 0 .5rem 0 0; }
+
+            @include small-device { margin: 0 .1rem; }
+
+            }
+
+        }
+
+    .tagline {
+        font-weight: $light;
+        letter-spacing: $letter-spacing-2;
+        font-size: $smallest-font-size;
+        margin-left: .5rem;
+        }
+
+    p {
+        font-weight: $light;
+        margin: 0;
+        }
+
     }

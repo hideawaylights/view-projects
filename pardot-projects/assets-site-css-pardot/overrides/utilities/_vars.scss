@@ -8,30 +8,20 @@ $bold: 			700;
 $ultra-bold:	900;
 
 // Common font sizing
-$smallest-font-size: 	0.8125rem; 	// =   13px
-$tiny-font-size: 		0.875rem; 	// =   14px
-$small-font-size: 		0.9375rem; 	// =   15px
-$base-font-size: 		1.063rem; 	// =   17px
-$secondary-font-size: 	1.25rem; 	// =   20px
-$large-font-size: 		1.375rem; 	// =   22px
-$larger-font-size: 		1.625rem; 	// =   26px
+$really-font-size: 		1.1rem; 	// =   11px
+$smallest-font-size: 	1.2rem; 	// =   12px
+$tiny-font-size: 		1.3rem; 	// =   13px
+$small-font-size: 		1.4rem; 	// =   14px
+$base-font-size: 		1.6rem; 	// =   16px
+$secondary-font-size: 	2rem; 		// =   20px
+$large-font-size: 		2.2rem; 	// =   22px
+$larger-font-size: 		2.6rem; 	// =   26px
 
-$letter-spacing-1:		-.02em;
+$letter-spacing-1:		-.0008em;
 $letter-spacing-2:		.02em;
-$letter-spacing-3:		.03em;
-$letter-spacing-4:		.06em;
-$letter-spacing-5:		.085em;
-
-$typography: (
-	base-font-size: 		1.5rem,
-	secondary-font-size: 	2rem,
-	base-line-height: 		1.8,
-	secondary-line-height: 	2,
-	condensed-line-height: 	1.5,
-	base-margins-type: 		1em,
-	roboto: 				('Roboto', sans-serif),
-	muli: 					('Muli', sans-serif)
-);
+$letter-spacing-3:		.04em;
+$letter-spacing-4:		.08em;
+$letter-spacing-5:		.1em;
 
 $content-margins: (
 	heading-typography-margins: 			.8em,

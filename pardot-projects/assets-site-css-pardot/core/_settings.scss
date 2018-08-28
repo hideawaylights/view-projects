@@ -41,9 +41,10 @@ $typography: (
     root-font-size: 		62.5%,
 	base-font-size: 		1.6rem, // = 16px
 	secondary-font-size: 	20px,
+    condensed-line-height: 	1.5,
 	base-line-height: 		1.8,
-	secondary-line-height: 	2,
-	condensed-line-height: 	1.5,
+	size-1-line-height: 	2,
+    size-2-line-height: 	2.5,
 	base-margins-type: 		2rem, // = 20px
 );
 
@@ -81,7 +82,7 @@ $colors: (
   'alternate-mid-blue':     #327dae,
   'alternate-mid-blue2':    #397CAE,
   'mid-blue':               #8dc0d1,
-  'light-blue':             #95BFD1, // Primary link color
+  'light-blue':             #95BFD1,
   'neon-blue':              #009ACB,
   'neon-blue2':             #00B4CB,
   'dark-gray':              #4A4A4A, // Primary font color
@@ -94,11 +95,12 @@ $colors: (
 
   'base-font-color':        #4A4A4A,
   'alt-font-color':         #34657F,
-  'link-color':             #95BFD1,
+  'link-color':             #30acc5,
   'alt-link-color':         #7D8287,
 
   //  New brand color palete
-  'brand-blue-1':           #30acc5,
+  'brand-blue-0':           #8db8c9, // New logo dot color
+  'brand-blue-1':           #30acc5, // Primary link color
   'brand-blue-2':           #317cad,
   'brand-blue-3':           #33647e,
   'brand-blue-4':           #334047,

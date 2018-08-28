@@ -13989,10 +13989,10 @@ td.col-highlight:not(.neg) {
 .content-section {
   position: relative;
   -webkit-transform: translateZ(0);
-  padding: 80rem 0; }
+  padding: 8rem 0; }
   @media screen and (max-width: 96rem) {
     .content-section {
-      padding: 40rem 0; } }
+      padding: 4rem 0; } }
   .content-section.\--no-padding {
     padding: 0 !important; }
   .content-section.\--no-top-padding {
@@ -15593,14 +15593,96 @@ td.col-highlight:not(.neg) {
       width: calc(100% * 1);
       margin: 0; } }
 
-.primary-content-container .item {
-  min-height: 20vh;
-  background-color: tomato; }
-  .primary-content-container .item:first-child {
-    background-color: aqua; }
+.primary-content-container p:empty, .primary-content-container div:empty, .primary-content-container h1:empty, .primary-content-container h2:empty, .primary-content-container h3:empty, .primary-content-container h4:empty, .primary-content-container h5:empty, .primary-content-container h6:empty {
+  display: none; }
+
+.main-content-hero-container img {
+  margin-bottom: 4rem; }
 
 footer.simple-footer {
+  font-weight: 300;
+  font-size: 1.4rem;
+  color: #fff;
+  line-height: 2.5;
   background-color: #334047; }
+  footer.simple-footer a:not([class]) {
+    color: #fff; }
+    footer.simple-footer a:not([class]):hover {
+      color: #30acc5;
+      text-decoration: none; }
+  footer.simple-footer .content-section {
+    padding-top: 6rem;
+    padding-bottom: 2rem; }
+  footer.simple-footer .copyright-container {
+    font-size: 1.3rem;
+    padding: 4rem 0 0; }
+    @media (max-width: 30rem) {
+      footer.simple-footer .copyright-container {
+        padding: 0; }
+        footer.simple-footer .copyright-container .copyright {
+          display: block; } }
+  footer.simple-footer .divider {
+    display: inline-block;
+    margin: 0 .5rem;
+    opacity: .5; }
+    @media (max-width: 30rem) {
+      footer.simple-footer .divider.first {
+        display: none; } }
+  footer.simple-footer h3 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #30acc5; }
+  footer.simple-footer .footer-logo {
+    display: block;
+    width: 14rem;
+    margin-bottom: 1rem; }
+  footer.simple-footer .logo-container {
+    margin-bottom: 2.5rem; }
+  footer.simple-footer .site-nav li {
+    margin-right: 1rem;
+    text-transform: uppercase;
+    display: inline-block; }
+    @media (max-width: 30rem) {
+      footer.simple-footer .site-nav li {
+        display: block; } }
+  footer.simple-footer .social-container {
+    padding-top: 2.5rem;
+    text-align: right; }
+    @media (max-width: 50rem) {
+      footer.simple-footer .social-container {
+        text-align: left; } }
+    footer.simple-footer .social-container a {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 100%;
+      background-clip: padding-box;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      footer.simple-footer .social-container a:hover {
+        background-color: #33647e; }
+      footer.simple-footer .social-container a img {
+        margin: auto;
+        max-width: 80%; }
+    footer.simple-footer .social-container li {
+      display: inline-block;
+      margin: 0 0 0 .5rem; }
+      @media (max-width: 50rem) {
+        footer.simple-footer .social-container li {
+          margin: 0 .5rem 0 0; } }
+      @media (max-width: 30rem) {
+        footer.simple-footer .social-container li {
+          margin: 0 .1rem; } }
+  footer.simple-footer .tagline {
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    font-size: 1.2rem;
+    margin-left: .5rem; }
+  footer.simple-footer p {
+    font-weight: 300;
+    margin: 0; }
 
 header.simple-header {
   margin: 0 0 3.0rem;
@@ -15613,6 +15695,14 @@ header.simple-header {
     margin: auto;
     width: 10.0rem;
     height: 4rem; }
+
+.content-section a:not([class]) {
+  color: #30acc5;
+  -webkit-transition: 300ms all ease-out;
+  transition: 300ms all ease-out; }
+  .content-section a:not([class]):hover {
+    color: #f05b43;
+    text-decoration: none; }
 
 .content-section em {
   font-style: italic; }
@@ -15636,7 +15726,8 @@ header.simple-header {
   .content-section .h1.light, .content-section h1.light {
     font-weight: 300; }
   .content-section .h1.small, .content-section h1.small {
-    font-size: 5.2rem; }
+    font-size: 4.6rem;
+    margin-bottom: 0.4em; }
 
 .content-section .h2, .content-section h2 {
   font-size: 4rem;
@@ -15663,7 +15754,7 @@ header.simple-header {
   font-weight: 400; }
 
 .content-section .h6, .content-section h6 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 600; }
   .content-section .h6.light, .content-section h6.light {

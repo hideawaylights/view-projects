@@ -4,14 +4,16 @@
 // Primary content container
 .primary-content-container {
 
-    .item {
-        min-height: 20vh;
-        background-color: tomato;
+    p, div, h1, h2, h3, h4, h5, h6 {
 
-        &:first-child {
-            background-color: aqua;
-            }
+        &:empty { display: none; }
 
         }
+
+    }
+
+.main-content-hero-container {
+
+    img { margin-bottom: $section-padding-3; }
 
     }

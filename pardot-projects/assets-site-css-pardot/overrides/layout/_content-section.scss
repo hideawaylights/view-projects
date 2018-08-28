@@ -3,9 +3,9 @@
 .content-section {
 	position: relative;
 	-webkit-transform: translateZ(0);
-	padding: 80rem 0;
+	padding: 8rem 0;
 	@include media(max, map-get($breakpoints, laptop)) {
-		padding: 40rem 0;
+		padding: 4rem 0;
 		}
 
 	// Remove padding options

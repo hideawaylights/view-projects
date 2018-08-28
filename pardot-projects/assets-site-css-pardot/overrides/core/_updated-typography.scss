@@ -3,6 +3,17 @@
 
 .content-section { // NOTE: Temporarily scoped to .content-section for sanitation to other typography styles
 
+    a:not([class]) {
+    	color: color('brand-blue-1');
+    	@include transitions-all;
+
+    	&:hover {
+            color: color('brand-orange-1');
+            text-decoration: none;
+            }
+
+    	}
+
     em { font-style: italic; }
 
     hr {
@@ -14,7 +25,6 @@
     	border: 0;
     	background-color: map-get($colors, border-grey-3);
     	}
-
 
 
     //////// Headers ////////
@@ -31,7 +41,10 @@
 
         &.light { font-weight: $light; }
 
-        &.small { font-size: 5.2rem; }
+        &.small {
+            font-size: 4.6rem;
+            margin-bottom: map-get($content-margins, tiny-typography-margins);
+            }
 
     	}
 
@@ -72,7 +85,7 @@
 
     %h6, .h6, h6 {
     	@extend %header-element;
-    	font-size: 1.5rem;
+    	font-size: 1.6rem;
     	line-height: 1.5;
         font-weight: $semi-bold;
 
