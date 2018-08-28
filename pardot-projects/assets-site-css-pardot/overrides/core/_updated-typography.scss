@@ -29,9 +29,19 @@
 
     //////// Headers ////////
 
+
     %header-element {
     	font-weight: $normal;
     	margin-bottom: map-get($content-margins, heading-typography-margins);
+
+        &.accent-header {
+            font-weight: $normal;
+            text-transform: uppercase;
+            margin: .8rem 0;
+            color: lighten(color(dark-gray), 20%);
+            font-size: $small-font-size;
+            }
+
     	}
 
     %h1, .h1, h1 {

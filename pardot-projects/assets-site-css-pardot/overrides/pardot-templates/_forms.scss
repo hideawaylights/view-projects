@@ -1,0 +1,158 @@
+// Pardot templates View Glass - Pardot forms
+
+
+// Core Pardot Form overrides
+
+#pardot-form {
+    margin: 0 0 3rem;
+    padding: 2.5rem 1.5rem;
+    background-color: #23687f;
+    background-color: color('brand-blue-3');
+    @include border-radius(3px);
+    position: relative;
+
+    &:before {
+		content: "";
+		display: block;
+		height: 0;
+		left: 0;
+		position: absolute;
+		top: 2rem;
+		@include translateX-Y(-100%, 0)
+		width: 0;
+		border-color: transparent color('brand-blue-3');
+		border-style: solid;
+		border-width: 18px 18px 18px 0;
+
+		@include tablet { display: none; }
+
+		}
+
+    .form-field {
+        margin: 0 0 1.5rem;
+        }
+    //
+    // input[type="text"] {
+    //     padding: 1.5rem 1rem;
+    //     width: 100%;
+    //
+    //     }
+
+    input[type="email"], input[type="password"], input[type="text"], input[type="search"], input[type="number"], input[type="date"], textarea, select {
+    	-webkit-appearance: none;
+    	display: block;
+    	width: 100%;
+    	background-color: map-get($colors, white);
+    	margin: 0;
+    	padding: 1.4rem 1.2rem;
+    	border: 1px solid darken(color('brand-blue-3'), 1%);
+    	@include border-radius(2px);
+    	font-size: $base-font-size; // 16px
+    	color: map-get($colors, alt-font-color);
+    	max-width: 100%;
+    	font-family: map-get($fonts, medium);
+    	@include transitions-all;
+
+    	&::-webkit-input-placeholder 	{ color: map-get($colors, alt-font-color); opacity: .9; }
+    	&:-moz-placeholder 				{ color: map-get($colors, alt-font-color); opacity: .9; }
+    	&::-moz-placeholder 			{ color: map-get($colors, alt-font-color); opacity: .9; }
+    	// &:-ms-input-placeholder 		{ color: map-get($colors, alt-font-color); opacity: .9; }
+
+    	// &:disabled {
+    	// 	color: lighten(map-get($colors, gray-dark), 42%);
+    	// 	background-color: lighten(map-get($colors, gray-lighter), 15%);
+    	// 	border-color: lighten(map-get($colors, gray-lighter), 10%) !important;
+        //
+    	// 		&::-webkit-input-placeholder 	{ color: map-get($colors, alt-font-color); opacity: .3; }
+    	// 		&:-moz-placeholder 				{ color: map-get($colors, alt-font-color); opacity: .3; }
+    	// 		&::-moz-placeholder 			{ color: map-get($colors, alt-font-color); opacity: .3; }
+    	// 		// &:-ms-input-placeholder 		{ color: map-get($colors, alt-font-color); opacity: .3; }
+        //
+    	// 	}
+
+    	&:hover {
+    		border-color: lighten(color('brand-blue-3'), 1%);
+            @include depth(three);
+    		}
+
+    	&:focus {
+    		outline: none;
+    		border-color: lighten(color('brand-blue-3'), 5%);
+            @include depth(three);
+
+    		&::-webkit-input-placeholder 	{ color: map-get($colors, alt-font-color); opacity: .3; }
+    		&:-moz-placeholder 				{ color: map-get($colors, alt-font-color); opacity: .3; }
+    		&::-moz-placeholder 			{ color: map-get($colors, alt-font-color); opacity: .3; }
+    		// &:-ms-input-placeholder 		{ color: map-get($colors, alt-font-color); opacity: .3; }
+
+    		}
+
+        }
+
+    input[type="submit"] {
+        margin: 2rem 0 2rem 0;
+        padding: 1rem 4rem;
+        background-color: #86c2d2;
+        background-color: color('brand-orange-1');
+        border-style: none;
+        color: white;
+        font-size: $base-font-size;
+        @include border-radius(4px);
+        cursor: pointer;
+        @include depth(base);
+        @include transitions-all;
+
+        &:hover {
+            background-color: darken(color('brand-orange-1'), 5%);
+            @include depth(two);
+            }
+
+        }
+
+    label {
+        font-weight: $light;
+        margin-bottom: 1rem;
+        }
+
+    p { clear: none; }
+
+    .red-background, p.errors {
+        font-weight: $normal;
+        color: color('white');
+        background-color: color('brand-blue-1');
+        padding: .8rem;
+        @include border-radius(1px);
+        }
+
+    p.error label, .error.no-label {
+        color: color('white');
+        border-left: .3rem solid color('brand-orange-1');
+        margin: 0 0 1rem;
+        padding-left: 1.5rem; 
+        }
+
+    p.error input, p.error input:hover, p.error input:focus {
+        border: 1px solid color('brand-orange-1');
+        }
+
+    .submit {
+        margin: 0;
+        text-align: center;
+        }
+
+    }
+
+
+
+// Legacy
+
+.form__title {
+    padding: 10px 0;
+    margin: 0;
+    color: #fff;
+    background-color: #86c2d2;
+    font-size: 22px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
