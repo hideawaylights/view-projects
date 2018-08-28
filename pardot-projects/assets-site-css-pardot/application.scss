@@ -71,21 +71,26 @@
 
         // Pardot overrides and developer styles // mike@ofad.co
 
-        // Pardon "main.css" import
+        // Pardot "main.css" import
         @import 'overrides/legacy/pardot-main-import';
 
+        // OFAD overrides
         @import 'overrides/utilities/vars';
         @import 'overrides/utilities/functions';
         @import 'overrides/utilities/mixins';
 
-        // Grid framework
+        // OFAD overrides Grid framework
+        @import 'overrides/layout/containers';
+        @import 'overrides/layout/content-section';
         @import 'overrides/layout/framework-grid';
 
-        // Pardot templates
-        @import 'overrides/pardot-templates/content-sections';
+        // OFAD overrides Pardot templates
+        @import 'overrides/pardot-templates/content-areas';
+        @import 'overrides/pardot-templates/footers';
         @import 'overrides/pardot-templates/headers';
 
-        // New core overrides
+        // OFAD overrides New core overrides
+        @import 'overrides/core/updated-typography';
         // @import 'overrides/core/forms';
         // @import 'overrides/core/table';
 

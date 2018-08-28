@@ -1,0 +1,17 @@
+// Pardot templates View Glass - Content Sections
+
+
+// Primary content container
+.primary-content-container {
+
+    .item {
+        min-height: 20vh;
+        background-color: tomato;
+
+        &:first-child {
+            background-color: aqua;
+            }
+
+        }
+
+    }

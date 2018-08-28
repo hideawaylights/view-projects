@@ -23,79 +23,40 @@ $letter-spacing-4:		.06em;
 $letter-spacing-5:		.085em;
 
 $typography: (
-	base-font-size: 		17px,
-	secondary-font-size: 	20px,
+	base-font-size: 		1.5rem,
+	secondary-font-size: 	2rem,
 	base-line-height: 		1.8,
 	secondary-line-height: 	2,
 	condensed-line-height: 	1.5,
-	base-margins-type: 		2rem,
+	base-margins-type: 		1em,
 	roboto: 				('Roboto', sans-serif),
 	muli: 					('Muli', sans-serif)
 );
 
 $content-margins: (
-	heading-typography-margins: 			.5em,
+	heading-typography-margins: 			.8em,
 	editorial-heading-typography-margins:	.4em,
 	tiny-typography-margins: 				.4em,
 	small-typography-margins: 				.8em,
 	medium-typography-margins: 				1.1em,
-	base-typography-margins: 				1.8em,
+	base-typography-margins: 				1.5em,
 	large-typography-margins:				2em
 );
 
 // Common colors
 
-
-$colors: (
-	black:		   				#000,
-	white:		   				#fff,
-
-	// Content colors
-	base-font-color: 		#5f6062,
-	alt-font-color:  		#7f7e7e, 		// lighter then base font color
-
-	// Brand colors
-
-
-	// Shades of grey
-
-
-	// Grey border shades
-	border-grey-1:			#eff0f0,
-	border-grey-2:			#e5e5e5,
-	border-grey-3:			#dddedf,
-	border-grey-4:			#d1d1d1,		// Default site borders
-	border-grey-5:			#bbbcbc,
-	border-grey-6:			#7f7e7e,
-	border-grey-7:			#5f6062,
-	border-grey-8:			#3f3f3f,
-	border-grey-9:			#3a3a3a,
-
-	// Grey background shades
-	bg-grey-1:				#f6f7f7,
-	bg-grey-2:				#f1f2f2,
-	bg-grey-3:				#eaeaea,
-	bg-grey-4:				#bbbcbc,
-	bg-grey-5:				#7f7e7e,
-	bg-grey-6:				#5f6062,
-	bg-grey-7:				#575655,
-	bg-grey-8:				#3f3f3f,
-	bg-grey-9:				#3a3a3a,
-
-);
-
 $narrow-width: 				60rem;		// =   960px
 
 // Site gutters
-$site-gutter-xlarge:		11.25rem;	// =   180px
-$site-gutter-large:			7.5rem;		// =   120px
-$site-gutter-medium:		5rem;		// =   80px
-$site-gutter-small:			2.5rem;		// =   40px
-$site-gutter-xsmall:		0.625rem;	// =   10px
+$site-gutter-xlarge:		18.0rem;	// =   180px
+$site-gutter-large:			12.0rem;	// =   120px
+$site-gutter-medium:		8rem;		// =   80px
+$site-gutter-small:			4rem;		// =   40px
+$site-gutter-xsmall:		1rem;		// =   10px
 
-$site-gutter:				1.875rem;	// =   30px
-$site-gutter-tablet:		1.25rem;	// =   20px
-$site-gutter-device:		0.9375rem;	// =   15px
+$site-gutter:				3rem;	// =   30px
+$site-gutter-tablet:		2rem;	// =   20px
+$site-gutter-device:		1.5rem;	// =   15px
 
 
 // off-stage-navigation-panel widths
@@ -103,43 +64,43 @@ $nav-panel-width: 			84%;
 $nav-panel-offset: 			16%;
 
 // Section padding
-$section-padding:			5rem; 		// =   80px
-$section-padding-device:	2.5rem; 	// =   40px
+$section-padding:			8rem; 		// =   80px
+$section-padding-device:	4rem; 		// =   40px
 
-$section-padding-10:		17.5rem;	// =   280px
-$section-padding-9:			13.75rem;	// =   220px
-$section-padding-8:			10rem;		// =   160px
-$section-padding-7:			10rem;		// =   120px
-$section-padding-6:			6.25rem;	// =   100px
-$section-padding-5:			4.375rem;	// =   70px
-$section-padding-4:			3.75rem;	// =   60px
-$section-padding-3: 		2.5rem;		// =   40px
-$section-padding-2: 		1.25rem;	// =   20px
-$section-padding-1:			0.625rem;	// =   10px
+$section-padding-10:		28rem;		// =   280px
+$section-padding-9:			22rem;		// =   220px
+$section-padding-8:			16rem;		// =   160px
+$section-padding-7:			12rem;		// =   120px
+$section-padding-6:			10rem;		// =   100px
+$section-padding-5:			7rem;		// =   70px
+$section-padding-4:			6rem;		// =   60px
+$section-padding-3: 		4rem;		// =   40px
+$section-padding-2: 		2rem;		// =   20px
+$section-padding-1:			1rem;		// =   10px
 
 $containers: (
-	content-width-massive:	162.5rem,	// =   2600px
-	content-width-huge: 	137.5rem,	// =   2200px
-	content-width-large: 	112.5rem,	// =   1800px
+	content-width-massive:	260rem,		// =   2600px
+	content-width-huge: 	220rem,		// =   2200px
+	content-width-large: 	180rem,		// =   1800px
 );
 
 $columns: (
-	span-16-columns: 		98.75rem,	// =   1580px
-	span-15-columns: 		92.5rem,	// =   1480px
-	span-14-columns: 		86.25rem,	// =   1380px
-	span-13-columns: 		80rem,		// =   1280px
-	span-12-columns: 		73.75rem,	// =   1180px
-	span-11-columns: 		67.5rem,	// =   1080px
-	span-10-columns: 		61.25rem,	// =   980px
-	span-9-columns: 		55rem,		// =   880px
-	span-8-columns: 		48.75rem,	// =   780px
-	span-7-columns: 		42.5rem,	// =   680px
-	span-6-columns: 		36.25rem,	// =   580px
-	span-5-columns: 		30rem,		// =   480px
-	span-4-columns: 		23.75rem,	// =   380px
-	span-3-columns: 		17.5rem,	// =   280px
-	span-2-columns: 		11.25rem,	// =   180px
-	span-1-columns: 		5rem		// =   80px
+	span-16-columns: 		158rem,		// =   1580px
+	span-15-columns: 		148rem,		// =   1480px
+	span-14-columns: 		138rem,		// =   1380px
+	span-13-columns: 		128rem,		// =   1280px
+	span-12-columns: 		118rem,		// =   1180px
+	span-11-columns: 		108rem,		// =   1080px
+	span-10-columns: 		98rem,		// =   980px
+	span-9-columns: 		88rem,		// =   880px
+	span-8-columns: 		78rem,		// =   780px
+	span-7-columns: 		68rem,		// =   680px
+	span-6-columns: 		58rem,		// =   580px
+	span-5-columns: 		48rem,		// =   480px
+	span-4-columns: 		38rem,		// =   380px
+	span-3-columns: 		28rem,		// =   280px
+	span-2-columns: 		18rem,		// =   180px
+	span-1-columns: 		8rem		// =   80px
 );
 
 $transition: (
@@ -186,19 +147,19 @@ $global-transition-speed: 300ms;
 
 
 $breakpoints: (
-	mobile-small: 			20rem, 		// =   320px
-	mobile-large: 			30rem, 		// =   480px
-	tablet: 				40rem, 		// =   680px
-	tablet-large: 			50rem, 		// =   800px
-	laptop: 				60rem,		// =   960px
-	laptop-large: 			65rem,		// =   1040px
-	desktop-small: 			70rem,		// =   1120px
-	desktop: 				75rem,		// =   1200px
-	desktop-large: 			80rem,		// =   1280px
-	desktop-larger: 		86.25rem,	// =   1380px
-	desktop-largest: 		100rem,		// =   1600px
-	desktop-hugeish: 		112.5rem,	// =   1800px
-	desktop-huge: 			137.5rem	// =   2200px
+	mobile-small: 			32rem, 		// =   320px
+	mobile-large: 			48rem, 		// =   480px
+	tablet: 				68rem, 		// =   680px
+	tablet-large: 			80rem, 		// =   800px
+	laptop: 				96rem,		// =   960px
+	laptop-large: 			104rem,		// =   1040px
+	desktop-small: 			112rem,		// =   1120px
+	desktop: 				120rem,		// =   1200px
+	desktop-large: 			128rem,		// =   1280px
+	desktop-larger: 		138rem,		// =   1380px
+	desktop-largest: 		160rem,		// =   1600px
+	desktop-hugeish: 		180rem,		// =   1800px
+	desktop-huge: 			220rem		// =   2200px
 );
 
 

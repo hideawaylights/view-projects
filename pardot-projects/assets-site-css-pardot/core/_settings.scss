@@ -39,12 +39,12 @@
 
 $typography: (
     root-font-size: 		62.5%,
-	base-font-size: 		1.6rem,
+	base-font-size: 		1.6rem, // = 16px
 	secondary-font-size: 	20px,
 	base-line-height: 		1.8,
 	secondary-line-height: 	2,
 	condensed-line-height: 	1.5,
-	base-margins-type: 		2rem,
+	base-margins-type: 		2rem, // = 20px
 );
 
 // Variables > Typography
@@ -56,13 +56,13 @@ $bold: 			700;
 $ultra-bold:	900;
 
 // Common font sizing
-$smallest-font-size: 	0.8125rem; 	// =   13px
-$tiny-font-size: 		0.875rem; 	// =   14px
-$small-font-size: 		0.9375rem; 	// =   15px
-$base-font-size: 		1.063rem; 	// =   17px
-$secondary-font-size: 	1.25rem; 	// =   20px
-$large-font-size: 		1.375rem; 	// =   22px
-$larger-font-size: 		1.625rem; 	// =   26px
+$smallest-font-size: 	1.3rem; 	// =   13px
+$tiny-font-size: 		1.4rem; 	// =   14px
+$small-font-size: 		1.5rem; 	// =   15px
+$base-font-size: 		1.7rem; 	// =   17px
+$secondary-font-size: 	2.0rem; 	// =   20px
+$large-font-size: 		2.2rem; 	// =   22px
+$larger-font-size: 		2.6rem; 	// =   26px
 
 $letter-spacing-1:		-.02em;
 $letter-spacing-2:		.02em;
@@ -96,6 +96,43 @@ $colors: (
   'alt-font-color':         #34657F,
   'link-color':             #95BFD1,
   'alt-link-color':         #7D8287,
+
+  //  New brand color palete
+  'brand-blue-1':           #30acc5,
+  'brand-blue-2':           #317cad,
+  'brand-blue-3':           #33647e,
+  'brand-blue-4':           #334047,
+  'brand-tan-1':             #d6d2c9,
+  'brand-tan-2':             #75787a,
+  'brand-orange-1':          #f05b43,
+  'brand-green-1':           #78c159,
+
+  // OFAD import colors
+  'black':		   				#000,
+  'white':		   				#fff,
+
+  // Grey border shades
+  'border-grey-1':			#eff0f0,
+  'border-grey-2':			#e5e5e5,
+  'border-grey-3':			#dddedf,
+  'border-grey-4':			#d1d1d1,		// Default site borders
+  'border-grey-5':			#bbbcbc,
+  'border-grey-6':			#7f7e7e,
+  'border-grey-7':			#5f6062,
+  'border-grey-8':			#3f3f3f,
+  'border-grey-9':			#3a3a3a,
+
+  // Grey background shades
+  'bg-grey-1':				#f6f7f7,
+  'bg-grey-2':				#f1f2f2,
+  'bg-grey-3':				#eaeaea,
+  'bg-grey-4':				#bbbcbc,
+  'bg-grey-5':				#7f7e7e,
+  'bg-grey-6':				#5f6062,
+  'bg-grey-7':				#575655,
+  'bg-grey-8':				#3f3f3f,
+  'bg-grey-9':				#3a3a3a,
+
 );
 
 // - - typography
