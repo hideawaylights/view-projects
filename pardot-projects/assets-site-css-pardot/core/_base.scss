@@ -8,10 +8,12 @@ html {
     }
 
 body {
-	font-size: map-get($typography, root-font-size);
+	font-size: map-get($typography, base-font-size);
 	line-height: map-get($typography, base-line-height);
-	color: color('base-font-color');
+
+    color: color('base-font-color');
 	@include font-rules('book');
+
 	font-weight: $normal;
 	font-style: normal;
     background: #fff;
@@ -21,6 +23,20 @@ body {
 	-webkit-font-smoothing: subpixel-antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	}
+    //
+    // html {
+    // font-size: 62.5%;
+    // @include font-rules('book');
+    // line-height: 1.2;
+    // overflow-x: hidden;
+    // }
+    //
+    // body {
+    // background: #fff;
+    // color: color('dark-gray');
+    // font-size: 1.6rem;
+    // }
+
 
 main {
   position: relative;

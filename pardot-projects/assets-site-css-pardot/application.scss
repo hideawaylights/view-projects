@@ -69,21 +69,27 @@
 // to quickly add styles that are easily seen by the maintainer of the file.
 
 
-    // Pardot overrides and developer styles // mike@ofad.co
+        // Pardot overrides and developer styles // mike@ofad.co
 
-    // Pardon "main.css" import
-    @import 'overrides/legacy/pardot-main-import';
+        // Pardon "main.css" import
+        @import 'overrides/legacy/pardot-main-import';
 
-    // @import 'overrides/utilities/vars';
-    @import 'overrides/utilities/functions';
-    @import 'overrides/utilities/mixins';
+        @import 'overrides/utilities/vars';
+        @import 'overrides/utilities/functions';
+        @import 'overrides/utilities/mixins';
 
-    // New core
-    @import 'overrides/core/forms';
-    // @import 'overrides/core/table';
+        // Grid framework
+        @import 'overrides/layout/framework-grid';
 
-    // Grid framework
-    @import 'overrides/layout/framework-grid';
+        // Pardot templates
+        @import 'overrides/pardot-templates/content-sections';
+        @import 'overrides/pardot-templates/headers';
+
+        // New core overrides
+        // @import 'overrides/core/forms';
+        // @import 'overrides/core/table';
+
+
 
 
 // - - - - - - - - - - - - - - - - - - -
