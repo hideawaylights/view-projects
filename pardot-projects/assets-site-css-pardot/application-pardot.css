@@ -15619,6 +15619,7 @@ footer.simple-footer {
   padding: 2.5rem 1.5rem;
   background-color: #23687f;
   background-color: #33647e;
+  background-color: #f05b43;
   border-radius: 3px;
   background-clip: padding-box;
   position: relative; }
@@ -15633,6 +15634,7 @@ footer.simple-footer {
             transform: translate(-100%, 0);
     width: 0;
     border-color: transparent #33647e;
+    border-color: transparent #f05b43;
     border-style: solid;
     border-width: 18px 18px 18px 0; }
     @media (max-width: 50rem) {
@@ -15647,6 +15649,7 @@ footer.simple-footer {
     margin: 0;
     padding: 1.4rem 1.2rem;
     border: 1px solid #32617a;
+    border: 2px solid #ef533a;
     border-radius: 2px;
     background-clip: padding-box;
     font-size: 1.6rem;
@@ -15666,16 +15669,18 @@ footer.simple-footer {
       opacity: .9; }
     #pardot-form input[type="email"]:hover, #pardot-form input[type="password"]:hover, #pardot-form input[type="text"]:hover, #pardot-form input[type="search"]:hover, #pardot-form input[type="number"]:hover, #pardot-form input[type="date"]:hover, #pardot-form textarea:hover, #pardot-form select:hover {
       border-color: #346782;
-      -webkit-box-shadow: 0 3px 13px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.18);
-              box-shadow: 0 3px 13px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.18);
+      border-color: #ed3a1d;
+      -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1);
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1);
       background-clip: padding-box;
       -webkit-box-sizing: border-box;
               box-sizing: border-box; }
     #pardot-form input[type="email"]:focus, #pardot-form input[type="password"]:focus, #pardot-form input[type="text"]:focus, #pardot-form input[type="search"]:focus, #pardot-form input[type="number"]:focus, #pardot-form input[type="date"]:focus, #pardot-form textarea:focus, #pardot-form select:focus {
       outline: none;
       border-color: #3a7290;
-      -webkit-box-shadow: 0 3px 13px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.18);
-              box-shadow: 0 3px 13px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.18);
+      border-color: #ec3214;
+      -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1);
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1);
       background-clip: padding-box;
       -webkit-box-sizing: border-box;
               box-sizing: border-box; }
@@ -15691,10 +15696,11 @@ footer.simple-footer {
   #pardot-form input[type="submit"] {
     margin: 2rem 0 2rem 0;
     padding: 1rem 4rem;
-    background-color: #86c2d2;
-    background-color: #f05b43;
-    border-style: none;
     color: white;
+    background-color: #f05b43;
+    color: #4A4A4A;
+    background-color: #fff;
+    border-style: none;
     font-size: 1.6rem;
     border-radius: 4px;
     background-clip: padding-box;
@@ -15712,7 +15718,12 @@ footer.simple-footer {
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1);
       background-clip: padding-box;
       -webkit-box-sizing: border-box;
-              box-sizing: border-box; }
+              box-sizing: border-box;
+      background-color: #fafafa;
+      -webkit-box-shadow: 0 3px 13px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.18);
+              box-shadow: 0 3px 13px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.18);
+      background-clip: padding-box;
+      box-sizing: border-box; }
   #pardot-form label {
     font-weight: 300;
     margin-bottom: 1rem; }
